@@ -1,0 +1,301 @@
+{
+  "userId": "0be9288c-2529-411a-86fb-a0dc09567d83",
+  "gender": "male",
+  "language": "el",
+  "date": "2021-06-08",
+  "BMI": 24,
+  "userAction": {
+    "morning": {
+      "preferedLocation": {
+        "room": {
+          "roomType": "kitchen",
+          "percentage": 0.1
+        },
+        "area": {
+          "areaType": "sofa",
+          "percentage": 0.2
+        }
+      },
+      "adlAnalytics": {
+        "eating": {
+          "duration": 120000
+        },
+        "preparingFood": {
+          "duration": 120000
+        },
+        "washingDishes": {
+          "duration": 120000
+        },
+        "sittingRelated": {
+          "duration": 120000
+        }
+      },
+      "gait": {
+        "features": {
+          "avgSpeed": 26.628826238027351,
+          "duration": 120000
+        },
+        "dangerousSituation": [
+          {
+            "type": "fall",
+            "room": "kitchen",
+            "exactTime": "13:45:57"
+          }
+        ]
+      }
+    },
+    "afternoon": {
+      "preferedLocation": {
+        "room": {
+          "roomType": "kitchen",
+          "percentage": 0.1
+        },
+        "area": {
+          "areaType": "sofa",
+          "percentage": 0.2
+        }
+      },
+      "adlAnalytics": {
+        "eating": {
+          "duration": 120000
+        },
+        "preparingFood": {
+          "duration": 120000
+        },
+        "washingDishes": {
+          "duration": 120000
+        },
+        "sittingRelated": {
+          "duration": 120000
+        }
+      },
+      "gait": {
+        "features": {
+          "avgSpeed": 26.628826238027351,
+          "duration": 120000
+        },
+        "dangerousSituation": [
+          {
+            "type": "fall",
+            "room": "kitchen",
+            "exactTime": "13:45:57"
+          }
+        ]
+      }
+    },
+    "evening": {
+      "preferedLocation": {
+        "room": {
+          "roomType": "kitchen",
+          "percentage": 0.1
+        },
+        "area": {
+          "areaType": "sofa",
+          "percentage": 0.2
+        }
+      },
+      "adlAnalytics": {
+        "eating": {
+          "duration": 120000
+        },
+        "preparingFood": {
+          "duration": 120000
+        },
+        "washingDishes": {
+          "duration": 120000
+        },
+        "sittingRelated": {
+          "duration": 120000
+        }
+      },
+      "gait": {
+        "features": {
+          "avgSpeed": 26.628826238027351,
+          "duration": 120000
+        },
+        "dangerousSituation": [
+          {
+            "type": "fall",
+            "room": "kitchen",
+            "exactTime": "13:45:57"
+          }
+        ]
+      }
+    },
+    "night": {
+      "preferedLocation": {
+        "room": {
+          "roomType": "kitchen",
+          "percentage": 0.1
+        },
+        "area": {
+          "areaType": "sofa",
+          "percentage": 0.2
+        }
+      },
+      "adlAnalytics": {
+        "eating": {
+          "duration": 120000
+        },
+        "preparingFood": {
+          "duration": 120000
+        },
+        "washingDishes": {
+          "duration": 120000
+        },
+        "sittingRelated": {
+          "duration": 120000
+        }
+      },
+      "gait": {
+        "features": {
+          "avgSpeed": 26.628826238027351,
+          "duration": 120000
+        },
+        "dangerousSituation": [
+          {
+            "type": "fall",
+            "room": "kitchen",
+            "exactTime": "13:45:57"
+          }
+        ]
+      }
+    }
+  },
+  "userDetectedPerHourHistogram": [
+    {
+      "room": "kitchen",
+      "histogram": [
+        {
+          "dayHour": 12,
+          "durationSeconds": 3780
+        }
+      ]
+    }
+  ],
+  "profiles": {
+    "emotion": {
+      "face": {
+        "amountOfTime": 0,
+        "anger": 0,
+        "disgust": 0.019801980198019802,
+        "fear": 0.0297029702970297,
+        "happiness": 0,
+        "neutral": null,
+        "sadness": 0.20297029702970298,
+        "surprise": 0.0297029702970297,
+        "neutrality": 0.71782178217821779
+      },
+      "voice": {
+        "amountOfTime": 0,
+        "anger": 0.019801980198,
+        "fear": 0.02970297,
+        "happiness": 0.20297,
+        "neutral": 0.717821,
+        "sadness": null
+      }
+    },
+    "engagement": {
+      "accepted": 0.7123
+    },
+    "cognitiveInterventionPerformance": {
+      "fromSensing": null,
+      "fromInterventions": [
+        {
+          "appId": "quiz",
+          "outcome": {
+            "questionId": "2",
+            "topic": "did-you-know-cognitive",
+            "answered": true,
+            "related": false
+          }
+        }
+      ]
+    },
+    "nutritionalInterventionPerformance": {
+      "fromSensing": null,
+      "fromInterventions": [
+        {
+          "appId": "quiz",
+          "outcome": {
+            "questionId": "3",
+            "topic": "did-you-know-fibre",
+            "answered": true,
+            "related": false
+          }
+        }
+      ]
+    },
+    "socialInterventionPerformance": {
+      "fromSensing": null,
+      "fromInterventions": [
+        {
+          "appId": "socialRecommender",
+          "outcome": {
+            "recommenderType": "social",
+            "params": {
+              "activityId": [
+                35
+              ],
+              "title": "Κοινωνική σύσταση",
+              "explanation": "Το να κρατάς επαφή με τους φίλους και την οικογένεια συνδέεται με λιγότερα συμπτώματα κατάθλιψης. Κράτα αυτή την πληροφορία στο μυαλό σου, {{name}}!",
+              "events": [],
+              "contacts": []
+            },
+            "again": false
+          },
+          "intervention": {
+            "state": "started",
+            "dateTime": 1625413925931
+          }
+        }
+      ]
+    },
+    "physicalInterventionPerformance": {
+      "fromSensing": null,
+      "fromInterventions": [
+        {
+          "appId": "physicalRecommender",
+          "outcome": {
+            "activityId": "physicalRecommendation01>",
+            "again": true
+          }
+        }
+      ]
+    }},
+	"diseaseMonitoring": {
+		"diseaseSigns": [
+			{
+				"type": "bpm",
+				"value": 81,
+				"unit": ""
+			},
+			{
+				"type": "pi",
+				"value": 0.6,
+				"unit": ""
+			},
+			{
+				"type": "lipColour",
+				"value": [
+					2,
+					3,
+					4
+				],
+				"unit": ""
+			}
+		],
+		"diseaseSymptoms": [
+			{
+				"type": "soreThroat",
+				"value": 4,
+				"unit": "multipleChoice"
+			},
+			{
+				"type": "headache",
+				"value": 3,
+				"unit": "multipleChoice"
+			}
+		]
+	}
+}
