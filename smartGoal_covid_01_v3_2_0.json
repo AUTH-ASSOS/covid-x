@@ -1,0 +1,2959 @@
+{
+	"goalId": "covid_01",
+	"creationDate": "2021-07-08",
+	"version": "3.2.0",
+	"el": {
+		"goalId": "covid_01",
+		"creationDate": "2020-03-26",
+		"name": "Υποστήριξη και παρακολούθηση συμπτωμάτων COVID-19",
+		"description": "Αυτός ο στόχος θα σε βοηθήσει να παρακολουθείς την εξέλιξη των συμπτωμάτων σου κατά τη διάρκεια της καραντίνας",
+		"requirements": [
+			"Συμβουλευτείτε τον γιατρό σας αν έχετε οποιαδήποτε αμφιβολία"
+		],
+		"personalization": [
+			{
+				"id": "difficulty",
+				"question": "Διάλεξε το επίπεδο δυσκολίας για τον στόχο",
+				"answers": [
+					"Χαμηλό",
+					"Μέτριο",
+					"Υψηλό"
+				]
+			}
+		],
+		"interventionPlan": [
+			{
+				"difficulty": 0,
+				"introduction": "Ωραία {{name}}, έχεις θέσει έναν νέο στόχο. Για τις επόμενες 2 εβδομάδες, θα σε βοηθήσω να παρακολουθείς τα συμπτωματα σου τουλάχιστον 3 φορές την εβδομάδα",
+				"conclusion": "Συγχαρητήρια {{name}}, έχεις ολοκληρώσει τον 2 εβδομάδων στόχο σου. Ελπίζω να έχεις αναρώσει και να νιώθεις πολύ καλύτερα! Αν όχι, μη διστάσεις να θέσεις ξανά αυτό το στόχο. ",
+				"weekPlan": [
+					{
+						"questionnaire": {
+							"dailyRange": [
+								0,
+								1
+							],
+							"weeklyRange": [
+								3,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					},
+					{
+						"questionnaire": {
+							"dailyRange": [
+								0,
+								1
+							],
+							"weeklyRange": [
+								3,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					}
+				]
+			},
+			{
+				"difficulty": 1,
+				"introduction": "Ωραία {{name}}, έχεις θέσει έναν νέο στόχο. Για τις επόμενες 2 εβδομάδες, θα σε βοηθήσω να παρακολουθείς τα συμπτωματα σου τουλάχιστον 5 φορές την εβδομάδα",
+				"conclusion": "Συγχαρητήρια {{name}}, έχεις ολοκληρώσει τον 2 εβδομάδων στόχο σου. Ελπίζω να έχεις αναρώσει και να νιώθεις πολύ καλύτερα! Αν όχι, μη διστάσεις να θέσεις ξανά αυτό το στόχο. ",
+				"weekPlan": [
+					{
+						"questionnaire": {
+							"dailyRange": [
+								0,
+								1
+							],
+							"weeklyRange": [
+								5,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					},
+					{
+						"questionnaire": {
+							"dailyRange": [
+								0,
+								1
+							],
+							"weeklyRange": [
+								5,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					}
+				]
+			},
+			{
+				"difficulty": 2,
+				"introduction": "Ωραία {{name}}, έχεις θέσει έναν νέο στόχο. Για τις επόμενες 2 εβδομάδες, θα σε βοηθήσω να παρακολουθείς τα συμπτωματα σου κάθε μέρα",
+				"conclusion": "Συγχαρητήρια {{name}}, έχεις ολοκληρώσει τον 2 εβδομάδων στόχο σου. Ελπίζω να έχεις αναρώσει και να νιώθεις πολύ καλύτερα! Αν όχι, μη διστάσεις να θέσεις ξανά αυτό το στόχο. ",
+				"weekPlan": [
+					{
+						"questionnaire": {
+							"dailyRange": [
+								1,
+								2
+							],
+							"weeklyRange": [
+								7,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					},
+					{
+						"questionnaire": {
+							"dailyRange": [
+								1,
+								2
+							],
+							"weeklyRange": [
+								7,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					}
+				]
+			}
+		],
+		"categoryLabels": [
+			"disease"
+		],
+		"toolInfo": {
+			"questionnaire": {
+				"name": "ερωτηματολόγιο"
+			}
+		},
+		"toolData": {
+			"questionnaire": [
+				{
+					"difficulty": 0,
+					"version": 3,
+					"title": "Παρακολούθηση συμπτωμάτων COVID-19",
+					"creationDate": "2021-06-04",
+					"questionnaireId": "covid_01",
+					"questions": [
+						{
+							"id": 0,
+							"text": "Έχεις συμπτώματα σήμερα;",
+							"answerType": "boolean",
+							"questionType": "root",
+							"feature": "havingSymptoms",
+							"nextQuestion": [
+								{
+									"yes": 1
+								},
+								{
+									"no": 2
+								}
+							]
+						},
+						{
+							"id": 1,
+							"text": "Έχεις κάποιο από τα ακόλουθα συμπτώματα: έντονο πόνο στο στήθος και δυσκολία στην αναπνοή \n χλωμό, γκρίζωπό ή μπλε χρώμα δέρματος \n μεγάλη δυσκολία να ξυπνήσεις \n αδυναμία να σταθείς όρθιος και ζάλη \n εμφάνιση ή επιδείνωση κρίσεων; ",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "severeSymptoms",
+							"nextQuestion": [
+								{
+									"yes": 3
+								},
+								{
+									"no": 4
+								}
+							]
+						},
+						{
+							"id": 2,
+							"text": "Σε ευχαριστώ. Τα λέμε ξανά αύριο",
+							"answerType": null,
+							"questionType": "leaf",
+							"feature": null,
+							"nextQuestion": []
+						},
+						{
+							"id": 3,
+							"text": "Επικοινώνησε άμεσα με τον γιατρό σου!",
+							"answerType": null,
+							"questionType": "leaf",
+							"feature": null,
+							"nextQuestion": []
+						},
+						{
+							"id": 4,
+							"text": "Έχεις πυρετό;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFever",
+							"nextQuestion": [
+								{
+									"yes": 5
+								},
+								{
+									"no": 6
+								}
+							]
+						},
+						{
+							"id": 5,
+							"text": "Πόσο;",
+							"answerType": "openEnded",
+							"questionType": "node",
+							"feature": "valueFever",
+							"nextQuestion": [
+								{
+									"value": 6
+								}
+							]
+						},
+						{
+							"id": 6,
+							"text": "Έχεις συμπτώματα γρίπης (π.χ. πονοκέφαλο, πονόλαιμο)",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFluSymptom",
+							"nextQuestion": [
+								{
+									"yes": 7
+								},
+								{
+									"no": 8
+								}
+							]
+						},
+						{
+							"id": 7,
+							"text": "Έχεις πονοκέφαλο;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingHeadache",
+							"nextQuestion": [
+								{
+									"yes": 9
+								},
+								{
+									"no": 10
+								}
+							]
+						},
+						{
+							"id": 9,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονος είναι ο πονοκέφαλος σου;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueHeadache",
+							"nextQuestion": [
+								{
+									"1": 10
+								},
+								{
+									"2": 10
+								},
+								{
+									"3": 10
+								},
+								{
+									"4": 10
+								},
+								{
+									"5": 10
+								}
+							]
+						},
+						{
+							"id": 10,
+							"text": "Έχεις πονόλαιμο;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingSoreThroat",
+							"nextQuestion": [
+								{
+									"yes": 11
+								},
+								{
+									"no": 12
+								}
+							]
+						},
+						{
+							"id": 11,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονος είναι ο πονόλαιμος σου;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueSoreThroat",
+							"nextQuestion": [
+								{
+									"1": 12
+								},
+								{
+									"2": 12
+								},
+								{
+									"3": 12
+								},
+								{
+									"4": 12
+								},
+								{
+									"5": 12
+								}
+							]
+						},
+						{
+							"id": 12,
+							"text": "Έχεις βήχα",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingCough",
+							"nextQuestion": [
+								{
+									"yes": 13
+								},
+								{
+									"no": 8
+								}
+							]
+						},
+						{
+							"id": 13,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονος είναι ο βήχας σου;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueCough",
+							"nextQuestion": [
+								{
+									"1": 8
+								},
+								{
+									"2": 8
+								},
+								{
+									"3": 8
+								},
+								{
+									"4": 8
+								},
+								{
+									"5": 8
+								}
+							]
+						},
+						{
+							"id": 8,
+							"text": "Έχεις γαστρεντερικάς συμπτώματα;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingGastrointestinal",
+							"nextQuestion": [
+								{
+									"yes": 15
+								},
+								{
+									"no": 14
+								}
+							]
+						},
+						{
+							"id": 15,
+							"text": "Έχεις διάρροια;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingDiarrhea",
+							"nextQuestion": [
+								{
+									"yes": 16
+								},
+								{
+									"no": 17
+								}
+							]
+						},
+						{
+							"id": 16,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονη είναι η διάρροια σου;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueDiarrhea",
+							"nextQuestion": [
+								{
+									"1": 17
+								},
+								{
+									"2": 17
+								},
+								{
+									"3": 17
+								},
+								{
+									"4": 17
+								},
+								{
+									"5": 17
+								}
+							]
+						},
+						{
+							"id": 17,
+							"text": "Έχεις απώλεια όρεξης;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "appetiteLoss",
+							"nextQuestion": [
+								{
+									"value": 18
+								}
+							]
+						},
+						{
+							"id": 18,
+							"text": "Έχεις πόνους στην κοιλιά;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingAbdominalPain",
+							"nextQuestion": [
+								{
+									"yes": 19
+								},
+								{
+									"no": 14
+								}
+							]
+						},
+						{
+							"id": 19,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονος είναι ο πόνος;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueAbdominalPain",
+							"nextQuestion": [
+								{
+									"1": 14
+								},
+								{
+									"2": 14
+								},
+								{
+									"3": 14
+								},
+								{
+									"4": 14
+								},
+								{
+									"5": 14
+								}
+							]
+						},
+						{
+							"id": 14,
+							"text": "Νίωθεις κουρασμένος",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFatigue",
+							"nextQuestion": [
+								{
+									"yes": 20
+								},
+								{
+									"no": 20
+								}
+							]
+						},
+						{
+							"id": 20,
+							"text": "Έχεις πόνους στο στήθος;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingChestPain",
+							"nextQuestion": [
+								{
+									"yes": 21
+								},
+								{
+									"no": 22
+								}
+							]
+						},
+						{
+							"id": 21,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονος είναι ο πόνος στο στήθος;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueChestPain",
+							"nextQuestion": [
+								{
+									"1": 22
+								},
+								{
+									"2": 22
+								},
+								{
+									"3": 22
+								},
+								{
+									"4": 22
+								},
+								{
+									"5": 22
+								}
+							]
+						},
+						{
+							"id": 22,
+							"text": "Έχεις απώλεια της όσφρησης;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "smellLoss",
+							"nextQuestion": [
+								{
+									"yes": 23
+								},
+								{
+									"no": 23
+								}
+							]
+						},
+						{
+							"id": 23,
+							"text": "Νίωθεις σύγχηση;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "confusion",
+							"nextQuestion": [
+								{
+									"yes": 24
+								},
+								{
+									"no": 24
+								}
+							]
+						},
+						{
+							"id": 24,
+							"text": "Αναπνέεις εύκολα;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingBreathingProblem",
+							"nextQuestion": [
+								{
+									"yes": 2
+								},
+								{
+									"no": 25
+								}
+							]
+						},
+						{
+							"id": 25,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόση προσπάθεια θα έλεγες ότι χρειάζεται για να αναπνεύσεις;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueBreathingProblem",
+							"nextQuestion": [
+								{
+									"1": 2
+								},
+								{
+									"2": 2
+								},
+								{
+									"3": 2
+								},
+								{
+									"4": 2
+								},
+								{
+									"5": 2
+								}
+							]
+						}
+					]
+				},
+				{
+					"difficulty": 1,
+					"version": 3,
+					"title": "Covid symptoms monitoring",
+					"creationDate": "2021-06-04",
+					"questionnaireId": "covid_01",
+					"questions": [
+						{
+							"id": 0,
+							"text": "Έχεις συμπτώματα σήμερα;",
+							"answerType": "boolean",
+							"questionType": "root",
+							"feature": "havingSymptoms",
+							"nextQuestion": [
+								{
+									"yes": 1
+								},
+								{
+									"no": 2
+								}
+							]
+						},
+						{
+							"id": 1,
+							"text": "Έχεις κάποιο από τα ακόλουθα συμπτώματα: έντονο πόνο στο στήθος και δυσκολία στην αναπνοή \n χλωμό, γκρίζωπό ή μπλε χρώμα δέρματος \n μεγάλη δυσκολία να ξυπνήσεις \n αδυναμία να σταθείς όρθιος και ζάλη \n εμφάνιση ή επιδείνωση κρίσεων; ",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "severeSymptoms",
+							"nextQuestion": [
+								{
+									"yes": 3
+								},
+								{
+									"no": 4
+								}
+							]
+						},
+						{
+							"id": 2,
+							"text": "Σε ευχαριστώ. Τα λέμε ξανά αύριο",
+							"answerType": null,
+							"questionType": "leaf",
+							"feature": null,
+							"nextQuestion": []
+						},
+						{
+							"id": 3,
+							"text": "Επικοινώνησε άμεσα με τον γιατρό σου!",
+							"answerType": null,
+							"questionType": "leaf",
+							"feature": null,
+							"nextQuestion": []
+						},
+						{
+							"id": 4,
+							"text": "Έχεις πυρετό;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFever",
+							"nextQuestion": [
+								{
+									"yes": 5
+								},
+								{
+									"no": 6
+								}
+							]
+						},
+						{
+							"id": 5,
+							"text": "Πόσο;",
+							"answerType": "openEnded",
+							"questionType": "node",
+							"feature": "valueFever",
+							"nextQuestion": [
+								{
+									"value": 6
+								}
+							]
+						},
+						{
+							"id": 6,
+							"text": "Έχεις συμπτώματα γρίπης (π.χ. πονοκέφαλο, πονόλαιμο)",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFluSymptom",
+							"nextQuestion": [
+								{
+									"yes": 7
+								},
+								{
+									"no": 8
+								}
+							]
+						},
+						{
+							"id": 7,
+							"text": "Έχεις πονοκέφαλο;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingHeadache",
+							"nextQuestion": [
+								{
+									"yes": 9
+								},
+								{
+									"no": 10
+								}
+							]
+						},
+						{
+							"id": 9,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονος είναι ο πονοκέφαλος σου;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueHeadache",
+							"nextQuestion": [
+								{
+									"1": 10
+								},
+								{
+									"2": 10
+								},
+								{
+									"3": 10
+								},
+								{
+									"4": 10
+								},
+								{
+									"5": 10
+								}
+							]
+						},
+						{
+							"id": 10,
+							"text": "Έχεις πονόλαιμο;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingSoreThroat",
+							"nextQuestion": [
+								{
+									"yes": 11
+								},
+								{
+									"no": 12
+								}
+							]
+						},
+						{
+							"id": 11,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονος είναι ο πονόλαιμος σου;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueSoreThroat",
+							"nextQuestion": [
+								{
+									"1": 12
+								},
+								{
+									"2": 12
+								},
+								{
+									"3": 12
+								},
+								{
+									"4": 12
+								},
+								{
+									"5": 12
+								}
+							]
+						},
+						{
+							"id": 12,
+							"text": "Έχεις βήχα",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingCough",
+							"nextQuestion": [
+								{
+									"yes": 13
+								},
+								{
+									"no": 8
+								}
+							]
+						},
+						{
+							"id": 13,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονος είναι ο βήχας σου;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueCough",
+							"nextQuestion": [
+								{
+									"1": 8
+								},
+								{
+									"2": 8
+								},
+								{
+									"3": 8
+								},
+								{
+									"4": 8
+								},
+								{
+									"5": 8
+								}
+							]
+						},
+						{
+							"id": 8,
+							"text": "Έχεις γαστρεντερικάς συμπτώματα;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingGastrointestinal",
+							"nextQuestion": [
+								{
+									"yes": 15
+								},
+								{
+									"no": 14
+								}
+							]
+						},
+						{
+							"id": 15,
+							"text": "Έχεις διάρροια;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingDiarrhea",
+							"nextQuestion": [
+								{
+									"yes": 16
+								},
+								{
+									"no": 17
+								}
+							]
+						},
+						{
+							"id": 16,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονη είναι η διάρροια σου;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueDiarrhea",
+							"nextQuestion": [
+								{
+									"1": 17
+								},
+								{
+									"2": 17
+								},
+								{
+									"3": 17
+								},
+								{
+									"4": 17
+								},
+								{
+									"5": 17
+								}
+							]
+						},
+						{
+							"id": 17,
+							"text": "Έχεις απώλεια όρεξης;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "appetiteLoss",
+							"nextQuestion": [
+								{
+									"value": 18
+								}
+							]
+						},
+						{
+							"id": 18,
+							"text": "Έχεις πόνους στην κοιλιά;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingAbdominalPain",
+							"nextQuestion": [
+								{
+									"yes": 19
+								},
+								{
+									"no": 14
+								}
+							]
+						},
+						{
+							"id": 19,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονος είναι ο πόνος;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueAbdominalPain",
+							"nextQuestion": [
+								{
+									"1": 14
+								},
+								{
+									"2": 14
+								},
+								{
+									"3": 14
+								},
+								{
+									"4": 14
+								},
+								{
+									"5": 14
+								}
+							]
+						},
+						{
+							"id": 14,
+							"text": "Νίωθεις κουρασμένος",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFatigue",
+							"nextQuestion": [
+								{
+									"yes": 20
+								},
+								{
+									"no": 20
+								}
+							]
+						},
+						{
+							"id": 20,
+							"text": "Έχεις πόνους στο στήθος;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingChestPain",
+							"nextQuestion": [
+								{
+									"yes": 21
+								},
+								{
+									"no": 22
+								}
+							]
+						},
+						{
+							"id": 21,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονος είναι ο πόνος στο στήθος;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueChestPain",
+							"nextQuestion": [
+								{
+									"1": 22
+								},
+								{
+									"2": 22
+								},
+								{
+									"3": 22
+								},
+								{
+									"4": 22
+								},
+								{
+									"5": 22
+								}
+							]
+						},
+						{
+							"id": 22,
+							"text": "Έχεις απώλεια της όσφρησης;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "smellLoss",
+							"nextQuestion": [
+								{
+									"yes": 23
+								},
+								{
+									"no": 23
+								}
+							]
+						},
+						{
+							"id": 23,
+							"text": "Νίωθεις σύγχηση;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "confusion",
+							"nextQuestion": [
+								{
+									"yes": 24
+								},
+								{
+									"no": 24
+								}
+							]
+						},
+						{
+							"id": 24,
+							"text": "Αναπνέεις εύκολα;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingBreathingProblem",
+							"nextQuestion": [
+								{
+									"yes": 2
+								},
+								{
+									"no": 25
+								}
+							]
+						},
+						{
+							"id": 25,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόση προσπάθεια θα έλεγες ότι χρειάζεται για να αναπνεύσεις;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueBreathingProblem",
+							"nextQuestion": [
+								{
+									"1": 2
+								},
+								{
+									"2": 2
+								},
+								{
+									"3": 2
+								},
+								{
+									"4": 2
+								},
+								{
+									"5": 2
+								}
+							]
+						}
+					]
+				},
+				{
+					"difficulty": 2,
+					"version": 3,
+					"title": "Covid symptoms monitoring",
+					"creationDate": "2021-06-04",
+					"questionnaireId": "covid_01",
+					"questions": [
+						{
+							"id": 0,
+							"text": "Έχεις συμπτώματα σήμερα;",
+							"answerType": "boolean",
+							"questionType": "root",
+							"feature": "havingSymptoms",
+							"nextQuestion": [
+								{
+									"yes": 1
+								},
+								{
+									"no": 2
+								}
+							]
+						},
+						{
+							"id": 1,
+							"text": "Έχεις κάποιο από τα ακόλουθα συμπτώματα: έντονο πόνο στο στήθος και δυσκολία στην αναπνοή \n χλωμό, γκρίζωπό ή μπλε χρώμα δέρματος \n μεγάλη δυσκολία να ξυπνήσεις \n αδυναμία να σταθείς όρθιος και ζάλη \n εμφάνιση ή επιδείνωση κρίσεων; ",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "severeSymptoms",
+							"nextQuestion": [
+								{
+									"yes": 3
+								},
+								{
+									"no": 4
+								}
+							]
+						},
+						{
+							"id": 2,
+							"text": "Σε ευχαριστώ. Τα λέμε ξανά αύριο",
+							"answerType": null,
+							"questionType": "leaf",
+							"feature": null,
+							"nextQuestion": []
+						},
+						{
+							"id": 3,
+							"text": "Επικοινώνησε άμεσα με τον γιατρό σου!",
+							"answerType": null,
+							"questionType": "leaf",
+							"feature": null,
+							"nextQuestion": []
+						},
+						{
+							"id": 4,
+							"text": "Έχεις πυρετό;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFever",
+							"nextQuestion": [
+								{
+									"yes": 5
+								},
+								{
+									"no": 6
+								}
+							]
+						},
+						{
+							"id": 5,
+							"text": "Πόσο;",
+							"answerType": "openEnded",
+							"questionType": "node",
+							"feature": "valueFever",
+							"nextQuestion": [
+								{
+									"value": 6
+								}
+							]
+						},
+						{
+							"id": 6,
+							"text": "Έχεις συμπτώματα γρίπης (π.χ. πονοκέφαλο, πονόλαιμο)",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFluSymptom",
+							"nextQuestion": [
+								{
+									"yes": 7
+								},
+								{
+									"no": 8
+								}
+							]
+						},
+						{
+							"id": 7,
+							"text": "Έχεις πονοκέφαλο;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingHeadache",
+							"nextQuestion": [
+								{
+									"yes": 9
+								},
+								{
+									"no": 10
+								}
+							]
+						},
+						{
+							"id": 9,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονος είναι ο πονοκέφαλος σου;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueHeadache",
+							"nextQuestion": [
+								{
+									"1": 10
+								},
+								{
+									"2": 10
+								},
+								{
+									"3": 10
+								},
+								{
+									"4": 10
+								},
+								{
+									"5": 10
+								}
+							]
+						},
+						{
+							"id": 10,
+							"text": "Έχεις πονόλαιμο;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingSoreThroat",
+							"nextQuestion": [
+								{
+									"yes": 11
+								},
+								{
+									"no": 12
+								}
+							]
+						},
+						{
+							"id": 11,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονος είναι ο πονόλαιμος σου;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueSoreThroat",
+							"nextQuestion": [
+								{
+									"1": 12
+								},
+								{
+									"2": 12
+								},
+								{
+									"3": 12
+								},
+								{
+									"4": 12
+								},
+								{
+									"5": 12
+								}
+							]
+						},
+						{
+							"id": 12,
+							"text": "Έχεις βήχα",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingCough",
+							"nextQuestion": [
+								{
+									"yes": 13
+								},
+								{
+									"no": 8
+								}
+							]
+						},
+						{
+							"id": 13,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονος είναι ο βήχας σου;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueCough",
+							"nextQuestion": [
+								{
+									"1": 8
+								},
+								{
+									"2": 8
+								},
+								{
+									"3": 8
+								},
+								{
+									"4": 8
+								},
+								{
+									"5": 8
+								}
+							]
+						},
+						{
+							"id": 8,
+							"text": "Έχεις γαστρεντερικάς συμπτώματα;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingGastrointestinal",
+							"nextQuestion": [
+								{
+									"yes": 15
+								},
+								{
+									"no": 14
+								}
+							]
+						},
+						{
+							"id": 15,
+							"text": "Έχεις διάρροια;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingDiarrhea",
+							"nextQuestion": [
+								{
+									"yes": 16
+								},
+								{
+									"no": 17
+								}
+							]
+						},
+						{
+							"id": 16,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονη είναι η διάρροια σου;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueDiarrhea",
+							"nextQuestion": [
+								{
+									"1": 17
+								},
+								{
+									"2": 17
+								},
+								{
+									"3": 17
+								},
+								{
+									"4": 17
+								},
+								{
+									"5": 17
+								}
+							]
+						},
+						{
+							"id": 17,
+							"text": "Έχεις απώλεια όρεξης;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "appetiteLoss",
+							"nextQuestion": [
+								{
+									"value": 18
+								}
+							]
+						},
+						{
+							"id": 18,
+							"text": "Έχεις πόνους στην κοιλιά;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingAbdominalPain",
+							"nextQuestion": [
+								{
+									"yes": 19
+								},
+								{
+									"no": 14
+								}
+							]
+						},
+						{
+							"id": 19,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονος είναι ο πόνος;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueAbdominalPain",
+							"nextQuestion": [
+								{
+									"1": 14
+								},
+								{
+									"2": 14
+								},
+								{
+									"3": 14
+								},
+								{
+									"4": 14
+								},
+								{
+									"5": 14
+								}
+							]
+						},
+						{
+							"id": 14,
+							"text": "Νίωθεις κουρασμένος",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFatigue",
+							"nextQuestion": [
+								{
+									"yes": 20
+								},
+								{
+									"no": 20
+								}
+							]
+						},
+						{
+							"id": 20,
+							"text": "Έχεις πόνους στο στήθος;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingChestPain",
+							"nextQuestion": [
+								{
+									"yes": 21
+								},
+								{
+									"no": 22
+								}
+							]
+						},
+						{
+							"id": 21,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόσο έντονος είναι ο πόνος στο στήθος;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueChestPain",
+							"nextQuestion": [
+								{
+									"1": 22
+								},
+								{
+									"2": 22
+								},
+								{
+									"3": 22
+								},
+								{
+									"4": 22
+								},
+								{
+									"5": 22
+								}
+							]
+						},
+						{
+							"id": 22,
+							"text": "Έχεις απώλεια της όσφρησης;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "smellLoss",
+							"nextQuestion": [
+								{
+									"yes": 23
+								},
+								{
+									"no": 23
+								}
+							]
+						},
+						{
+							"id": 23,
+							"text": "Νίωθεις σύγχηση;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "confusion",
+							"nextQuestion": [
+								{
+									"yes": 24
+								},
+								{
+									"no": 24
+								}
+							]
+						},
+						{
+							"id": 24,
+							"text": "Αναπνέεις εύκολα;",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingBreathingProblem",
+							"nextQuestion": [
+								{
+									"yes": 2
+								},
+								{
+									"no": 25
+								}
+							]
+						},
+						{
+							"id": 25,
+							"text": "Σε μια κλίμακα από το 1 έως το 5, πόση προσπάθεια θα έλεγες ότι χρειάζεται για να αναπνεύσεις;",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueBreathingProblem",
+							"nextQuestion": [
+								{
+									"1": 2
+								},
+								{
+									"2": 2
+								},
+								{
+									"3": 2
+								},
+								{
+									"4": 2
+								},
+								{
+									"5": 2
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	},
+	"en": {
+		"goalId": "covid_01",
+		"creationDate": "2020-03-26",
+		"name": "Monitoring support of COVID-19 symptoms",
+		"description": "This goal will support you on monitoring your COVID-19 symptoms during your self-quarantine.",
+		"requirements": [
+			"Do not hesitate to contact your doctor if you have any doubt"
+		],
+		"personalization": [
+			{
+				"id": "difficulty",
+				"question": "Choose the level of monitoring",
+				"answers": [
+					"Low",
+					"Medium",
+					"Intense"
+				]
+			}
+		],
+		"interventionPlan": [
+			{
+				"difficulty": 0,
+				"introduction": "Nice {{name}}, you have set-up an new goal. For the following 2 weeks I will support you on monitoring your symptoms at least 3 times per week",
+				"conclusion": "Congrats {{name}}, you have completed your goal. I hope that you have recovered and feeling much better now! If not, do not hesitate to follow again the same goal",
+				"weekPlan": [
+					{
+						"questionnaire": {
+							"dailyRange": [
+								0,
+								1
+							],
+							"weeklyRange": [
+								3,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					},
+					{
+						"questionnaire": {
+							"dailyRange": [
+								0,
+								1
+							],
+							"weeklyRange": [
+								3,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					}
+				]
+			},
+			{
+				"difficulty": 1,
+				"introduction": "Nice {{name}}, you have set-up an new goal. For the following 2 weeks I will support you on monitoring your symptoms at least 5 times per week",
+				"conclusion": "Congrats {{name}}, you have completed your goal. I hope that you have recovered and feeling much better now! If not, do not hesitate to follow again the same goal",
+				"weekPlan": [
+					{
+						"questionnaire": {
+							"dailyRange": [
+								0,
+								1
+							],
+							"weeklyRange": [
+								5,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					},
+					{
+						"questionnaire": {
+							"dailyRange": [
+								0,
+								1
+							],
+							"weeklyRange": [
+								5,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					}
+				]
+			},
+			{
+				"difficulty": 2,
+				"introduction": "Nice {{name}}, you have set-up an new goal. For the following 2 weeks I will support you on monitoring your symptoms everyday",
+				"conclusion": "Congrats {{name}}, you have completed your goal. I hope that you have recovered and feeling much better now! If not, do not hesitate to follow again the same goal",
+				"weekPlan": [
+					{
+						"questionnaire": {
+							"dailyRange": [
+								1,
+								2
+							],
+							"weeklyRange": [
+								7,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					},
+					{
+						"questionnaire": {
+							"dailyRange": [
+								1,
+								2
+							],
+							"weeklyRange": [
+								7,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					}
+				]
+			}
+		],
+		"categoryLabels": [
+			"disease"
+		],
+		"toolInfo": {
+			"questionnaire": {
+				"name": "Questionnaire"
+			}
+		},
+		"toolData": {
+			"questionnaire": [
+				{
+					"difficulty": 0,
+					"version": 3,
+					"title": "Covid symptoms monitoring",
+					"creationDate": "2021-06-04",
+					"questionnaireId": "covid_01",
+					"questions": [
+						{
+							"id": 0,
+							"text": "Do you have any symptoms today?",
+							"answerType": "boolean",
+							"questionType": "root",
+							"feature": "havingSymptoms",
+							"nextQuestion": [
+								{
+									"yes": 1
+								},
+								{
+									"no": 2
+								}
+							]
+						},
+						{
+							"id": 1,
+							"text": "Do you have any of the following symptoms: acute chest pain and shortness of breath / pale, grey or blue colored skin / very difficult to wake up / too weak to stand, dizziness / new or worsening seizures?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "severeSymptoms",
+							"nextQuestion": [
+								{
+									"yes": 3
+								},
+								{
+									"no": 4
+								}
+							]
+						},
+						{
+							"id": 2,
+							"text": "Thank you. See you again tomorrow",
+							"answerType": null,
+							"questionType": "leaf",
+							"feature": null,
+							"nextQuestion": []
+						},
+						{
+							"id": 3,
+							"text": "Please contact your doctor immediately!",
+							"answerType": null,
+							"questionType": "leaf",
+							"feature": null,
+							"nextQuestion": []
+						},
+						{
+							"id": 4,
+							"text": "Do you have fever?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFever",
+							"nextQuestion": [
+								{
+									"yes": 5
+								},
+								{
+									"no": 6
+								}
+							]
+						},
+						{
+							"id": 5,
+							"text": "How much?",
+							"answerType": "openEnded",
+							"questionType": "node",
+							"feature": "valueFever",
+							"nextQuestion": [
+								{
+									"value": 6
+								}
+							]
+						},
+						{
+							"id": 6,
+							"text": "Do you have any flu-like symptoms?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFluSymptom",
+							"nextQuestion": [
+								{
+									"yes": 7
+								},
+								{
+									"no": 8
+								}
+							]
+						},
+						{
+							"id": 7,
+							"text": "Do you have a headache?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingHeadache",
+							"nextQuestion": [
+								{
+									"yes": 9
+								},
+								{
+									"no": 10
+								}
+							]
+						},
+						{
+							"id": 9,
+							"text": "From 1 to 5, can you evaluate how bad is your headache?",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueHeadache",
+							"nextQuestion": [
+								{
+									"1": 10
+								},
+								{
+									"2": 10
+								},
+								{
+									"3": 10
+								},
+								{
+									"4": 10
+								},
+								{
+									"5": 10
+								}
+							]
+						},
+						{
+							"id": 10,
+							"text": "Do you have sore throat?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingSoreThroat",
+							"nextQuestion": [
+								{
+									"yes": 11
+								},
+								{
+									"no": 12
+								}
+							]
+						},
+						{
+							"id": 11,
+							"text": "From 1 to 5, can you evaluate how bad is your sore throat",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueSoreThroat",
+							"nextQuestion": [
+								{
+									"1": 12
+								},
+								{
+									"2": 12
+								},
+								{
+									"3": 12
+								},
+								{
+									"4": 12
+								},
+								{
+									"5": 12
+								}
+							]
+						},
+						{
+							"id": 12,
+							"text": "Do you have cough?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingCough",
+							"nextQuestion": [
+								{
+									"yes": 13
+								},
+								{
+									"no": 8
+								}
+							]
+						},
+						{
+							"id": 13,
+							"text": "From 1 to 5, how intense is your cough?",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueCough",
+							"nextQuestion": [
+								{
+									"1": 8
+								},
+								{
+									"2": 8
+								},
+								{
+									"3": 8
+								},
+								{
+									"4": 8
+								},
+								{
+									"5": 8
+								}
+							]
+						},
+						{
+							"id": 8,
+							"text": "Do you have any gastrointestinal symptoms?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingGastrointestinal",
+							"nextQuestion": [
+								{
+									"yes": 15
+								},
+								{
+									"no": 14
+								}
+							]
+						},
+						{
+							"id": 15,
+							"text": "Do you have diarrhea?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingDiarrhea",
+							"nextQuestion": [
+								{
+									"yes": 16
+								},
+								{
+									"no": 17
+								}
+							]
+						},
+						{
+							"id": 16,
+							"text": "From 1 to 5, can you evaluate how bad is your diarrhea?",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueDiarrhea",
+							"nextQuestion": [
+								{
+									"1": 17
+								},
+								{
+									"2": 17
+								},
+								{
+									"3": 17
+								},
+								{
+									"4": 17
+								},
+								{
+									"5": 17
+								}
+							]
+						},
+						{
+							"id": 17,
+							"text": "Do you have loss of appetite?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "appetiteLoss",
+							"nextQuestion": [
+								{
+									"value": 18
+								}
+							]
+						},
+						{
+							"id": 18,
+							"text": "Do you have abdominal pain?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingAbdominalPain",
+							"nextQuestion": [
+								{
+									"yes": 19
+								},
+								{
+									"no": 14
+								}
+							]
+						},
+						{
+							"id": 19,
+							"text": "From 1 to 5, can you evaluate how bad is your pain",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueAbdominalPain",
+							"nextQuestion": [
+								{
+									"1": 14
+								},
+								{
+									"2": 14
+								},
+								{
+									"3": 14
+								},
+								{
+									"4": 14
+								},
+								{
+									"5": 14
+								}
+							]
+						},
+						{
+							"id": 14,
+							"text": "Do you feel fatigue?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFatigue",
+							"nextQuestion": [
+								{
+									"yes": 20
+								},
+								{
+									"no": 20
+								}
+							]
+						},
+						{
+							"id": 20,
+							"text": "Do you have a chest pain?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingChestPain",
+							"nextQuestion": [
+								{
+									"yes": 21
+								},
+								{
+									"no": 22
+								}
+							]
+						},
+						{
+							"id": 21,
+							"text": "From 1 to 5, can you evaluate how bad is your chext pain?",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueChestPain",
+							"nextQuestion": [
+								{
+									"1": 22
+								},
+								{
+									"2": 22
+								},
+								{
+									"3": 22
+								},
+								{
+									"4": 22
+								},
+								{
+									"5": 22
+								}
+							]
+						},
+						{
+							"id": 22,
+							"text": "Do you have a loss of smell?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "smellLoss",
+							"nextQuestion": [
+								{
+									"yes": 23
+								},
+								{
+									"no": 23
+								}
+							]
+						},
+						{
+							"id": 23,
+							"text": "Do you feel confused?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "confusion",
+							"nextQuestion": [
+								{
+									"yes": 24
+								},
+								{
+									"no": 24
+								}
+							]
+						},
+						{
+							"id": 24,
+							"text": "Do you breathe easily?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingBreathingProblem",
+							"nextQuestion": [
+								{
+									"yes": 2
+								},
+								{
+									"no": 25
+								}
+							]
+						},
+						{
+							"id": 25,
+							"text": "From 1 to 5, can you evaluate how much effort is need to breathe",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueBreathingProblem",
+							"nextQuestion": [
+								{
+									"1": 2
+								},
+								{
+									"2": 2
+								},
+								{
+									"3": 2
+								},
+								{
+									"4": 2
+								},
+								{
+									"5": 2
+								}
+							]
+						}
+					]
+				},
+				{
+					"difficulty": 1,
+					"version": 3,
+					"title": "Covid symptoms monitoring",
+					"creationDate": "2021-06-04",
+					"questionnaireId": "covid_01",
+					"questions": [
+						{
+							"id": 0,
+							"text": "Do you have any symptoms today?",
+							"answerType": "boolean",
+							"questionType": "root",
+							"feature": "havingSymptoms",
+							"nextQuestion": [
+								{
+									"yes": 1
+								},
+								{
+									"no": 2
+								}
+							]
+						},
+						{
+							"id": 1,
+							"text": "Do you have any of the following symptoms: acute chest pain and shortness o breath / pale, grey or blue colored skin / very difficult to wake up / too weak to stand, dizziness / new or worsening scissors?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "severeSymptoms",
+							"nextQuestion": [
+								{
+									"yes": 3
+								},
+								{
+									"no": 4
+								}
+							]
+						},
+						{
+							"id": 2,
+							"text": "Thank you. See you again tomorrow",
+							"answerType": null,
+							"questionType": "leaf",
+							"feature": null,
+							"nextQuestion": []
+						},
+						{
+							"id": 3,
+							"text": "Please contact your doctor immediately!",
+							"answerType": null,
+							"questionType": "leaf",
+							"feature": null,
+							"nextQuestion": []
+						},
+						{
+							"id": 4,
+							"text": "Do you have fever?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFever",
+							"nextQuestion": [
+								{
+									"yes": 5
+								},
+								{
+									"no": 6
+								}
+							]
+						},
+						{
+							"id": 5,
+							"text": "How much?",
+							"answerType": "openEnded",
+							"questionType": "node",
+							"feature": "valueFever",
+							"nextQuestion": [
+								{
+									"value": 6
+								}
+							]
+						},
+						{
+							"id": 6,
+							"text": "Do you have any flu-like symptoms?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFluSymptom",
+							"nextQuestion": [
+								{
+									"yes": 7
+								},
+								{
+									"no": 8
+								}
+							]
+						},
+						{
+							"id": 7,
+							"text": "Do you have a headache?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingHeadache",
+							"nextQuestion": [
+								{
+									"yes": 9
+								},
+								{
+									"no": 10
+								}
+							]
+						},
+						{
+							"id": 9,
+							"text": "From 1 to 5, can you evaluate how bad is your headache?",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueHeadache",
+							"nextQuestion": [
+								{
+									"1": 10
+								},
+								{
+									"2": 10
+								},
+								{
+									"3": 10
+								},
+								{
+									"4": 10
+								},
+								{
+									"5": 10
+								}
+							]
+						},
+						{
+							"id": 10,
+							"text": "Do you have sore throat?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingSoreThroat",
+							"nextQuestion": [
+								{
+									"yes": 11
+								},
+								{
+									"no": 12
+								}
+							]
+						},
+						{
+							"id": 11,
+							"text": "From 1 to 5, can you evaluate how bad is your sore throat",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueSoreThroat",
+							"nextQuestion": [
+								{
+									"1": 12
+								},
+								{
+									"2": 12
+								},
+								{
+									"3": 12
+								},
+								{
+									"4": 12
+								},
+								{
+									"5": 12
+								}
+							]
+						},
+						{
+							"id": 12,
+							"text": "Do you have cough?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingCough",
+							"nextQuestion": [
+								{
+									"yes": 13
+								},
+								{
+									"no": 8
+								}
+							]
+						},
+						{
+							"id": 13,
+							"text": "From 1 to 5, how intense is your cough?",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueCough",
+							"nextQuestion": [
+								{
+									"1": 8
+								},
+								{
+									"2": 8
+								},
+								{
+									"3": 8
+								},
+								{
+									"4": 8
+								},
+								{
+									"5": 8
+								}
+							]
+						},
+						{
+							"id": 8,
+							"text": "Do you have any gastrointestinal symptoms?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingGastrointestinal",
+							"nextQuestion": [
+								{
+									"yes": 15
+								},
+								{
+									"no": 14
+								}
+							]
+						},
+						{
+							"id": 15,
+							"text": "Do you have diarrhea?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingDiarrhea",
+							"nextQuestion": [
+								{
+									"yes": 16
+								},
+								{
+									"no": 17
+								}
+							]
+						},
+						{
+							"id": 16,
+							"text": "From 1 to 5, can you evaluate how bad is your diarrhea?",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueDiarrhea",
+							"nextQuestion": [
+								{
+									"1": 17
+								},
+								{
+									"2": 17
+								},
+								{
+									"3": 17
+								},
+								{
+									"4": 17
+								},
+								{
+									"5": 17
+								}
+							]
+						},
+						{
+							"id": 17,
+							"text": "Do you have loss of appetite?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "appetiteLoss",
+							"nextQuestion": [
+								{
+									"value": 18
+								}
+							]
+						},
+						{
+							"id": 18,
+							"text": "Do you have abdominal pain?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingAbdominalPain",
+							"nextQuestion": [
+								{
+									"yes": 19
+								},
+								{
+									"no": 14
+								}
+							]
+						},
+						{
+							"id": 19,
+							"text": "From 1 to 5, can you evaluate how bad is your pain",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueAbdominalPain",
+							"nextQuestion": [
+								{
+									"1": 14
+								},
+								{
+									"2": 14
+								},
+								{
+									"3": 14
+								},
+								{
+									"4": 14
+								},
+								{
+									"5": 14
+								}
+							]
+						},
+						{
+							"id": 14,
+							"text": "Do you feel fatigue?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFatigue",
+							"nextQuestion": [
+								{
+									"yes": 20
+								},
+								{
+									"no": 20
+								}
+							]
+						},
+						{
+							"id": 20,
+							"text": "Do you have a chest pain?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingChestPain",
+							"nextQuestion": [
+								{
+									"yes": 21
+								},
+								{
+									"no": 22
+								}
+							]
+						},
+						{
+							"id": 21,
+							"text": "From 1 to 5, can you evaluate how bad is your chext pain?",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueChestPain",
+							"nextQuestion": [
+								{
+									"1": 22
+								},
+								{
+									"2": 22
+								},
+								{
+									"3": 22
+								},
+								{
+									"4": 22
+								},
+								{
+									"5": 22
+								}
+							]
+						},
+						{
+							"id": 22,
+							"text": "Do you have a loss of smell?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "smellLoss",
+							"nextQuestion": [
+								{
+									"yes": 23
+								},
+								{
+									"no": 23
+								}
+							]
+						},
+						{
+							"id": 23,
+							"text": "Do you feel confused?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "confusion",
+							"nextQuestion": [
+								{
+									"yes": 24
+								},
+								{
+									"no": 24
+								}
+							]
+						},
+						{
+							"id": 24,
+							"text": "Do you breathe easily?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingBreathingProblem",
+							"nextQuestion": [
+								{
+									"yes": 2
+								},
+								{
+									"no": 25
+								}
+							]
+						},
+						{
+							"id": 25,
+							"text": "From 1 to 5, can you evaluate how much effort is need to breathe",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueBreathingProblem",
+							"nextQuestion": [
+								{
+									"1": 2
+								},
+								{
+									"2": 2
+								},
+								{
+									"3": 2
+								},
+								{
+									"4": 2
+								},
+								{
+									"5": 2
+								}
+							]
+						}
+					]
+				},
+				{
+					"difficulty": 2,
+					"version": 3,
+					"title": "Covid symptoms monitoring",
+					"creationDate": "2021-06-04",
+					"questionnaireId": "covid_01",
+					"questions": [
+						{
+							"id": 0,
+							"text": "Do you have any symptoms today?",
+							"answerType": "boolean",
+							"questionType": "root",
+							"feature": "havingSymptoms",
+							"nextQuestion": [
+								{
+									"yes": 1
+								},
+								{
+									"no": 2
+								}
+							]
+						},
+						{
+							"id": 1,
+							"text": "Do you have any of the following symptoms: acute chest pain and shortness o breath / pale, grey or blue colored skin / very difficult to wake up / too weak to stand, dizziness / new or worsening scissors?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "severeSymptoms",
+							"nextQuestion": [
+								{
+									"yes": 3
+								},
+								{
+									"no": 4
+								}
+							]
+						},
+						{
+							"id": 2,
+							"text": "Thank you. See you again tomorrow",
+							"answerType": null,
+							"questionType": "leaf",
+							"feature": null,
+							"nextQuestion": []
+						},
+						{
+							"id": 3,
+							"text": "Please contact your doctor immediately!",
+							"answerType": null,
+							"questionType": "leaf",
+							"feature": null,
+							"nextQuestion": []
+						},
+						{
+							"id": 4,
+							"text": "Do you have fever?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFever",
+							"nextQuestion": [
+								{
+									"yes": 5
+								},
+								{
+									"no": 6
+								}
+							]
+						},
+						{
+							"id": 5,
+							"text": "How much?",
+							"answerType": "openEnded",
+							"questionType": "node",
+							"feature": "valueFever",
+							"nextQuestion": [
+								{
+									"value": 6
+								}
+							]
+						},
+						{
+							"id": 6,
+							"text": "Do you have any flu-like symptoms?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFluSymptom",
+							"nextQuestion": [
+								{
+									"yes": 7
+								},
+								{
+									"no": 8
+								}
+							]
+						},
+						{
+							"id": 7,
+							"text": "Do you have a headache?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingHeadache",
+							"nextQuestion": [
+								{
+									"yes": 9
+								},
+								{
+									"no": 10
+								}
+							]
+						},
+						{
+							"id": 9,
+							"text": "From 1 to 5, can you evaluate how bad is your headache?",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueHeadache",
+							"nextQuestion": [
+								{
+									"1": 10
+								},
+								{
+									"2": 10
+								},
+								{
+									"3": 10
+								},
+								{
+									"4": 10
+								},
+								{
+									"5": 10
+								}
+							]
+						},
+						{
+							"id": 10,
+							"text": "Do you have sore throat?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingSoreThroat",
+							"nextQuestion": [
+								{
+									"yes": 11
+								},
+								{
+									"no": 12
+								}
+							]
+						},
+						{
+							"id": 11,
+							"text": "From 1 to 5, can you evaluate how bad is your sore throat",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueSoreThroat",
+							"nextQuestion": [
+								{
+									"1": 12
+								},
+								{
+									"2": 12
+								},
+								{
+									"3": 12
+								},
+								{
+									"4": 12
+								},
+								{
+									"5": 12
+								}
+							]
+						},
+						{
+							"id": 12,
+							"text": "Do you have cough?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingCough",
+							"nextQuestion": [
+								{
+									"yes": 13
+								},
+								{
+									"no": 8
+								}
+							]
+						},
+						{
+							"id": 13,
+							"text": "From 1 to 5, how intense is your cough?",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueCough",
+							"nextQuestion": [
+								{
+									"1": 8
+								},
+								{
+									"2": 8
+								},
+								{
+									"3": 8
+								},
+								{
+									"4": 8
+								},
+								{
+									"5": 8
+								}
+							]
+						},
+						{
+							"id": 8,
+							"text": "Do you have any gastrointestinal symptoms?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingGastrointestinal",
+							"nextQuestion": [
+								{
+									"yes": 15
+								},
+								{
+									"no": 14
+								}
+							]
+						},
+						{
+							"id": 15,
+							"text": "Do you have diarrhea?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingDiarrhea",
+							"nextQuestion": [
+								{
+									"yes": 16
+								},
+								{
+									"no": 17
+								}
+							]
+						},
+						{
+							"id": 16,
+							"text": "From 1 to 5, can you evaluate how bad is your diarrhea?",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueDiarrhea",
+							"nextQuestion": [
+								{
+									"1": 17
+								},
+								{
+									"2": 17
+								},
+								{
+									"3": 17
+								},
+								{
+									"4": 17
+								},
+								{
+									"5": 17
+								}
+							]
+						},
+						{
+							"id": 17,
+							"text": "Do you have loss of appetite?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "appetiteLoss",
+							"nextQuestion": [
+								{
+									"value": 18
+								}
+							]
+						},
+						{
+							"id": 18,
+							"text": "Do you have abdominal pain?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingAbdominalPain",
+							"nextQuestion": [
+								{
+									"yes": 19
+								},
+								{
+									"no": 14
+								}
+							]
+						},
+						{
+							"id": 19,
+							"text": "From 1 to 5, can you evaluate how bad is your pain",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueAbdominalPain",
+							"nextQuestion": [
+								{
+									"1": 14
+								},
+								{
+									"2": 14
+								},
+								{
+									"3": 14
+								},
+								{
+									"4": 14
+								},
+								{
+									"5": 14
+								}
+							]
+						},
+						{
+							"id": 14,
+							"text": "Do you feel fatigue?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingFatigue",
+							"nextQuestion": [
+								{
+									"yes": 20
+								},
+								{
+									"no": 20
+								}
+							]
+						},
+						{
+							"id": 20,
+							"text": "Do you have a chest pain?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingChestPain",
+							"nextQuestion": [
+								{
+									"yes": 21
+								},
+								{
+									"no": 22
+								}
+							]
+						},
+						{
+							"id": 21,
+							"text": "From 1 to 5, can you evaluate how bad is your chext pain?",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueChestPain",
+							"nextQuestion": [
+								{
+									"1": 22
+								},
+								{
+									"2": 22
+								},
+								{
+									"3": 22
+								},
+								{
+									"4": 22
+								},
+								{
+									"5": 22
+								}
+							]
+						},
+						{
+							"id": 22,
+							"text": "Do you have a loss of smell?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "smellLoss",
+							"nextQuestion": [
+								{
+									"yes": 23
+								},
+								{
+									"no": 23
+								}
+							]
+						},
+						{
+							"id": 23,
+							"text": "Do you feel confused?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "confusion",
+							"nextQuestion": [
+								{
+									"yes": 24
+								},
+								{
+									"no": 24
+								}
+							]
+						},
+						{
+							"id": 24,
+							"text": "Do you breathe easily?",
+							"answerType": "boolean",
+							"questionType": "node",
+							"feature": "havingBreathingProblem",
+							"nextQuestion": [
+								{
+									"yes": 2
+								},
+								{
+									"no": 25
+								}
+							]
+						},
+						{
+							"id": 25,
+							"text": "From 1 to 5, can you evaluate how much effort is need to breathe",
+							"answerType": "multipleChoice",
+							"questionType": "node",
+							"feature": "valueBreathingProblem",
+							"nextQuestion": [
+								{
+									"1": 2
+								},
+								{
+									"2": 2
+								},
+								{
+									"3": 2
+								},
+								{
+									"4": 2
+								},
+								{
+									"5": 2
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,2350 @@
+{
+	"goalId": "covid_03",
+	"creationDate": "2021-07-16",
+	"version": "1.1.0",
+	"el": {
+		"goalId": "covid_03",
+		"creationDate": "2021-07-16",
+		"name": "Καθημερινές συμβουλές για την περίοδο της καραντίνας ασθενών COVID-19",
+		"description": "Αυτός ο στόχος θα σε βοηθήσει να μάθεις κάποιες πρακτικές οδηγίες κατά τη διάρκεια της καραντίνας",
+		"requirements": [
+			"Συμβουλευτείτε τον γιατρό σας αν έχετε οποιαδήποτε αμφιβολία"
+		],
+		"personalization": [
+			{
+				"id": "difficulty",
+				"question": "Διάλεξε το επίπεδο δυσκολίας για τον στόχο, ανάλογα με τη συχνότητα προτάσεων που επιθυμείς",
+				"answers": [
+					"Χαμηλό, τουλάχιστον 3 φορές την εβδομάδα ",
+					"Μέτριο, τουλάχιστον 5 φορές την εβδομάδα",
+					"Υψηλό, κάθε μέρα"
+				]
+			}
+		],
+		"interventionPlan": [
+			{
+				"difficulty": 0,
+				"introduction": "Ωραία {{name}}, έχεις θέσει έναν νέο στόχο. Για τις επόμενες 2 εβδομάδες, θα σου δίνω πρακτικές συμβουλές τουλάχιστον 3 φορές την εβδομάδα",
+				"conclusion": "Συγχαρητήρια {{name}}, έχεις ολοκληρώσει τον 2 εβδομάδων στόχο σου. Ελπίζω να έχεις αναρώσει και να νιώθεις πολύ καλύτερα! Αν όχι, μη διστάσεις να θέσεις ξανά αυτό το στόχο. ",
+				"weekPlan": [
+					{
+						"physicalRecommender": {
+							"dailyRange": [
+								0,
+								1
+							],
+							"weeklyRange": [
+								0,
+								3
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					},
+					{
+						"physicalRecommender": {
+							"dailyRange": [
+								0,
+								1
+							],
+							"weeklyRange": [
+								0,
+								3
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					}
+				]
+			},
+			{
+				"difficulty": 1,
+				"introduction": "Ωραία {{name}}, έχεις θέσει έναν νέο στόχο. Για τις επόμενες 2 εβδομάδες, θα σου δίνω πρακτικές συμβουλές τουλάχιστον 5 φορές την εβδομάδα",
+				"conclusion": "Συγχαρητήρια {{name}}, έχεις ολοκληρώσει τον 2 εβδομάδων στόχο σου. Ελπίζω να έχεις αναρώσει και να νιώθεις πολύ καλύτερα! Αν όχι, μη διστάσεις να θέσεις ξανά αυτό το στόχο. ",
+				"weekPlan": [
+					{
+						"physicalRecommender": {
+							"dailyRange": [
+								0,
+								1
+							],
+							"weeklyRange": [
+								0,
+								5
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					},
+					{
+						"physicalRecommender": {
+							"dailyRange": [
+								0,
+								1
+							],
+							"weeklyRange": [
+								0,
+								5
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					}
+				]
+			},
+			{
+				"difficulty": 2,
+				"introduction": "Ωραία {{name}}, έχεις θέσει έναν νέο στόχο. Για τις επόμενες 2 εβδομάδες, θα σου δίνω πρακτικές συμβουλές κάθε μέρα",
+				"conclusion": "Συγχαρητήρια {{name}}, έχεις ολοκληρώσει τον 2 εβδομάδων στόχο σου. Ελπίζω να έχεις αναρώσει και να νιώθεις πολύ καλύτερα! Αν όχι, μη διστάσεις να θέσεις ξανά αυτό το στόχο. ",
+				"weekPlan": [
+					{
+						"physicalRecommender": {
+							"dailyRange": [
+								1,
+								2
+							],
+							"weeklyRange": [
+								7,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					},
+					{
+						"physicalRecommender": {
+							"dailyRange": [
+								1,
+								2
+							],
+							"weeklyRange": [
+								7,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					}
+				]
+			}
+		],
+		"categoryLabels": [
+			"disease"
+		],
+		"toolInfo": {
+			"physicalRecommender": {
+				"name": "Συμβουλές"
+			}
+		},
+		"toolData": {
+			"physicalRecommender": [
+				{
+					"difficulty": 0,
+					"contents": [
+						{
+							"id": 1,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Εξαλείψτε την εξάπλωση του ιού",
+									"explanation": "Καθάρισε και απολύμανε τις επιφάνειες που αγγίζεις συχνά",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Οι δυνητικά μολυσμένες επιφάνειες μπορεί να περιλαμβάνουν τραπέζια, πόμολα, διακόπτες, πάγκους, λαβές, γραφεία, τηλέφωνα, πληκτρολόγια, τουαλέτες, βρύσες και νεροχύτες. Καθαρίστε και απολυμάνετε τις επιφάνειες φορώντας γάντια. Χρησιμοποιήστε σπρέι ή μαντηλάκια οικιακού καθαρισμού σύμφωνα με τις οδηγίες της ετικέτας.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/disinfect_surfaces.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 2,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Προσωπική Υγιεινή",
+									"explanation": "Βεβαιωθείτε ότι πλένετε συχνά τα χέρια σας ή χρησιμοποιείτε αντισυπτικό χεριών",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Για να αποτρέψετε την εξάπλωση μικροβίων, καθαρίζετε συχνά τα χέρια σας με σαπούνι και νερό για τουλάχιστον 20 δευτερόλεπτα ή με απολυμαντικό χεριών με βάση το οινόπνευμα που περιέχει τουλάχιστον 60% αλκοόλ.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/wash_sanitise_hands.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 3,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Απομονωθείται σε ένα δωμάτιο του σπιτιού",
+									"explanation": "Μείνετε σε ένα συγκεκριμένο δωμάτιο όσο το δυνατόν περισσότερο για να αποφύγετε τη διάδοση του ιού σε άλλους κατοίκους του σπιτιού.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Προσπαθήστε να μείνετε μακριά από άλλους ανθρώπους και κατοικίδια που κατοικούν στο σπίτι σας. Εάν είναι διαθέσιμο, χρησιμοποιήστε επίσης ένα ξεχωριστό μπάνιο που είναι κοντά στο δωμάτιό σας.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/self_isolate.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 4,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Παραμείνετε δραστήριοι",
+									"explanation": "Μην αμελείτε την φυσική δραστηριότηρα στο βαθμό που μπορείτε. Είναι σημαντικό να παραμείνετε δραστήριοι.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Νιώστε καλύτερα και πιο υγιείς κάνοντας μερικές εύκολες ασκήσεις κάθε πρωί. Οι ασκήσεις στο σπίτι και άλλες μέθοδοι αύξησης της συνήθους σωματικής δραστηριότητας, μπορεί να βοηθήσουν στη μείωση των αρνητικών ψυχολογικών προβλημάτων που παρατηρούνται σήμερα. Μια πρόταση είναι να κάνετε τις παρακάτω ασκήσεις κάθες μέρα για περίπου 15 λεπτά. ",
+									"multimedia": "https://www.youtube.com/watch?v=xfRFyJ_AnG8&ab_channel=CarolineJordan",
+									"multimediaType": "stream/youtube"
+								}
+							]
+						},
+						{
+							"id": 5,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Ξεκουραστείτε και μείνετε ενυδατωμένοι",
+									"explanation": "Μείνετε ενυδατωμένοι σταδιακά, όλη την ημέρα. Πίνετε υγρά ή τρώτε τροφές πλούσιες σε νερό. Ξεκουραστείτε και κοιμηθείτε αρκετά.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Κρατήστε ένα μπουκάλι νερό στο γραφείο, τον καναπέ ή το τραπέζι σας, όπου κι αν κάθεστε, έχοντας το εύκολα προσβάσιμο. Περιορίστε ή αποφύγετε τα αλκοολούχα ποτά. Προσπαθήστε να έχετε τουλάχιστον επτά έως οκτώ ώρες ποιοτικού ύπνου κάθε βράδυ.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/rest_stay_hydrated.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 6,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Αξιοποιήστε τον χρόνο σας στο σπίτι",
+									"explanation": "Συνεχίστε το διάβασμα που είχατε αφήσει στη μέση, ακούστε μουσική ή βρείτε νέα χόμπι",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Διαβάστε αυτό το βιβλίο που αναβάλλατε. Κρατήστε ένα ημερολόγιο για να παρακολουθείτε τις καθημερινές σας δραστηριότητες. Συμπληρώστε ένα καθημερινό παζλ για να εξασκήσετε το μυαλό σας. Διαλογιστείτε για 30 λεπτά την ημέρα. Μόνο μερικά από τα πράγματα που θα μπορούσατε να κάνετε. ",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/invest_time.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 7,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Ολοκληρώστε παλιά και/ή ξεκινήστε νέα έργα",
+									"explanation": "Ολοκληρώστε προσωπικά ή εργασιακά έργα, ειδικά αν εργάζεστε από απόσταση ή βρείτε νέες δημιουργικές ιδέες για να ξεκινήσετε",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Κρατήστε το μυαλό σας απασχολημένο ολοκληρώνοντας εργασίες που σχετίζονται με την εργασία ή προσωπικές εργασίες. Το μυαλό σας χρειάζεται την άσκηση και μπορείτε να επωφεληθείτε από τα αποτελέσματα. Εάν ξεκινήσετε κάτι νέο, μπορείτε να εγγραφείτε σε ένα δωρεάν μάθημα ή να μάθετε μια νέα δεξιότητα.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/learn_skills.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 8,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Βρείτε νέους τρόπους κοινωνηκοποίησης",
+									"explanation": "Σε περιόδους κοινωνικής απόστασης είναι σύνηθες να νιώθουμε απομόνωση. Προσπαθήστε να συνδεθείτε με άλλους με νέους, δημιουργικούς τρόπους.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Σκεφτείτε διαφορετικούς τρόπους με τους οποίους μπορεί να νιώσετε πιο συνδεδεμένοι. Αυτό μπορεί να γίνει μέσω τηλεφώνου, μέσω κοινωνικών μέσων ή άλλων εφαρμογών εικονικών συνδέσεων για να συνδεθείτε με φίλους και οικογένεια. Η ουσιαστική αλληλεπίδραση και η διασκέδαση είναι σημαντικές για τη συναισθηματική ευημερία.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/connect_socially.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 9,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Αναπτύξτε και διατηρήστε μια ρουτίνα",
+									"explanation": "Η ρουτίνα μπορεί να βοηθήσει στη μείωση του άγχους δημιουργώντας ένα πρόγραμμα που είναι εύκολο να διατηρηθεί",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/routine.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 10,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Αγοράστε τα απαραίτητα από το διαδίκτυο",
+									"explanation": "Χρησιμοποιήστε υπηρεσίες ανέπαφης παράδοσης στο σπίτθ",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Πολλά φαρμακεία και παντοπωλεία προσφέρουν παράδοση χωρίς επαφή. Ένας φίλος ή συγγενής μπορεί επίσης να είναι σε θέση να σας φέρει τις προμήθειες που χρειάζεστε έξω από την πόρτα σας.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/shopping.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 11,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Ανανεώστε τον αέρα στο χώρο σας",
+									"explanation": "Ανοίξτε τα παράθυρα και τις πόρτες, χρησιμοποιήστε ανεμιστήρες ή ρυθμίστε το air condition σας να βγάζει καθαρό αέρα από έξω.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Ανοίξτε τα παράθυρα τουλάχιστον για 30 λεπτά κάθε πρωί. Ο καθαρός αέρας και ο ήλιος θα βελτιώσουν την αναπνοή και τη διάθεσή σας. Είναι σημαντικό να ξεκινάτε ευχάριστα τη μέρα σας.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/fresh_air.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 12,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Σκέψου και μίλα θετικά",
+									"explanation": "Είναι μια δύσκολη περίοδος για εσάς και για πολλούς άλλους ανθρώπους. Μιλήστε και μοιραστείτε θετικές σκέψεις. ",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Να είστε υπομονετικοί και ευγενικοί με τους άλλους. Μοιραστείτε αναρτήσεις, λεζάντες και σχόλια που είναι θετικά. Το θετικό έλκει το θετικό. Ας το διαδώσουμε. Οι θετικές σκέψεις και τα συναισθήματα είναι γνωστό ότι ενισχύουν το ανοσοποιητικό σας σύστημα, δίνοντάς σας επίσης αυξημένη δύναμη να ξεπεράσετε τον ιό.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/positivity.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 13,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Κάντε μικρά ενεργά διαλείμματα κατά τη διάρκεια της ημέρας",
+									"explanation": "Σύντομες σωματικές δραστηριότητας συμπληρώνουν τις εβδομαδιαίες συστάσεις. Ο χορός, η εκτέλεση οικιακών εργασιών όπως η καθαριότητα και η κηπουρική ακόμα και το σύντομο επιτόπιο περπάτημα είναι άλλα μέσα για να παραμείνετε δραστήριοι στο σπίτι.",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						},
+						{
+							"id": 14,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Περπατήστε",
+									"explanation": "Ακόμη και σε μικρούς χώρους, το περπάτημα ή το περπάτημα επί τόπου, μπορεί να σας βοηθήσει να παραμείνετε δραστήριοι. Εάν έχετε μια κλήση, σηκωθείτε ή περπατήστε γύρω από το σπίτι σας ενώ μιλάτε, αντί να καθίσετε.",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						},
+						{
+							"id": 15,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Σηκωθείτε όρθιοι",
+									"explanation": "Μειώστε τον χρόνο της καθιστικής ζωής σας σηκώνοντας σε όρθια θέση όποτε είναι δυνατόν. Ιδανικά, στοχεύστε να διακόπτετε τον χρόνο καθίσματος και ανάκλισης κάθε 30 λεπτά.",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"difficulty": 1,
+					"contents": [
+						{
+							"id": 1,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Εξαλείψτε την εξάπλωση του ιού",
+									"explanation": "Καθάρισε και απολύμανε τις επιφάνειες που αγγίζεις συχνά",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Οι δυνητικά μολυσμένες επιφάνειες μπορεί να περιλαμβάνουν τραπέζια, πόμολα, διακόπτες, πάγκους, λαβές, γραφεία, τηλέφωνα, πληκτρολόγια, τουαλέτες, βρύσες και νεροχύτες. Καθαρίστε και απολυμάνετε τις επιφάνειες φορώντας γάντια. Χρησιμοποιήστε σπρέι ή μαντηλάκια οικιακού καθαρισμού σύμφωνα με τις οδηγίες της ετικέτας.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/disinfect_surfaces.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 2,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Προσωπική Υγιεινή",
+									"explanation": "Βεβαιωθείτε ότι πλένετε συχνά τα χέρια σας ή χρησιμοποιείτε αντισυπτικό χεριών",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Για να αποτρέψετε την εξάπλωση μικροβίων, καθαρίζετε συχνά τα χέρια σας με σαπούνι και νερό για τουλάχιστον 20 δευτερόλεπτα ή με απολυμαντικό χεριών με βάση το οινόπνευμα που περιέχει τουλάχιστον 60% αλκοόλ.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/wash_sanitise_hands.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 3,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Απομονωθείται σε ένα δωμάτιο του σπιτιού",
+									"explanation": "Μείνετε σε ένα συγκεκριμένο δωμάτιο όσο το δυνατόν περισσότερο για να αποφύγετε τη διάδοση του ιού σε άλλους κατοίκους του σπιτιού.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Προσπαθήστε να μείνετε μακριά από άλλους ανθρώπους και κατοικίδια που κατοικούν στο σπίτι σας. Εάν είναι διαθέσιμο, χρησιμοποιήστε επίσης ένα ξεχωριστό μπάνιο που είναι κοντά στο δωμάτιό σας.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/self_isolate.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 4,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Παραμείνετε δραστήριοι",
+									"explanation": "Μην αμελείτε την φυσική δραστηριότηρα στο βαθμό που μπορείτε. Είναι σημαντικό να παραμείνετε δραστήριοι.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Νιώστε καλύτερα και πιο υγιείς κάνοντας μερικές εύκολες ασκήσεις κάθε πρωί. Οι ασκήσεις στο σπίτι και άλλες μέθοδοι αύξησης της συνήθους σωματικής δραστηριότητας, μπορεί να βοηθήσουν στη μείωση των αρνητικών ψυχολογικών προβλημάτων που παρατηρούνται σήμερα. Μια πρόταση είναι να κάνετε τις παρακάτω ασκήσεις κάθες μέρα για περίπου 15 λεπτά. ",
+									"multimedia": "https://www.youtube.com/watch?v=xfRFyJ_AnG8&ab_channel=CarolineJordan",
+									"multimediaType": "stream/youtube"
+								}
+							]
+						},
+						{
+							"id": 5,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Ξεκουραστείτε και μείνετε ενυδατωμένοι",
+									"explanation": "Μείνετε ενυδατωμένοι σταδιακά, όλη την ημέρα. Πίνετε υγρά ή τρώτε τροφές πλούσιες σε νερό. Ξεκουραστείτε και κοιμηθείτε αρκετά.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Κρατήστε ένα μπουκάλι νερό στο γραφείο, τον καναπέ ή το τραπέζι σας, όπου κι αν κάθεστε, έχοντας το εύκολα προσβάσιμο. Περιορίστε ή αποφύγετε τα αλκοολούχα ποτά. Προσπαθήστε να έχετε τουλάχιστον επτά έως οκτώ ώρες ποιοτικού ύπνου κάθε βράδυ.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/rest_stay_hydrated.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 6,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Αξιοποιήστε τον χρόνο σας στο σπίτι",
+									"explanation": "Συνεχίστε το διάβασμα που είχατε αφήσει στη μέση, ακούστε μουσική ή βρείτε νέα χόμπι",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Διαβάστε αυτό το βιβλίο που αναβάλλατε. Κρατήστε ένα ημερολόγιο για να παρακολουθείτε τις καθημερινές σας δραστηριότητες. Συμπληρώστε ένα καθημερινό παζλ για να εξασκήσετε το μυαλό σας. Διαλογιστείτε για 30 λεπτά την ημέρα. Μόνο μερικά από τα πράγματα που θα μπορούσατε να κάνετε. ",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/invest_time.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 7,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Ολοκληρώστε παλιά και/ή ξεκινήστε νέα έργα",
+									"explanation": "Ολοκληρώστε προσωπικά ή εργασιακά έργα, ειδικά αν εργάζεστε από απόσταση ή βρείτε νέες δημιουργικές ιδέες για να ξεκινήσετε",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Κρατήστε το μυαλό σας απασχολημένο ολοκληρώνοντας εργασίες που σχετίζονται με την εργασία ή προσωπικές εργασίες. Το μυαλό σας χρειάζεται την άσκηση και μπορείτε να επωφεληθείτε από τα αποτελέσματα. Εάν ξεκινήσετε κάτι νέο, μπορείτε να εγγραφείτε σε ένα δωρεάν μάθημα ή να μάθετε μια νέα δεξιότητα.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/learn_skills.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 8,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Βρείτε νέους τρόπους κοινωνηκοποίησης",
+									"explanation": "Σε περιόδους κοινωνικής απόστασης είναι σύνηθες να νιώθουμε απομόνωση. Προσπαθήστε να συνδεθείτε με άλλους με νέους, δημιουργικούς τρόπους.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Σκεφτείτε διαφορετικούς τρόπους με τους οποίους μπορεί να νιώσετε πιο συνδεδεμένοι. Αυτό μπορεί να γίνει μέσω τηλεφώνου, μέσω κοινωνικών μέσων ή άλλων εφαρμογών εικονικών συνδέσεων για να συνδεθείτε με φίλους και οικογένεια. Η ουσιαστική αλληλεπίδραση και η διασκέδαση είναι σημαντικές για τη συναισθηματική ευημερία.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/connect_socially.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 9,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Αναπτύξτε και διατηρήστε μια ρουτίνα",
+									"explanation": "Η ρουτίνα μπορεί να βοηθήσει στη μείωση του άγχους δημιουργώντας ένα πρόγραμμα που είναι εύκολο να διατηρηθεί",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/routine.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 10,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Αγοράστε τα απαραίτητα από το διαδίκτυο",
+									"explanation": "Χρησιμοποιήστε υπηρεσίες ανέπαφης παράδοσης στο σπίτθ",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Πολλά φαρμακεία και παντοπωλεία προσφέρουν παράδοση χωρίς επαφή. Ένας φίλος ή συγγενής μπορεί επίσης να είναι σε θέση να σας φέρει τις προμήθειες που χρειάζεστε έξω από την πόρτα σας.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/shopping.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 11,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Ανανεώστε τον αέρα στο χώρο σας",
+									"explanation": "Ανοίξτε τα παράθυρα και τις πόρτες, χρησιμοποιήστε ανεμιστήρες ή ρυθμίστε το air condition σας να βγάζει καθαρό αέρα από έξω.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Ανοίξτε τα παράθυρα τουλάχιστον για 30 λεπτά κάθε πρωί. Ο καθαρός αέρας και ο ήλιος θα βελτιώσουν την αναπνοή και τη διάθεσή σας. Είναι σημαντικό να ξεκινάτε ευχάριστα τη μέρα σας.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/fresh_air.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 12,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Σκέψου και μίλα θετικά",
+									"explanation": "Είναι μια δύσκολη περίοδος για εσάς και για πολλούς άλλους ανθρώπους. Μιλήστε και μοιραστείτε θετικές σκέψεις. ",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Να είστε υπομονετικοί και ευγενικοί με τους άλλους. Μοιραστείτε αναρτήσεις, λεζάντες και σχόλια που είναι θετικά. Το θετικό έλκει το θετικό. Ας το διαδώσουμε. Οι θετικές σκέψεις και τα συναισθήματα είναι γνωστό ότι ενισχύουν το ανοσοποιητικό σας σύστημα, δίνοντάς σας επίσης αυξημένη δύναμη να ξεπεράσετε τον ιό.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/positivity.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 13,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Κάντε μικρά ενεργά διαλείμματα κατά τη διάρκεια της ημέρας",
+									"explanation": "Σύντομες σωματικές δραστηριότητας συμπληρώνουν τις εβδομαδιαίες συστάσεις. Ο χορός, η εκτέλεση οικιακών εργασιών όπως η καθαριότητα και η κηπουρική ακόμα και το σύντομο επιτόπιο περπάτημα είναι άλλα μέσα για να παραμείνετε δραστήριοι στο σπίτι.",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						},
+						{
+							"id": 14,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Περπατήστε",
+									"explanation": "Ακόμη και σε μικρούς χώρους, το περπάτημα ή το περπάτημα επί τόπου, μπορεί να σας βοηθήσει να παραμείνετε δραστήριοι. Εάν έχετε μια κλήση, σηκωθείτε ή περπατήστε γύρω από το σπίτι σας ενώ μιλάτε, αντί να καθίσετε.",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						},
+						{
+							"id": 15,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Σηκωθείτε όρθιοι",
+									"explanation": "Μειώστε τον χρόνο της καθιστικής ζωής σας σηκώνοντας σε όρθια θέση όποτε είναι δυνατόν. Ιδανικά, στοχεύστε να διακόπτετε τον χρόνο καθίσματος και ανάκλισης κάθε 30 λεπτά.",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"difficulty": 2,
+					"contents": [
+						{
+							"id": 1,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Εξαλείψτε την εξάπλωση του ιού",
+									"explanation": "Καθάρισε και απολύμανε τις επιφάνειες που αγγίζεις συχνά",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Οι δυνητικά μολυσμένες επιφάνειες μπορεί να περιλαμβάνουν τραπέζια, πόμολα, διακόπτες, πάγκους, λαβές, γραφεία, τηλέφωνα, πληκτρολόγια, τουαλέτες, βρύσες και νεροχύτες. Καθαρίστε και απολυμάνετε τις επιφάνειες φορώντας γάντια. Χρησιμοποιήστε σπρέι ή μαντηλάκια οικιακού καθαρισμού σύμφωνα με τις οδηγίες της ετικέτας.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/disinfect_surfaces.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 2,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Προσωπική Υγιεινή",
+									"explanation": "Βεβαιωθείτε ότι πλένετε συχνά τα χέρια σας ή χρησιμοποιείτε αντισυπτικό χεριών",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Για να αποτρέψετε την εξάπλωση μικροβίων, καθαρίζετε συχνά τα χέρια σας με σαπούνι και νερό για τουλάχιστον 20 δευτερόλεπτα ή με απολυμαντικό χεριών με βάση το οινόπνευμα που περιέχει τουλάχιστον 60% αλκοόλ.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/wash_sanitise_hands.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 3,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Απομονωθείται σε ένα δωμάτιο του σπιτιού",
+									"explanation": "Μείνετε σε ένα συγκεκριμένο δωμάτιο όσο το δυνατόν περισσότερο για να αποφύγετε τη διάδοση του ιού σε άλλους κατοίκους του σπιτιού.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Προσπαθήστε να μείνετε μακριά από άλλους ανθρώπους και κατοικίδια που κατοικούν στο σπίτι σας. Εάν είναι διαθέσιμο, χρησιμοποιήστε επίσης ένα ξεχωριστό μπάνιο που είναι κοντά στο δωμάτιό σας.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/self_isolate.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 4,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Παραμείνετε δραστήριοι",
+									"explanation": "Μην αμελείτε την φυσική δραστηριότηρα στο βαθμό που μπορείτε. Είναι σημαντικό να παραμείνετε δραστήριοι.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Νιώστε καλύτερα και πιο υγιείς κάνοντας μερικές εύκολες ασκήσεις κάθε πρωί. Οι ασκήσεις στο σπίτι και άλλες μέθοδοι αύξησης της συνήθους σωματικής δραστηριότητας, μπορεί να βοηθήσουν στη μείωση των αρνητικών ψυχολογικών προβλημάτων που παρατηρούνται σήμερα. Μια πρόταση είναι να κάνετε τις παρακάτω ασκήσεις κάθες μέρα για περίπου 15 λεπτά. ",
+									"multimedia": "https://www.youtube.com/watch?v=xfRFyJ_AnG8&ab_channel=CarolineJordan",
+									"multimediaType": "stream/youtube"
+								}
+							]
+						},
+						{
+							"id": 5,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Ξεκουραστείτε και μείνετε ενυδατωμένοι",
+									"explanation": "Μείνετε ενυδατωμένοι σταδιακά, όλη την ημέρα. Πίνετε υγρά ή τρώτε τροφές πλούσιες σε νερό. Ξεκουραστείτε και κοιμηθείτε αρκετά.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Κρατήστε ένα μπουκάλι νερό στο γραφείο, τον καναπέ ή το τραπέζι σας, όπου κι αν κάθεστε, έχοντας το εύκολα προσβάσιμο. Περιορίστε ή αποφύγετε τα αλκοολούχα ποτά. Προσπαθήστε να έχετε τουλάχιστον επτά έως οκτώ ώρες ποιοτικού ύπνου κάθε βράδυ.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/rest_stay_hydrated.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 6,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Αξιοποιήστε τον χρόνο σας στο σπίτι",
+									"explanation": "Συνεχίστε το διάβασμα που είχατε αφήσει στη μέση, ακούστε μουσική ή βρείτε νέα χόμπι",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Διαβάστε αυτό το βιβλίο που αναβάλλατε. Κρατήστε ένα ημερολόγιο για να παρακολουθείτε τις καθημερινές σας δραστηριότητες. Συμπληρώστε ένα καθημερινό παζλ για να εξασκήσετε το μυαλό σας. Διαλογιστείτε για 30 λεπτά την ημέρα. Μόνο μερικά από τα πράγματα που θα μπορούσατε να κάνετε. ",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/invest_time.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 7,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Ολοκληρώστε παλιά και/ή ξεκινήστε νέα έργα",
+									"explanation": "Ολοκληρώστε προσωπικά ή εργασιακά έργα, ειδικά αν εργάζεστε από απόσταση ή βρείτε νέες δημιουργικές ιδέες για να ξεκινήσετε",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Κρατήστε το μυαλό σας απασχολημένο ολοκληρώνοντας εργασίες που σχετίζονται με την εργασία ή προσωπικές εργασίες. Το μυαλό σας χρειάζεται την άσκηση και μπορείτε να επωφεληθείτε από τα αποτελέσματα. Εάν ξεκινήσετε κάτι νέο, μπορείτε να εγγραφείτε σε ένα δωρεάν μάθημα ή να μάθετε μια νέα δεξιότητα.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/learn_skills.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 8,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Βρείτε νέους τρόπους κοινωνηκοποίησης",
+									"explanation": "Σε περιόδους κοινωνικής απόστασης είναι σύνηθες να νιώθουμε απομόνωση. Προσπαθήστε να συνδεθείτε με άλλους με νέους, δημιουργικούς τρόπους.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Σκεφτείτε διαφορετικούς τρόπους με τους οποίους μπορεί να νιώσετε πιο συνδεδεμένοι. Αυτό μπορεί να γίνει μέσω τηλεφώνου, μέσω κοινωνικών μέσων ή άλλων εφαρμογών εικονικών συνδέσεων για να συνδεθείτε με φίλους και οικογένεια. Η ουσιαστική αλληλεπίδραση και η διασκέδαση είναι σημαντικές για τη συναισθηματική ευημερία.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/connect_socially.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 9,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Αναπτύξτε και διατηρήστε μια ρουτίνα",
+									"explanation": "Η ρουτίνα μπορεί να βοηθήσει στη μείωση του άγχους δημιουργώντας ένα πρόγραμμα που είναι εύκολο να διατηρηθεί",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/routine.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 10,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Αγοράστε τα απαραίτητα από το διαδίκτυο",
+									"explanation": "Χρησιμοποιήστε υπηρεσίες ανέπαφης παράδοσης στο σπίτθ",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Πολλά φαρμακεία και παντοπωλεία προσφέρουν παράδοση χωρίς επαφή. Ένας φίλος ή συγγενής μπορεί επίσης να είναι σε θέση να σας φέρει τις προμήθειες που χρειάζεστε έξω από την πόρτα σας.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/shopping.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 11,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Ανανεώστε τον αέρα στο χώρο σας",
+									"explanation": "Ανοίξτε τα παράθυρα και τις πόρτες, χρησιμοποιήστε ανεμιστήρες ή ρυθμίστε το air condition σας να βγάζει καθαρό αέρα από έξω.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Ανοίξτε τα παράθυρα τουλάχιστον για 30 λεπτά κάθε πρωί. Ο καθαρός αέρας και ο ήλιος θα βελτιώσουν την αναπνοή και τη διάθεσή σας. Είναι σημαντικό να ξεκινάτε ευχάριστα τη μέρα σας.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/fresh_air.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 12,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Σκέψου και μίλα θετικά",
+									"explanation": "Είναι μια δύσκολη περίοδος για εσάς και για πολλούς άλλους ανθρώπους. Μιλήστε και μοιραστείτε θετικές σκέψεις. ",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Να είστε υπομονετικοί και ευγενικοί με τους άλλους. Μοιραστείτε αναρτήσεις, λεζάντες και σχόλια που είναι θετικά. Το θετικό έλκει το θετικό. Ας το διαδώσουμε. Οι θετικές σκέψεις και τα συναισθήματα είναι γνωστό ότι ενισχύουν το ανοσοποιητικό σας σύστημα, δίνοντάς σας επίσης αυξημένη δύναμη να ξεπεράσετε τον ιό.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/positivity.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 13,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Κάντε μικρά ενεργά διαλείμματα κατά τη διάρκεια της ημέρας",
+									"explanation": "Σύντομες σωματικές δραστηριότητας συμπληρώνουν τις εβδομαδιαίες συστάσεις. Ο χορός, η εκτέλεση οικιακών εργασιών όπως η καθαριότητα και η κηπουρική ακόμα και το σύντομο επιτόπιο περπάτημα είναι άλλα μέσα για να παραμείνετε δραστήριοι στο σπίτι.",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						},
+						{
+							"id": 14,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Περπατήστε",
+									"explanation": "Ακόμη και σε μικρούς χώρους, το περπάτημα ή το περπάτημα επί τόπου, μπορεί να σας βοηθήσει να παραμείνετε δραστήριοι. Εάν έχετε μια κλήση, σηκωθείτε ή περπατήστε γύρω από το σπίτι σας ενώ μιλάτε, αντί να καθίσετε.",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						},
+						{
+							"id": 15,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Σηκωθείτε όρθιοι",
+									"explanation": "Μειώστε τον χρόνο της καθιστικής ζωής σας σηκώνοντας σε όρθια θέση όποτε είναι δυνατόν. Ιδανικά, στοχεύστε να διακόπτετε τον χρόνο καθίσματος και ανάκλισης κάθε 30 λεπτά.",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	},
+	"en": {
+		"goalId": "covid_01",
+		"creationDate": "2020-03-26",
+		"name": "Suggestions for COVID-19 self-quarantine period",
+		"description": "This goal will support you by providing practical tips during your self-quarantine for COVID-19.",
+		"requirements": [
+			"Do not hesitate to contact your doctor if you have any doubt"
+		],
+		"personalization": [
+			{
+				"id": "difficulty",
+				"question": "Choose the level of fraquency for the suggestions",
+				"answers": [
+					"Low, suggestions presented at least 3 timer per week ",
+					"Medium, suggestions presented at least 5 timer per week",
+					"Intense, suggestions presented daily"
+				]
+			}
+		],
+		"interventionPlan": [
+			{
+				"difficulty": 0,
+				"introduction": "Nice {{name}}, you have set-up an new goal. For the following 2 weeks I will give you some practical suggestions for at least 3 times per week",
+				"conclusion": "Congrats {{name}}, you have completed your goal. I hope that you have recovered and feeling much better now! If not, do not hesitate to follow again the same goal",
+				"weekPlan": [
+					{
+						"physicalRecommender": {
+							"dailyRange": [
+								0,
+								1
+							],
+							"weeklyRange": [
+								3,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					},
+					{
+						"physicalRecommender": {
+							"dailyRange": [
+								0,
+								1
+							],
+							"weeklyRange": [
+								3,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					}
+				]
+			},
+			{
+				"difficulty": 1,
+				"introduction": "Nice {{name}}, you have set-up an new goal. For the following 2 weeks I will give you some practical suggestions for at least 5 times per week",
+				"conclusion": "Congrats {{name}}, you have completed your goal. I hope that you have recovered and feeling much better now! If not, do not hesitate to follow again the same goal",
+				"weekPlan": [
+					{
+						"physicalRecommender": {
+							"dailyRange": [
+								0,
+								1
+							],
+							"weeklyRange": [
+								5,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					},
+					{
+						"physicalRecommender": {
+							"dailyRange": [
+								0,
+								1
+							],
+							"weeklyRange": [
+								5,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					}
+				]
+			},
+			{
+				"difficulty": 2,
+				"introduction": "Nice {{name}}, you have set-up an new goal. For the following 2 weeks I will give you some practical suggestions everyday",
+				"conclusion": "Congrats {{name}}, you have completed your goal. I hope that you have recovered and feeling much better now! If not, do not hesitate to follow again the same goal",
+				"weekPlan": [
+					{
+						"physicalRecommender": {
+							"dailyRange": [
+								1,
+								2
+							],
+							"weeklyRange": [
+								7,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					},
+					{
+						"physicalRecommender": {
+							"dailyRange": [
+								1,
+								2
+							],
+							"weeklyRange": [
+								7,
+								7
+							],
+							"timeRange": [
+								10,
+								22
+							]
+						}
+					}
+				]
+			}
+		],
+		"categoryLabels": [
+			"disease"
+		],
+		"toolInfo": {
+			"physicalRecommender": {
+				"name": "Suggestions"
+			}
+		},
+		"toolData": {
+			"physicalRecommender": [
+				{
+					"difficulty": 0,
+					"contents": [
+						{
+							"id": 1,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Eliminate the spread of the virus",
+									"explanation": "Clean and disinfect frequently touched surfaces",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": " Potentially contaminated surfaces may include tables, doorknobs, light switches, countertops, handles, desks, phones, keyboards, toilets, faucets and sinks. Clean and disinfect the surfaces wearing gloves. Use household cleaning sprays or wipes according to the label instructions.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/disinfect_surfaces.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 2,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Sanitise yourself",
+									"explanation": "Make sure you frequently wash your hands or use a sanitiser",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "In order to prevent the spread of germs, clean your hands often with soap and water for at least 20 seconds, or an alcohol-based hand sanitizer that contains at least 60% alcohol. Also, make sure you cover your cough/sneeze.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/wash_sanitise_hands.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 3,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Self-isolate in a room",
+									"explanation": "Stay in a specific room as much as possible to avoid spread the virus to other residents.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Try to keep away from other people and pets that reside in your home. If available, use also a separate bathroom that is close to your room.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/self_isolate.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 4,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Stay physically active",
+									"explanation": "Morning and balanced exercises",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Feel better and healthier by having some easy exercises every morning. (7 times per week, 15 minutes daily). Home-based exercises and other methods of increasing habitual physical activity, might help in reducing the presently observed negative psychological problems.",
+									"multimedia": "https://www.youtube.com/watch?v=xfRFyJ_AnG8&ab_channel=CarolineJordan",
+									"multimediaType": "stream/youtube"
+								}
+							]
+						},
+						{
+							"id": 5,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Get rest and stay hydrated",
+									"explanation": "Stay hydrated gradually, throughout the day. Drink fluids, or eat water-rich foods. Rest and get plenty to sleep.\t\n",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Keep a water bottle at your desk, couch or table, wherever you're sitting. Limit or avoid alcoholic beverages. Try to get a minimum of seven to eight hours of quality sleep each night.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/rest_stay_hydrated.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 6,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Make the best of your time at home",
+									"explanation": "Catch up on reading, listen to music or find new hobbies",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Read that book you've been putting off. First on the list, is very much where you should be starting. Keep a journal to track your daily adventures. Complete a daily puzzle to exercise your mind. Meditate for 30 minutes per day in order to clear your head.  ",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/invest_time.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 7,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Finish old and/or start new projects ",
+									"explanation": "Complete personal or work projects, especially if you are teleworking, or find new creative ideas to start",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Keep yourself and your mind busy by completing work-related or personal tasks. Your mind needs the exercise and you can benefit from the results. If you start something new, you may enrol on a free course or learn a new skill.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/learn_skills.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 8,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Find New Ways to Connect socially",
+									"explanation": "During times of social distancing it is common to feel isolated. Try to connect with others with creative ways.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Think out of the box for ways you may feel more connected. This may be over the telephone, through social media or other virtual connections apps to connect with friends and family. Meaningful interaction and fun is important for emotional wellbeing.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/connect_socially.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 9,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Develop a Routine",
+									"explanation": "Routine tasks may help in reducing stress by building a schedule that is certain and easy to maintain",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "The certainty of your routine can turn down the volume on the uncertainty of life. Routine will reduce stress, increase healthy habits, help make the days run faster and keep track of time.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/routine.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 10,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Shop online for essentials",
+									"explanation": "Prefer a delivery no-contact service than going to store",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Many pharmacies and grocery stores offer delivery with no contact. Prefer using these services to the extent possible. A friend or relative may also be able to bring you the supplies you need",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/shopping.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 11,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Get fresh air in your room daily",
+									"explanation": "Open windows and doors, use fans or set your air condition to pull fresh air from outside.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Open windows at least for 30 minutes each morning. The fresh air and sunshine will improve your breathing and your spirits. It is important to start your day fresh.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/fresh_air.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 12,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Think and speak positive",
+									"explanation": "It’s a challenging time for everyone. Speak and share positively to your peers.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Be patient and kind to others. Share posts, captions and comments that are positive. Positive attracts positive. Let’s spread it. Positive thoughts and emotions are known to increase your immune system, also giving you an increased power in overcoming the virus.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/positivity.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 13,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Take short active breaks during the day",
+									"explanation": "Short bouts of physical activity add up to the weekly recommendations. Dancing, playing with children, and performing domestic chores such as cleaning and gardening are other means to stay active at home.",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						},
+						{
+							"id": 14,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Walk",
+									"explanation": "Even in small spaces, walking around or walking on the spot, can help you remain active. If you have a call, stand or walk around your home while you speak, instead of sitting down. ",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						},
+						{
+							"id": 15,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Stand up",
+									"explanation": "Reduce your sedentary time by standing up whenever possible. Ideally, aim to interrupt sitting and reclining time every 30 minutes.",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"difficulty": 1,
+					"contents": [
+						{
+							"id": 1,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Eliminate the spread of the virus",
+									"explanation": "Clean and disinfect frequently touched surfaces",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": " Potentially contaminated surfaces may include tables, doorknobs, light switches, countertops, handles, desks, phones, keyboards, toilets, faucets and sinks. Clean and disinfect the surfaces wearing gloves. Use household cleaning sprays or wipes according to the label instructions.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/disinfect_surfaces.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 2,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Sanitise yourself",
+									"explanation": "Make sure you frequently wash your hands or use a sanitiser",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "In order to prevent the spread of germs, clean your hands often with soap and water for at least 20 seconds, or an alcohol-based hand sanitizer that contains at least 60% alcohol. Also, make sure you cover your cough/sneeze.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/wash_sanitise_hands.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 3,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Self-isolate in a room",
+									"explanation": "Stay in a specific room as much as possible to avoid spread the virus to other residents.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Try to keep away from other people and pets that reside in your home. If available, use also a separate bathroom that is close to your room.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/self_isolate.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 4,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Stay physically active",
+									"explanation": "Morning and balanced exercises",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Feel better and healthier by having some easy exercises every morning. (7 times per week, 15 minutes daily). Home-based exercises and other methods of increasing habitual physical activity, might help in reducing the presently observed negative psychological problems.",
+									"multimedia": "https://www.youtube.com/watch?v=xfRFyJ_AnG8&ab_channel=CarolineJordan",
+									"multimediaType": "stream/youtube"
+								}
+							]
+						},
+						{
+							"id": 5,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Get rest and stay hydrated",
+									"explanation": "Stay hydrated gradually, throughout the day. Drink fluids, or eat water-rich foods. Rest and get plenty to sleep.\t\n",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Keep a water bottle at your desk, couch or table, wherever you're sitting. Limit or avoid alcoholic beverages. Try to get a minimum of seven to eight hours of quality sleep each night.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/rest_stay_hydrated.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 6,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Make the best of your time at home",
+									"explanation": "Catch up on reading, listen to music or find new hobbies",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Read that book you've been putting off. First on the list, is very much where you should be starting. Keep a journal to track your daily adventures. Complete a daily puzzle to exercise your mind. Meditate for 30 minutes per day in order to clear your head.  ",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/invest_time.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 7,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Finish old and/or start new projects ",
+									"explanation": "Complete personal or work projects, especially if you are teleworking, or find new creative ideas to start",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Keep yourself and your mind busy by completing work-related or personal tasks. Your mind needs the exercise and you can benefit from the results. If you start something new, you may enrol on a free course or learn a new skill.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/learn_skills.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 8,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Find New Ways to Connect socially",
+									"explanation": "During times of social distancing it is common to feel isolated. Try to connect with others with creative ways.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Think out of the box for ways you may feel more connected. This may be over the telephone, through social media or other virtual connections apps to connect with friends and family. Meaningful interaction and fun is important for emotional wellbeing.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/connect_socially.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 9,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Develop a Routine",
+									"explanation": "Routine tasks may help in reducing stress by building a schedule that is certain and easy to maintain",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "The certainty of your routine can turn down the volume on the uncertainty of life. Routine will reduce stress, increase healthy habits, help make the days run faster and keep track of time.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/routine.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 10,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Shop online for essentials",
+									"explanation": "Prefer a delivery no-contact service than going to store",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Many pharmacies and grocery stores offer delivery with no contact. Prefer using these services to the extent possible. A friend or relative may also be able to bring you the supplies you need",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/shopping.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 11,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Get fresh air in your room daily",
+									"explanation": "Open windows and doors, use fans or set your air condition to pull fresh air from outside.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Open windows at least for 30 minutes each morning. The fresh air and sunshine will improve your breathing and your spirits. It is important to start your day fresh.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/fresh_air.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 12,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Think and speak positive",
+									"explanation": "It’s a challenging time for everyone. Speak and share positively to your peers.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Be patient and kind to others. Share posts, captions and comments that are positive. Positive attracts positive. Let’s spread it. Positive thoughts and emotions are known to increase your immune system, also giving you an increased power in overcoming the virus.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/positivity.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 13,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Take short active breaks during the day",
+									"explanation": "Short bouts of physical activity add up to the weekly recommendations. Dancing, playing with children, and performing domestic chores such as cleaning and gardening are other means to stay active at home.",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						},
+						{
+							"id": 14,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Walk",
+									"explanation": "Even in small spaces, walking around or walking on the spot, can help you remain active. If you have a call, stand or walk around your home while you speak, instead of sitting down. ",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						},
+						{
+							"id": 15,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Stand up",
+									"explanation": "Reduce your sedentary time by standing up whenever possible. Ideally, aim to interrupt sitting and reclining time every 30 minutes.",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"difficulty": 2,
+					"contents": [
+						{
+							"id": 1,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Eliminate the spread of the virus",
+									"explanation": "Clean and disinfect frequently touched surfaces",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": " Potentially contaminated surfaces may include tables, doorknobs, light switches, countertops, handles, desks, phones, keyboards, toilets, faucets and sinks. Clean and disinfect the surfaces wearing gloves. Use household cleaning sprays or wipes according to the label instructions.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/disinfect_surfaces.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 2,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Sanitise yourself",
+									"explanation": "Make sure you frequently wash your hands or use a sanitiser",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "In order to prevent the spread of germs, clean your hands often with soap and water for at least 20 seconds, or an alcohol-based hand sanitizer that contains at least 60% alcohol. Also, make sure you cover your cough/sneeze.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/wash_sanitise_hands.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 3,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Self-isolate in a room",
+									"explanation": "Stay in a specific room as much as possible to avoid spread the virus to other residents.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Try to keep away from other people and pets that reside in your home. If available, use also a separate bathroom that is close to your room.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/self_isolate.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 4,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Stay physically active",
+									"explanation": "Morning and balanced exercises",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Feel better and healthier by having some easy exercises every morning. (7 times per week, 15 minutes daily). Home-based exercises and other methods of increasing habitual physical activity, might help in reducing the presently observed negative psychological problems.",
+									"multimedia": "https://www.youtube.com/watch?v=xfRFyJ_AnG8&ab_channel=CarolineJordan",
+									"multimediaType": "stream/youtube"
+								}
+							]
+						},
+						{
+							"id": 5,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Get rest and stay hydrated",
+									"explanation": "Stay hydrated gradually, throughout the day. Drink fluids, or eat water-rich foods. Rest and get plenty to sleep.\t\n",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Keep a water bottle at your desk, couch or table, wherever you're sitting. Limit or avoid alcoholic beverages. Try to get a minimum of seven to eight hours of quality sleep each night.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/rest_stay_hydrated.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 6,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Make the best of your time at home",
+									"explanation": "Catch up on reading, listen to music or find new hobbies",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Read that book you've been putting off. First on the list, is very much where you should be starting. Keep a journal to track your daily adventures. Complete a daily puzzle to exercise your mind. Meditate for 30 minutes per day in order to clear your head.  ",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/invest_time.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 7,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Finish old and/or start new projects ",
+									"explanation": "Complete personal or work projects, especially if you are teleworking, or find new creative ideas to start",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Keep yourself and your mind busy by completing work-related or personal tasks. Your mind needs the exercise and you can benefit from the results. If you start something new, you may enrol on a free course or learn a new skill.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/learn_skills.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 8,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Find New Ways to Connect socially",
+									"explanation": "During times of social distancing it is common to feel isolated. Try to connect with others with creative ways.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Think out of the box for ways you may feel more connected. This may be over the telephone, through social media or other virtual connections apps to connect with friends and family. Meaningful interaction and fun is important for emotional wellbeing.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/connect_socially.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 9,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Develop a Routine",
+									"explanation": "Routine tasks may help in reducing stress by building a schedule that is certain and easy to maintain",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "The certainty of your routine can turn down the volume on the uncertainty of life. Routine will reduce stress, increase healthy habits, help make the days run faster and keep track of time.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/routine.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 10,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Shop online for essentials",
+									"explanation": "Prefer a delivery no-contact service than going to store",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Many pharmacies and grocery stores offer delivery with no contact. Prefer using these services to the extent possible. A friend or relative may also be able to bring you the supplies you need",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/shopping.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 11,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Get fresh air in your room daily",
+									"explanation": "Open windows and doors, use fans or set your air condition to pull fresh air from outside.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Open windows at least for 30 minutes each morning. The fresh air and sunshine will improve your breathing and your spirits. It is important to start your day fresh.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/fresh_air.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 12,
+							"type": "message",
+							"gender": "both",
+							"nPages": 2,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Think and speak positive",
+									"explanation": "It’s a challenging time for everyone. Speak and share positively to your peers.",
+									"multimedia": "",
+									"multimediaType": ""
+								},
+								{
+									"page": 2,
+									"title": "",
+									"explanation": "Be patient and kind to others. Share posts, captions and comments that are positive. Positive attracts positive. Let’s spread it. Positive thoughts and emotions are known to increase your immune system, also giving you an increased power in overcoming the virus.",
+									"multimedia": "http://api.captain-eu.org/recommenders/covid/positivity.png",
+									"multimediaType": "image/png"
+								}
+							]
+						},
+						{
+							"id": 13,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Take short active breaks during the day",
+									"explanation": "Short bouts of physical activity add up to the weekly recommendations. Dancing, playing with children, and performing domestic chores such as cleaning and gardening are other means to stay active at home.",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						},
+						{
+							"id": 14,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Walk",
+									"explanation": "Even in small spaces, walking around or walking on the spot, can help you remain active. If you have a call, stand or walk around your home while you speak, instead of sitting down. ",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						},
+						{
+							"id": 15,
+							"type": "message",
+							"gender": "both",
+							"nPages": 1,
+							"difficulty": 0,
+							"estimatedTime": 1000.0,
+							"information": [
+								{
+									"page": 1,
+									"title": "Stand up",
+									"explanation": "Reduce your sedentary time by standing up whenever possible. Ideally, aim to interrupt sitting and reclining time every 30 minutes.",
+									"multimedia": "",
+									"multimediaType": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	}
+}
