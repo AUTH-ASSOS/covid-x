@@ -1,2495 +1,2692 @@
 {
-  "$id": "http://example.com/example.json",
-  "$schema": "http://json-schema.org/draft-07/schema",
-  "default": {},
-  "description": "The root schema comprises the entire JSON document.",
-  "required": [
-    "userId",
-    "gender",
-    "BMI",
-    "language",
-    "date",
-    "userDetectedPerHourHistogram",
-    "userAction",
-    "profiles",
-    "diseaseMonitoring"
-  ],
-  "title": "The root schema",
-  "type": "object",
-  "properties": {
-    "userId": {
-      "$id": "#/properties/userId",
-      "default": "",
-      "description": "the userId represents the user for the system",
-      "examples": [
-        "89888a22-7c0c-40e8-9812-a6c2e2a65163"
-      ],
-      "title": "The userId schema",
-      "type": "string"
-    },
-    "gender": {
-      "$id": "#/properties/gender",
-      "default": "",
-      "description": "user's gender",
-      "enum": [
-        "male",
-        "female",
-        "unknown"
-      ],
-      "examples": [
-        "male"
-      ],
-      "title": "The gender schema",
-      "type": "string"
-    },
-    "BMI": {
-      "$id": "#/properties/BMI",
-      "default": "",
-      "description": "the user's Body Mass Index",
-      "examples": [
-        24.3
-      ],
-      "title": "The BMI schema",
-      "type": "number"
-    },
-    "language": {
-      "$id": "#/properties/language",
-      "default": "",
-      "description": "The language code that the user has selected",
-      "examples": [
-        "en"
-      ],
-      "title": "The language schema",
-      "enum": [
-        "en",
-        "el",
-        "es",
-        "it"
-      ],
-      "type": "string"
-    },
-    "date": {
-      "$id": "#/properties/date",
-      "default": "",
-      "description": "the date the data are collected",
-      "examples": [
-        "2020-12-19 00:41:09.771571"
-      ],
-      "title": "The date schema",
-      "type": "string"
-    },
-    "userDetectedPerHourHistogram": {
-      "$id": "#/properties/userDetectedPerHourHistogram",
-      "default": [],
-      "description": "An explanation about the purpose of this instance.",
-      "title": "The userDetectedPerHourHistogram schema",
-      "type": "array",
-      "additionalItems": true,
-      "items": {
-        "$id": "#/properties/userDetectedPerHourHistogram/items",
-        "type": "object",
-        "anyOf": [
-          {
-            "$id": "#/properties/userDetectedPerHourHistogram/items/anyOf/0",
-            "type": "object",
-            "title": "The first anyOf schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": {},
-            "examples": [
-              {
-                "room": "kitchen",
-                "histogram": [
-                  {
-                    "dayHour": "18",
-                    "durationSeconds": "20"
-                  }
-                ]
-              }
-            ],
-            "required": [
-              "room",
-              "histogram"
-            ],
-            "properties": {
-              "room": {
-                "$id": "#/properties/userDetectedPerHourHistogram/items/anyOf/0/properties/room",
-                "default": "",
-                "description": "An explanation about the purpose of this instance.",
-                "enum": [
-                  "kitchen",
-                  "bedroom",
-                  "livingroom"
-                ],
-                "examples": [
-                  "kitchen"
-                ],
-                "title": "The room schema",
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "histogram": {
-                "$id": "#/properties/userDetectedPerHourHistogram/items/anyOf/0/properties/histogram",
-                "default": [],
-                "description": "An explanation about the purpose of this instance.",
-                "examples": [
-                  [
-                    {
-                      "dayHour": "18",
-                      "durationSeconds": "20"
-                    }
-                  ]
-                ],
-                "title": "The histogram schema",
-                "type": "array",
-                "additionalItems": true,
-                "items": {
-                  "$id": "#/properties/userDetectedPerHourHistogram/items/anyOf/0/properties/histogram/items",
-                  "anyOf": [
-                    {
-                      "$id": "#/properties/userDetectedPerHourHistogram/items/anyOf/0/properties/histogram/items/anyOf/0",
-                      "type": "object",
-                      "title": "The first anyOf schema",
-                      "description": "An explanation about the purpose of this instance.",
-                      "default": {},
-                      "examples": [
-                        {
-                          "dayHour": "18",
-                          "durationSeconds": "20"
-                        }
-                      ],
-                      "required": [
-                        "dayHour",
-                        "durationSeconds"
-                      ],
-                      "properties": {
-                        "dayHour": {
-                          "$id": "#/properties/userDetectedPerHourHistogram/items/anyOf/0/properties/histogram/items/anyOf/0/properties/dayHour",
-                          "default": "",
-                          "description": "the hour of the day in 0-24 format",
-                          "examples": [
-                            "18"
-                          ],
-                          "maximum": 24,
-                          "minimum": 0,
-                          "title": "The dayHour schema",
-                          "type": "integer"
-                        },
-                        "durationSeconds": {
-                          "$id": "#/properties/userDetectedPerHourHistogram/items/anyOf/0/properties/histogram/items/anyOf/0/properties/durationSeconds",
-                          "default": "",
-                          "description": "duration in seconds the person spend in this room",
-                          "examples": [
-                            "20"
-                          ],
-                          "title": "The durationSeconds schema",
-                          "type": "integer"
-                        }
-                      },
-                      "additionalProperties": true
-                    }
-                  ]
-                }
-              }
-            },
-            "additionalProperties": true
-          }
-        ]
-      }
-    },
-    "userAction": {
-      "$id": "#/properties/userAction",
-      "default": {},
-      "description": "An explanation about the purpose of this instance.",
-      "required": [
-        "morning",
-        "afternoon",
-        "evening",
-        "night"
-      ],
-      "title": "The userAction schema",
-      "type": "object",
-      "properties": {
-        "morning": {
-          "$id": "#/properties/userAction/properties/morning",
-          "default": {},
-          "description": "An explanation about the purpose of this instance.",
-          "required": [
-            "preferedLocation",
-            "adlAnalytics",
-            "gait"
-          ],
-          "title": "The morning schema",
-          "type": "object",
-          "properties": {
-            "preferedLocation": {
-              "$id": "#/properties/userAction/properties/morning/properties/preferedLocation",
-              "default": {},
-              "description": "An explanation about the purpose of this instance.",
-              "required": [
-                "room",
-                "area"
-              ],
-              "title": "The preferedLocation schema",
-              "type": "object",
-              "properties": {
-                "room": {
-                  "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room",
-                  "type": "object",
-                  "title": "The room schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "roomType": "<name of the room type>",
-                      "percentage": "<number from 0 to 1 indicating the percentage of total time user is detected to time in this room>"
-                    }
-                  ],
-                  "required": [
-                    "roomType",
-                    "percentage"
-                  ],
-                  "properties": {
-                    "roomType": {
-                      "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room/properties/roomType",
-                      "default": "",
-                      "description": "An explanation about the purpose of this instance.",
-                      "enum": [
-                        "livingroom",
-                        "kitchen"
-                      ],
-                      "examples": [
-                        "kitchen"
-                      ],
-                      "title": "The roomType schema",
-                      "type": [
-                        "string",
-                        "null"
-                      ]
-                    },
-                    "percentage": {
-                      "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room/properties/percentage",
-                      "default": "",
-                      "description": "number from 0 to 1 indicating the percentage of total time user is detected to time in this room",
-                      "examples": [
-                        0.7
-                      ],
-                      "maximum": 1,
-                      "minimum": 0,
-                      "title": "The percentage schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "area": {
-                  "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area",
-                  "default": {},
-                  "description": "An explanation about the purpose of this instance.",
-                  "required": [
-                    "areaType",
-                    "percentage"
-                  ],
-                  "title": "The area schema",
-                  "type": "object",
-                  "properties": {
-                    "areaType": {
-                      "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area/properties/areaType",
-                      "default": "",
-                      "description": "name of the area type",
-                      "enum": [
-                        "sofa",
-                        "door",
-                        "telephone",
-                        "table",
-                        "chair",
-                        "fridge"
-                      ],
-                      "examples": [
-                        "sofa"
-                      ],
-                      "title": "The areaType schema",
-                      "type": [
-                        "string",
-                        "null"
-                      ]
-                    },
-                    "percentage": {
-                      "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area/properties/percentage",
-                      "default": "",
-                      "description": "number from 0 to 1 indicating the percentage of time detected to time in this area>",
-                      "examples": [
-                        0.6
-                      ],
-                      "maximum": 1,
-                      "minimum": 0,
-                      "title": "The percentage schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                }
-              },
-              "additionalProperties": true
-            },
-            "adlAnalytics": {
-              "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics",
-              "type": "object",
-              "title": "The adlAnalytics schema",
-              "description": "An explanation about the purpose of this instance.",
-              "default": {},
-              "examples": [
-                {
-                  "eating": {
-                    "duration": "<duration in seconds>"
-                  },
-                  "preparingFood": {
-                    "duration": "<duration in seconds>"
-                  },
-                  "washingDishes": {
-                    "duration": "<duration in seconds>"
-                  },
-                  "sittingRelated": {
-                    "duration": "<duration in seconds>"
-                  }
-                }
-              ],
-              "required": [
-                "eating",
-                "preparingFood",
-                "washingDishes",
-                "sittingRelated"
-              ],
-              "properties": {
-                "eating": {
-                  "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/eating",
-                  "type": "object",
-                  "title": "The eating schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "duration": "<duration in seconds>"
-                    }
-                  ],
-                  "required": [
-                    "duration"
-                  ],
-                  "properties": {
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/eating/properties/duration",
-                      "default": "",
-                      "description": "duration in seconds",
-                      "examples": [
-                        1462
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "preparingFood": {
-                  "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/preparingFood",
-                  "type": "object",
-                  "title": "The preparingFood schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "duration": "<duration in seconds>"
-                    }
-                  ],
-                  "required": [
-                    "duration"
-                  ],
-                  "properties": {
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/preparingFood/properties/duration",
-                      "default": "",
-                      "description": "duration in seconds",
-                      "examples": [
-                        5834
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "washingDishes": {
-                  "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/washingDishes",
-                  "type": "object",
-                  "title": "The washingDishes schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "duration": "<duration in seconds>"
-                    }
-                  ],
-                  "required": [
-                    "duration"
-                  ],
-                  "properties": {
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/washingDishes/properties/duration",
-                      "default": "",
-                      "description": "duration in seconds",
-                      "examples": [
-                        29493
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "sittingRelated": {
-                  "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/sittingRelated",
-                  "type": "object",
-                  "title": "The sittingRelated schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "duration": "<duration in seconds>"
-                    }
-                  ],
-                  "required": [
-                    "duration"
-                  ],
-                  "properties": {
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/sittingRelated/properties/duration",
-                      "default": "",
-                      "description": "duration in seconds",
-                      "examples": [
-                        93939
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                }
-              },
-              "additionalProperties": true
-            },
-            "gait": {
-              "$id": "#/properties/userAction/properties/morning/properties/gait",
-              "default": {},
-              "description": "An explanation about the purpose of this instance.",
-              "required": [
-                "features",
-                "dangerousSituation"
-              ],
-              "title": "The gait schema",
-              "type": "object",
-              "properties": {
-                "features": {
-                  "$id": "#/properties/userAction/properties/morning/properties/gait/properties/features",
-                  "default": {},
-                  "description": "An explanation about the purpose of this instance.",
-                  "required": [
-                    "avgSpeed",
-                    "duration"
-                  ],
-                  "title": "The features schema",
-                  "type": "object",
-                  "properties": {
-                    "avgSpeed": {
-                      "$id": "#/properties/userAction/properties/morning/properties/gait/properties/features/properties/avgSpeed",
-                      "default": "",
-                      "description": "average speed for specific day period in m/sec",
-                      "examples": [
-                        50.5
-                      ],
-                      "title": "The avgSpeed schema",
-                      "type": "number"
-                    },
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/gait/properties/features/properties/duration",
-                      "default": "",
-                      "description": "duration of gait inside the house in sec for the specific day period in sec",
-                      "examples": [
-                        603882
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "dangerousSituation": {
-                  "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation",
-                  "type": "array",
-                  "title": "The dangerousSituation schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": [],
-                  "examples": [
-                    [
-                      {
-                        "type": "<type of dangerous situation>",
-                        "room": "room where the type happended",
-                        "exactTime": "time of the event"
-                      },
-                      {
-                        "type": "<type of dangerous situation>",
-                        "room": "room where the type happended",
-                        "exactTime": "time of the event"
-                      }
-                    ]
-                  ],
-                  "additionalItems": true,
-                  "items": {
-                    "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items",
-                    "type": "object",
-                    "anyOf": [
-                      {
-                        "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0",
-                        "default": {},
-                        "description": "An explanation about the purpose of this instance.",
-                        "required": [
-                          "type",
-                          "room",
-                          "exactTime"
-                        ],
-                        "title": "The first anyOf schema",
-                        "type": "object",
-                        "properties": {
-                          "type": {
-                            "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/type",
-                            "default": "",
-                            "description": "type of dangerous situation",
-                            "enum": [
-                              "fall",
-                              "dangerousHeight"
-                            ],
-                            "examples": [
-                              "fall"
-                            ],
-                            "title": "The type schema",
-                            "type": "string"
-                          },
-                          "room": {
-                            "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/room",
-                            "default": "",
-                            "description": "room where the type happended",
-                            "enum": [
-                              "kitchen",
-                              "livingroom"
-                            ],
-                            "examples": [
-                              "kitchen"
-                            ],
-                            "title": "The room schema",
-                            "type": "string"
-                          },
-                          "exactTime": {
-                            "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/exactTime",
-                            "default": "",
-                            "description": "time of the event",
-                            "examples": [
-                              "00:41:09.771571"
-                            ],
-                            "title": "The exactTime schema",
-                            "type": "string"
-                          }
-                        },
-                        "additionalProperties": true
-                      }
-                    ]
-                  }
-                }
-              },
-              "additionalProperties": true
-            }
-          },
-          "additionalProperties": true
-        },
-        "afternoon": {
-          "$id": "#/properties/userAction/properties/morning",
-          "default": {},
-          "description": "An explanation about the purpose of this instance.",
-          "required": [
-            "preferedLocation",
-            "adlAnalytics",
-            "gait"
-          ],
-          "title": "The morning schema",
-          "type": "object",
-          "properties": {
-            "preferedLocation": {
-              "$id": "#/properties/userAction/properties/morning/properties/preferedLocation",
-              "default": {},
-              "description": "An explanation about the purpose of this instance.",
-              "required": [
-                "room",
-                "area"
-              ],
-              "title": "The preferedLocation schema",
-              "type": "object",
-              "properties": {
-                "room": {
-                  "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room",
-                  "type": "object",
-                  "title": "The room schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "roomType": "<name of the room type>",
-                      "percentage": "<number from 0 to 1 indicating the percentage of total time user is detected to time in this room>"
-                    }
-                  ],
-                  "required": [
-                    "roomType",
-                    "percentage"
-                  ],
-                  "properties": {
-                    "roomType": {
-                      "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room/properties/roomType",
-                      "default": "",
-                      "description": "An explanation about the purpose of this instance.",
-                      "enum": [
-                        "livingroom",
-                        "kitchen"
-                      ],
-                      "examples": [
-                        "kitchen"
-                      ],
-                      "title": "The roomType schema",
-                      "type": [
-                        "string",
-                        "null"
-                      ]
-                    },
-                    "percentage": {
-                      "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room/properties/percentage",
-                      "default": "",
-                      "description": "number from 0 to 1 indicating the percentage of total time user is detected to time in this room",
-                      "examples": [
-                        0.7
-                      ],
-                      "maximum": 1,
-                      "minimum": 0,
-                      "title": "The percentage schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "area": {
-                  "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area",
-                  "default": {},
-                  "description": "An explanation about the purpose of this instance.",
-                  "required": [
-                    "areaType",
-                    "percentage"
-                  ],
-                  "title": "The area schema",
-                  "type": "object",
-                  "properties": {
-                    "areaType": {
-                      "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area/properties/areaType",
-                      "default": "",
-                      "description": "name of the area type",
-                      "enum": [
-                        "sofa",
-                        "door",
-                        "telephone",
-                        "table",
-                        "chair",
-                        "fridge"
-                      ],
-                      "examples": [
-                        "sofa"
-                      ],
-                      "title": "The areaType schema",
-                      "type": [
-                        "string",
-                        "null"
-                      ]
-                    },
-                    "percentage": {
-                      "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area/properties/percentage",
-                      "default": "",
-                      "description": "number from 0 to 1 indicating the percentage of time detected to time in this area>",
-                      "examples": [
-                        0.6
-                      ],
-                      "maximum": 1,
-                      "minimum": 0,
-                      "title": "The percentage schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                }
-              },
-              "additionalProperties": true
-            },
-            "adlAnalytics": {
-              "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics",
-              "type": "object",
-              "title": "The adlAnalytics schema",
-              "description": "An explanation about the purpose of this instance.",
-              "default": {},
-              "examples": [
-                {
-                  "eating": {
-                    "duration": "<duration in seconds>"
-                  },
-                  "preparingFood": {
-                    "duration": "<duration in seconds>"
-                  },
-                  "washingDishes": {
-                    "duration": "<duration in seconds>"
-                  },
-                  "sittingRelated": {
-                    "duration": "<duration in seconds>"
-                  }
-                }
-              ],
-              "required": [
-                "eating",
-                "preparingFood",
-                "washingDishes",
-                "sittingRelated"
-              ],
-              "properties": {
-                "eating": {
-                  "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/eating",
-                  "type": "object",
-                  "title": "The eating schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "duration": "<duration in seconds>"
-                    }
-                  ],
-                  "required": [
-                    "duration"
-                  ],
-                  "properties": {
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/eating/properties/duration",
-                      "default": "",
-                      "description": "duration in seconds",
-                      "examples": [
-                        1462
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "preparingFood": {
-                  "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/preparingFood",
-                  "type": "object",
-                  "title": "The preparingFood schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "duration": "<duration in seconds>"
-                    }
-                  ],
-                  "required": [
-                    "duration"
-                  ],
-                  "properties": {
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/preparingFood/properties/duration",
-                      "default": "",
-                      "description": "duration in seconds",
-                      "examples": [
-                        5834
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "washingDishes": {
-                  "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/washingDishes",
-                  "type": "object",
-                  "title": "The washingDishes schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "duration": "<duration in seconds>"
-                    }
-                  ],
-                  "required": [
-                    "duration"
-                  ],
-                  "properties": {
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/washingDishes/properties/duration",
-                      "default": "",
-                      "description": "duration in seconds",
-                      "examples": [
-                        29493
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "sittingRelated": {
-                  "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/sittingRelated",
-                  "type": "object",
-                  "title": "The sittingRelated schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "duration": "<duration in seconds>"
-                    }
-                  ],
-                  "required": [
-                    "duration"
-                  ],
-                  "properties": {
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/sittingRelated/properties/duration",
-                      "default": "",
-                      "description": "duration in seconds",
-                      "examples": [
-                        93939
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                }
-              },
-              "additionalProperties": true
-            },
-            "gait": {
-              "$id": "#/properties/userAction/properties/morning/properties/gait",
-              "default": {},
-              "description": "An explanation about the purpose of this instance.",
-              "required": [
-                "features",
-                "dangerousSituation"
-              ],
-              "title": "The gait schema",
-              "type": "object",
-              "properties": {
-                "features": {
-                  "$id": "#/properties/userAction/properties/morning/properties/gait/properties/features",
-                  "default": {},
-                  "description": "An explanation about the purpose of this instance.",
-                  "required": [
-                    "avgSpeed",
-                    "duration"
-                  ],
-                  "title": "The features schema",
-                  "type": "object",
-                  "properties": {
-                    "avgSpeed": {
-                      "$id": "#/properties/userAction/properties/morning/properties/gait/properties/features/properties/avgSpeed",
-                      "default": "",
-                      "description": "average speed for specific day period in m/sec",
-                      "examples": [
-                        50.5
-                      ],
-                      "title": "The avgSpeed schema",
-                      "type": "number"
-                    },
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/gait/properties/features/properties/duration",
-                      "default": "",
-                      "description": "duration of gait inside the house in sec for the specific day period in sec",
-                      "examples": [
-                        603882
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "dangerousSituation": {
-                  "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation",
-                  "type": "array",
-                  "title": "The dangerousSituation schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": [],
-                  "examples": [
-                    [
-                      {
-                        "type": "<type of dangerous situation>",
-                        "room": "room where the type happended",
-                        "exactTime": "time of the event"
-                      },
-                      {
-                        "type": "<type of dangerous situation>",
-                        "room": "room where the type happended",
-                        "exactTime": "time of the event"
-                      }
-                    ]
-                  ],
-                  "additionalItems": true,
-                  "items": {
-                    "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items",
-                    "type": "object",
-                    "anyOf": [
-                      {
-                        "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0",
-                        "default": {},
-                        "description": "An explanation about the purpose of this instance.",
-                        "required": [
-                          "type",
-                          "room",
-                          "exactTime"
-                        ],
-                        "title": "The first anyOf schema",
-                        "type": "object",
-                        "properties": {
-                          "type": {
-                            "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/type",
-                            "default": "",
-                            "description": "type of dangerous situation",
-                            "enum": [
-                              "fall",
-                              "dangerousHeight"
-                            ],
-                            "examples": [
-                              "fall"
-                            ],
-                            "title": "The type schema",
-                            "type": "string"
-                          },
-                          "room": {
-                            "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/room",
-                            "default": "",
-                            "description": "room where the type happended",
-                            "enum": [
-                              "kitchen",
-                              "livingroom"
-                            ],
-                            "examples": [
-                              "kitchen"
-                            ],
-                            "title": "The room schema",
-                            "type": "string"
-                          },
-                          "exactTime": {
-                            "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/exactTime",
-                            "default": "",
-                            "description": "time of the event",
-                            "examples": [
-                              "00:41:09.771571"
-                            ],
-                            "title": "The exactTime schema",
-                            "type": "string"
-                          }
-                        },
-                        "additionalProperties": true
-                      }
-                    ]
-                  }
-                }
-              },
-              "additionalProperties": true
-            }
-          },
-          "additionalProperties": true
-        },
-        "evening": {
-          "$id": "#/properties/userAction/properties/morning",
-          "default": {},
-          "description": "An explanation about the purpose of this instance.",
-          "required": [
-            "preferedLocation",
-            "adlAnalytics",
-            "gait"
-          ],
-          "title": "The morning schema",
-          "type": "object",
-          "properties": {
-            "preferedLocation": {
-              "$id": "#/properties/userAction/properties/morning/properties/preferedLocation",
-              "default": {},
-              "description": "An explanation about the purpose of this instance.",
-              "required": [
-                "room",
-                "area"
-              ],
-              "title": "The preferedLocation schema",
-              "type": "object",
-              "properties": {
-                "room": {
-                  "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room",
-                  "type": "object",
-                  "title": "The room schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "roomType": "<name of the room type>",
-                      "percentage": "<number from 0 to 1 indicating the percentage of total time user is detected to time in this room>"
-                    }
-                  ],
-                  "required": [
-                    "roomType",
-                    "percentage"
-                  ],
-                  "properties": {
-                    "roomType": {
-                      "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room/properties/roomType",
-                      "default": "",
-                      "description": "An explanation about the purpose of this instance.",
-                      "enum": [
-                        "livingroom",
-                        "kitchen"
-                      ],
-                      "examples": [
-                        "kitchen"
-                      ],
-                      "title": "The roomType schema",
-                      "type": [
-                        "string",
-                        "null"
-                      ]
-                    },
-                    "percentage": {
-                      "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room/properties/percentage",
-                      "default": "",
-                      "description": "number from 0 to 1 indicating the percentage of total time user is detected to time in this room",
-                      "examples": [
-                        0.7
-                      ],
-                      "maximum": 1,
-                      "minimum": 0,
-                      "title": "The percentage schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "area": {
-                  "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area",
-                  "default": {},
-                  "description": "An explanation about the purpose of this instance.",
-                  "required": [
-                    "areaType",
-                    "percentage"
-                  ],
-                  "title": "The area schema",
-                  "type": "object",
-                  "properties": {
-                    "areaType": {
-                      "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area/properties/areaType",
-                      "default": "",
-                      "description": "name of the area type",
-                      "enum": [
-                        "sofa",
-                        "door",
-                        "telephone",
-                        "table",
-                        "chair",
-                        "fridge"
-                      ],
-                      "examples": [
-                        "sofa"
-                      ],
-                      "title": "The areaType schema",
-                      "type": [
-                        "string",
-                        "null"
-                      ]
-                    },
-                    "percentage": {
-                      "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area/properties/percentage",
-                      "default": "",
-                      "description": "number from 0 to 1 indicating the percentage of time detected to time in this area>",
-                      "examples": [
-                        0.6
-                      ],
-                      "maximum": 1,
-                      "minimum": 0,
-                      "title": "The percentage schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                }
-              },
-              "additionalProperties": true
-            },
-            "adlAnalytics": {
-              "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics",
-              "type": "object",
-              "title": "The adlAnalytics schema",
-              "description": "An explanation about the purpose of this instance.",
-              "default": {},
-              "examples": [
-                {
-                  "eating": {
-                    "duration": "<duration in seconds>"
-                  },
-                  "preparingFood": {
-                    "duration": "<duration in seconds>"
-                  },
-                  "washingDishes": {
-                    "duration": "<duration in seconds>"
-                  },
-                  "sittingRelated": {
-                    "duration": "<duration in seconds>"
-                  }
-                }
-              ],
-              "required": [
-                "eating",
-                "preparingFood",
-                "washingDishes",
-                "sittingRelated"
-              ],
-              "properties": {
-                "eating": {
-                  "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/eating",
-                  "type": "object",
-                  "title": "The eating schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "duration": "<duration in seconds>"
-                    }
-                  ],
-                  "required": [
-                    "duration"
-                  ],
-                  "properties": {
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/eating/properties/duration",
-                      "default": "",
-                      "description": "duration in seconds",
-                      "examples": [
-                        1462
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "preparingFood": {
-                  "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/preparingFood",
-                  "type": "object",
-                  "title": "The preparingFood schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "duration": "<duration in seconds>"
-                    }
-                  ],
-                  "required": [
-                    "duration"
-                  ],
-                  "properties": {
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/preparingFood/properties/duration",
-                      "default": "",
-                      "description": "duration in seconds",
-                      "examples": [
-                        5834
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "washingDishes": {
-                  "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/washingDishes",
-                  "type": "object",
-                  "title": "The washingDishes schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "duration": "<duration in seconds>"
-                    }
-                  ],
-                  "required": [
-                    "duration"
-                  ],
-                  "properties": {
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/washingDishes/properties/duration",
-                      "default": "",
-                      "description": "duration in seconds",
-                      "examples": [
-                        29493
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "sittingRelated": {
-                  "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/sittingRelated",
-                  "type": "object",
-                  "title": "The sittingRelated schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "duration": "<duration in seconds>"
-                    }
-                  ],
-                  "required": [
-                    "duration"
-                  ],
-                  "properties": {
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/sittingRelated/properties/duration",
-                      "default": "",
-                      "description": "duration in seconds",
-                      "examples": [
-                        93939
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                }
-              },
-              "additionalProperties": true
-            },
-            "gait": {
-              "$id": "#/properties/userAction/properties/morning/properties/gait",
-              "default": {},
-              "description": "An explanation about the purpose of this instance.",
-              "required": [
-                "features",
-                "dangerousSituation"
-              ],
-              "title": "The gait schema",
-              "type": "object",
-              "properties": {
-                "features": {
-                  "$id": "#/properties/userAction/properties/morning/properties/gait/properties/features",
-                  "default": {},
-                  "description": "An explanation about the purpose of this instance.",
-                  "required": [
-                    "avgSpeed",
-                    "duration"
-                  ],
-                  "title": "The features schema",
-                  "type": "object",
-                  "properties": {
-                    "avgSpeed": {
-                      "$id": "#/properties/userAction/properties/morning/properties/gait/properties/features/properties/avgSpeed",
-                      "default": "",
-                      "description": "average speed for specific day period in m/sec",
-                      "examples": [
-                        50.5
-                      ],
-                      "title": "The avgSpeed schema",
-                      "type": "number"
-                    },
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/gait/properties/features/properties/duration",
-                      "default": "",
-                      "description": "duration of gait inside the house in sec for the specific day period in sec",
-                      "examples": [
-                        603882
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "dangerousSituation": {
-                  "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation",
-                  "type": "array",
-                  "title": "The dangerousSituation schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": [],
-                  "examples": [
-                    [
-                      {
-                        "type": "<type of dangerous situation>",
-                        "room": "room where the type happended",
-                        "exactTime": "time of the event"
-                      },
-                      {
-                        "type": "<type of dangerous situation>",
-                        "room": "room where the type happended",
-                        "exactTime": "time of the event"
-                      }
-                    ]
-                  ],
-                  "additionalItems": true,
-                  "items": {
-                    "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items",
-                    "type": "object",
-                    "anyOf": [
-                      {
-                        "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0",
-                        "default": {},
-                        "description": "An explanation about the purpose of this instance.",
-                        "required": [
-                          "type",
-                          "room",
-                          "exactTime"
-                        ],
-                        "title": "The first anyOf schema",
-                        "type": "object",
-                        "properties": {
-                          "type": {
-                            "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/type",
-                            "default": "",
-                            "description": "type of dangerous situation",
-                            "enum": [
-                              "fall",
-                              "dangerousHeight"
-                            ],
-                            "examples": [
-                              "fall"
-                            ],
-                            "title": "The type schema",
-                            "type": "string"
-                          },
-                          "room": {
-                            "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/room",
-                            "default": "",
-                            "description": "room where the type happended",
-                            "enum": [
-                              "kitchen",
-                              "livingroom"
-                            ],
-                            "examples": [
-                              "kitchen"
-                            ],
-                            "title": "The room schema",
-                            "type": "string"
-                          },
-                          "exactTime": {
-                            "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/exactTime",
-                            "default": "",
-                            "description": "time of the event",
-                            "examples": [
-                              "00:41:09.771571"
-                            ],
-                            "title": "The exactTime schema",
-                            "type": "string"
-                          }
-                        },
-                        "additionalProperties": true
-                      }
-                    ]
-                  }
-                }
-              },
-              "additionalProperties": true
-            }
-          },
-          "additionalProperties": true
-        },
-        "night": {
-          "$id": "#/properties/userAction/properties/morning",
-          "default": {},
-          "description": "An explanation about the purpose of this instance.",
-          "required": [
-            "preferedLocation",
-            "adlAnalytics",
-            "gait"
-          ],
-          "title": "The morning schema",
-          "type": "object",
-          "properties": {
-            "preferedLocation": {
-              "$id": "#/properties/userAction/properties/morning/properties/preferedLocation",
-              "default": {},
-              "description": "An explanation about the purpose of this instance.",
-              "required": [
-                "room",
-                "area"
-              ],
-              "title": "The preferedLocation schema",
-              "type": "object",
-              "properties": {
-                "room": {
-                  "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room",
-                  "type": "object",
-                  "title": "The room schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "roomType": "<name of the room type>",
-                      "percentage": "<number from 0 to 1 indicating the percentage of total time user is detected to time in this room>"
-                    }
-                  ],
-                  "required": [
-                    "roomType",
-                    "percentage"
-                  ],
-                  "properties": {
-                    "roomType": {
-                      "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room/properties/roomType",
-                      "default": "",
-                      "description": "An explanation about the purpose of this instance.",
-                      "enum": [
-                        "livingroom",
-                        "kitchen"
-                      ],
-                      "examples": [
-                        "kitchen"
-                      ],
-                      "title": "The roomType schema",
-                      "type": [
-                        "string",
-                        "null"
-                      ]
-                    },
-                    "percentage": {
-                      "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room/properties/percentage",
-                      "default": "",
-                      "description": "number from 0 to 1 indicating the percentage of total time user is detected to time in this room",
-                      "examples": [
-                        0.7
-                      ],
-                      "maximum": 1,
-                      "minimum": 0,
-                      "title": "The percentage schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "area": {
-                  "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area",
-                  "default": {},
-                  "description": "An explanation about the purpose of this instance.",
-                  "required": [
-                    "areaType",
-                    "percentage"
-                  ],
-                  "title": "The area schema",
-                  "type": "object",
-                  "properties": {
-                    "areaType": {
-                      "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area/properties/areaType",
-                      "default": "",
-                      "description": "name of the area type",
-                      "enum": [
-                        "sofa",
-                        "door",
-                        "telephone",
-                        "table",
-                        "chair",
-                        "fridge"
-                      ],
-                      "examples": [
-                        "sofa"
-                      ],
-                      "title": "The areaType schema",
-                      "type": [
-                        "string",
-                        "null"
-                      ]
-                    },
-                    "percentage": {
-                      "$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area/properties/percentage",
-                      "default": "",
-                      "description": "number from 0 to 1 indicating the percentage of time detected to time in this area>",
-                      "examples": [
-                        0.6
-                      ],
-                      "maximum": 1,
-                      "minimum": 0,
-                      "title": "The percentage schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                }
-              },
-              "additionalProperties": true
-            },
-            "adlAnalytics": {
-              "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics",
-              "type": "object",
-              "title": "The adlAnalytics schema",
-              "description": "An explanation about the purpose of this instance.",
-              "default": {},
-              "examples": [
-                {
-                  "eating": {
-                    "duration": "<duration in seconds>"
-                  },
-                  "preparingFood": {
-                    "duration": "<duration in seconds>"
-                  },
-                  "washingDishes": {
-                    "duration": "<duration in seconds>"
-                  },
-                  "sittingRelated": {
-                    "duration": "<duration in seconds>"
-                  }
-                }
-              ],
-              "required": [
-                "eating",
-                "preparingFood",
-                "washingDishes",
-                "sittingRelated"
-              ],
-              "properties": {
-                "eating": {
-                  "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/eating",
-                  "type": "object",
-                  "title": "The eating schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "duration": "<duration in seconds>"
-                    }
-                  ],
-                  "required": [
-                    "duration"
-                  ],
-                  "properties": {
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/eating/properties/duration",
-                      "default": "",
-                      "description": "duration in seconds",
-                      "examples": [
-                        1462
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "preparingFood": {
-                  "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/preparingFood",
-                  "type": "object",
-                  "title": "The preparingFood schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "duration": "<duration in seconds>"
-                    }
-                  ],
-                  "required": [
-                    "duration"
-                  ],
-                  "properties": {
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/preparingFood/properties/duration",
-                      "default": "",
-                      "description": "duration in seconds",
-                      "examples": [
-                        5834
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "washingDishes": {
-                  "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/washingDishes",
-                  "type": "object",
-                  "title": "The washingDishes schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "duration": "<duration in seconds>"
-                    }
-                  ],
-                  "required": [
-                    "duration"
-                  ],
-                  "properties": {
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/washingDishes/properties/duration",
-                      "default": "",
-                      "description": "duration in seconds",
-                      "examples": [
-                        29493
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "sittingRelated": {
-                  "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/sittingRelated",
-                  "type": "object",
-                  "title": "The sittingRelated schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "duration": "<duration in seconds>"
-                    }
-                  ],
-                  "required": [
-                    "duration"
-                  ],
-                  "properties": {
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/sittingRelated/properties/duration",
-                      "default": "",
-                      "description": "duration in seconds",
-                      "examples": [
-                        93939
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                }
-              },
-              "additionalProperties": true
-            },
-            "gait": {
-              "$id": "#/properties/userAction/properties/morning/properties/gait",
-              "default": {},
-              "description": "An explanation about the purpose of this instance.",
-              "required": [
-                "features",
-                "dangerousSituation"
-              ],
-              "title": "The gait schema",
-              "type": "object",
-              "properties": {
-                "features": {
-                  "$id": "#/properties/userAction/properties/morning/properties/gait/properties/features",
-                  "default": {},
-                  "description": "An explanation about the purpose of this instance.",
-                  "required": [
-                    "avgSpeed",
-                    "duration"
-                  ],
-                  "title": "The features schema",
-                  "type": "object",
-                  "properties": {
-                    "avgSpeed": {
-                      "$id": "#/properties/userAction/properties/morning/properties/gait/properties/features/properties/avgSpeed",
-                      "default": "",
-                      "description": "average speed for specific day period in m/sec",
-                      "examples": [
-                        50.5
-                      ],
-                      "title": "The avgSpeed schema",
-                      "type": "number"
-                    },
-                    "duration": {
-                      "$id": "#/properties/userAction/properties/morning/properties/gait/properties/features/properties/duration",
-                      "default": "",
-                      "description": "duration of gait inside the house in sec for the specific day period in sec",
-                      "examples": [
-                        603882
-                      ],
-                      "title": "The duration schema",
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "dangerousSituation": {
-                  "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation",
-                  "type": "array",
-                  "title": "The dangerousSituation schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": [],
-                  "examples": [
-                    [
-                      {
-                        "type": "<type of dangerous situation>",
-                        "room": "room where the type happended",
-                        "exactTime": "time of the event"
-                      },
-                      {
-                        "type": "<type of dangerous situation>",
-                        "room": "room where the type happended",
-                        "exactTime": "time of the event"
-                      }
-                    ]
-                  ],
-                  "additionalItems": true,
-                  "items": {
-                    "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items",
-                    "type": "object",
-                    "anyOf": [
-                      {
-                        "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0",
-                        "default": {},
-                        "description": "An explanation about the purpose of this instance.",
-                        "required": [
-                          "type",
-                          "room",
-                          "exactTime"
-                        ],
-                        "title": "The first anyOf schema",
-                        "type": "object",
-                        "properties": {
-                          "type": {
-                            "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/type",
-                            "default": "",
-                            "description": "type of dangerous situation",
-                            "enum": [
-                              "fall",
-                              "dangerousHeight"
-                            ],
-                            "examples": [
-                              "fall"
-                            ],
-                            "title": "The type schema",
-                            "type": "string"
-                          },
-                          "room": {
-                            "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/room",
-                            "default": "",
-                            "description": "room where the type happended",
-                            "enum": [
-                              "kitchen",
-                              "livingroom"
-                            ],
-                            "examples": [
-                              "kitchen"
-                            ],
-                            "title": "The room schema",
-                            "type": "string"
-                          },
-                          "exactTime": {
-                            "$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/exactTime",
-                            "default": "",
-                            "description": "time of the event",
-                            "examples": [
-                              "00:41:09.771571"
-                            ],
-                            "title": "The exactTime schema",
-                            "type": "string"
-                          }
-                        },
-                        "additionalProperties": true
-                      }
-                    ]
-                  }
-                }
-              },
-              "additionalProperties": true
-            }
-          },
-          "additionalProperties": true
-        }
-      },
-      "additionalProperties": true
-    },
-    "profiles": {
-      "$id": "#/properties/profiles",
-      "default": {},
-      "description": "An explanation about the purpose of this instance.",
-      "required": [
-        "emotion",
-        "engagement",
-        "cognitiveInterventionPerformance",
-        "nutritionalInterventionPerformance",
-        "socialInterventionPerformance",
-        "physicalInterventionPerformance"
-      ],
-      "title": "The profiles schema",
-      "type": "object",
-      "properties": {
-        "emotion": {
-          "$id": "#/properties/profiles/properties/emotion",
-          "default": {},
-          "description": "An explanation about the purpose of this instance.",
-          "required": [
-            "face",
-            "voice"
-          ],
-          "title": "The emotion schema",
-          "type": "object",
-          "properties": {
-            "face": {
-              "$id": "#/properties/profiles/properties/emotion/properties/face",
-              "default": {},
-              "description": "An explanation about the purpose of this instance.",
-              "required": [
-                "amountOfTime",
-                "anger",
-                "disgust",
-                "fear",
-                "happiness",
-                "neutral",
-                "sadness",
-                "surprise"
-              ],
-              "title": "The face schema",
-              "type": "object",
-              "properties": {
-                "amountOfTime": {
-                  "$id": "#/properties/profiles/properties/emotion/properties/face/properties/amountOfTime",
-                  "default": "",
-                  "description": "duration of the day that emotion is detected in sec",
-                  "examples": [
-                    283283
-                  ],
-                  "title": "The amountOfTime schema",
-                  "type": "number"
-                },
-                "anger": {
-                  "$id": "#/properties/profiles/properties/emotion/properties/face/properties/anger",
-                  "default": "",
-                  "description": "number from 0 to 1, percentage",
-                  "examples": [
-                    0.5
-                  ],
-                  "title": "The anger schema",
-                  "type": ["number", "null"]
-                        
-                },
-                "disgust": {
-                  "$id": "#/properties/profiles/properties/emotion/properties/face/properties/disgust",
-                  "default": "",
-                  "description": "number from 0 to 1, percentage",
-                  "examples": [
-                    0.2
-                  ],
-                  "title": "The disgust schema",
-                  "type": ["number", "null"]
-                },
-                "fear": {
-                  "$id": "#/properties/profiles/properties/emotion/properties/face/properties/fear",
-                  "default": "",
-                  "description": "number from 0 to 1, percentage",
-                  "examples": [
-                    0.3
-                  ],
-                  "title": "The fear schema",
-                  "type": ["number", "null"]
-                },
-                "hapiness": {
-                  "$id": "#/properties/profiles/properties/emotion/properties/face/properties/hapiness",
-                  "default": "",
-                  "description": "number from 0 to 1, percentage",
-                  "examples": [
-                    0.5
-                  ],
-                  "title": "The hapiness schema",
-                  "type": ["number", "null"]
-                },
-                "neutral": {
-                  "$id": "#/properties/profiles/properties/emotion/properties/face/properties/neutral",
-                  "default": "",
-                  "description": "number from 0 to 1, percentage",
-                  "examples": [
-                    0.7
-                  ],
-                  "title": "The neutral schema",
-                  "type": ["number", "null"]
-                },
-                "sadness": {
-                  "$id": "#/properties/profiles/properties/emotion/properties/face/properties/sadness",
-                  "default": "",
-                  "description": "number from 0 to 1, percentage",
-                  "examples": [
-                    0.7
-                  ],
-                  "title": "The sadness schema",
-                  "type": ["number", "null"]
-                },
-                "surprise": {
-                  "$id": "#/properties/profiles/properties/emotion/properties/face/properties/surprise",
-                  "default": "",
-                  "description": "number from 0 to 1, percentage",
-                  "examples": [
-                    0.3
-                  ],
-                  "title": "The surprise schema",
-                  "type": ["number", "null"]
-                }
-              },
-              "additionalProperties": true
-            },
-            "voice": {
-              "$id": "#/properties/profiles/properties/emotion/properties/voice",
-              "default": {},
-              "description": "An explanation about the purpose of this instance.",
-              "required": [
-                "amountOfTime",
-                "anger",
-                "fear",
-                "happiness",
-                "neutral",
-                "sadness"
-              ],
-              "title": "The voice schema",
-              "type": "object",
-              "properties": {
-                "amountOfTime": {
-                  "$id": "#/properties/profiles/properties/emotion/properties/voice/properties/amountOfTime",
-                  "default": "",
-                  "description": "duration of the day that emotion is detected",
-                  "examples": [
-                    28432
-                  ],
-                  "title": "The amountOfTime schema",
-                  "type": ["number", "null"]
-                },
-                "anger": {
-                  "$id": "#/properties/profiles/properties/emotion/properties/voice/properties/anger",
-                  "default": "",
-                  "description": "number from 0 to 1, percentage",
-                  "examples": [
-                    0.9
-                  ],
-                  "title": "The anger schema",
-                  "maximum": 1,
-                  "minimum": 0,
-                  "type": ["number", "null"]
-                },
-                "fear": {
-                  "$id": "#/properties/profiles/properties/emotion/properties/voice/properties/fear",
-                  "default": "",
-                  "description": "number from 0 to 1, percentage",
-                  "examples": [
-                    0.2
-                  ],
-                  "title": "The fear schema",
-                  "type": ["number", "null"]
-                },
-                "hapiness": {
-                  "$id": "#/properties/profiles/properties/emotion/properties/voice/properties/hapiness",
-                  "default": "",
-                  "description": "number from 0 to 1, percentage",
-                  "examples": [
-                    0.6
-                  ],
-                  "title": "The hapiness schema",
-                  "type": ["number", "null"]
-                },
-                "neutral": {
-                  "$id": "#/properties/profiles/properties/emotion/properties/voice/properties/neutral",
-                  "default": "",
-                  "description": "number from 0 to 1, percentage",
-                  "examples": [
-                    0.2
-                  ],
-                  "title": "The neutral schema",
-                  "type": ["number", "null"]
-                },
-                "sadness": {
-                  "$id": "#/properties/profiles/properties/emotion/properties/voice/properties/sadness",
-                  "default": "",
-                  "description": "number from 0 to 1, percentage",
-                  "examples": [
-                    0.1
-                  ],
-                  "title": "The sadness schema",
-                  "type": ["number", "null"]
-                }
-              },
-              "additionalProperties": true
-            }
-          },
-          "additionalProperties": true
-        },
-        "engagement": {
-          "$id": "#/properties/profiles/properties/engagement",
-          "default": {},
-          "description": "An explanation about the purpose of this instance.",
-          "required": [
-            "accepted"
-          ],
-          "title": "The engagement schema",
-          "type": "object",
-          "properties": {
-            "accepted": {
-              "$id": "#/properties/profiles/properties/engagement/properties/accepted",
-              "default": "",
-              "description": "percentage of activities accepted during the day",
-              "examples": [
-                0.3
-              ],
-              "title": "The accepted schema",
-              "maximum": 1,
-              "minimum": 0,
-              "type": "number"
-            }
-          },
-          "additionalProperties": true
-        },
-        "cognitiveInterventionPerformance": {
-          "$id": "#/properties/profiles/properties/cognitiveInterventionPerformance",
-          "default": {},
-          "description": "An explanation about the purpose of this instance.",
-          "required": [
-            "fromSensing",
-            "fromInterventions"
-          ],
-          "title": "The cognitiveInterventionPerformance schema",
-          "type": "object",
-          "properties": {
-            "fromSensing": {
-              "$id": "#/properties/profiles/properties/cognitiveInterventionPerformance/properties/fromSensing",
-              "type": ["object","null"],
-              "title": "The fromSensing schema",
-              "description": "An explanation about the purpose of this instance.",
-              "default": null,
-              "examples": [
-                null
-              ]
-            },
-            "fromInterventions": {
-              "$id": "#/properties/profiles/properties/cognitiveInterventionPerformance/properties/fromInterventions",
-              "default": [],
-              "description": "An explanation about the purpose of this instance.",
-              "title": "The fromInterventions schema",
-              "type": "array",
-              "additionalItems": true,
-              "items": {
-                "$id": "#/properties/profiles/properties/cognitiveInterventionPerformance/properties/fromInterventions/items",
-                "type": ["object","null"],
-                "anyOf": [
-                  {
-                    "$id": "#/properties/profiles/properties/cognitiveInterventionPerformance/properties/fromInterventions/items/anyOf/0",
-                    "default": {},
-                    "description": "An explanation about the purpose of this instance.",
-                    "required": [
-                      "appId",
-                      "outcome"
-                    ],
-                    "title": "The first anyOf schema",
-                    "type": "object",
-                    "properties": {
-                      "appId": {
-                        "$id": "#/properties/profiles/properties/cognitiveInterventionPerformance/properties/fromInterventions/items/anyOf/0/properties/appId",
-                        "default": "",
-                        "description": "The appId specifies each interventions provided to the user",
-                        "examples": [
-                          "musicApp"
-                        ],
-                        "title": "The appId schema",
-                        "type": "string"
-                      },
-                      "outcome": {
-                        "$id": "#/properties/profiles/properties/cognitiveInterventionPerformance/properties/fromInterventions/items/anyOf/0/properties/outcome",
-                        "default": {},
-                        "description": "outcome for *appId* for today",
-                        "examples": [],
-                        "title": "The outcome schema",
-                        "type": "object"
-                      }
-                    },
-                    "additionalProperties": true
-                  }
-                ]
-              }
-            }
-          },
-          "additionalProperties": true
-        },
-        "nutritionalInterventionPerformance": {
-          "$id": "#/properties/profiles/properties/nutritionalInterventionPerformance",
-          "default": {},
-          "description": "An explanation about the purpose of this instance.",
-          "required": [
-            "fromSensing",
-            "fromInterventions"
-          ],
-          "title": "The nutritionalInterventionPerformance schema",
-          "type": ["object","null"],
-          "properties": {
-            "fromSensing": {
-              "$id": "#/properties/profiles/properties/nutritionalInterventionPerformance/properties/fromSensing",
-              "default": null,
-              "description": "An explanation about the purpose of this instance.",
-              "examples": [
-                null
-              ],
-              "title": "The fromSensing schema",
-              "type": ["object","null"]
-            },
-            "fromInterventions": {
-              "$id": "#/properties/profiles/properties/nutritionalInterventionPerformance/properties/fromInterventions",
-              "default": [],
-              "description": "An explanation about the purpose of this instance.",
-              "title": "The fromInterventions schema",
-              "type": "array",
-              "additionalItems": true,
-              "items": {
-                "$id": "#/properties/profiles/properties/nutritionalInterventionPerformance/properties/fromInterventions/items",
-                "anyOf": [
-                  {
-                    "$id": "#/properties/profiles/properties/nutritionalInterventionPerformance/properties/fromInterventions/items/anyOf/0",
-                    "default": {},
-                    "description": "An explanation about the purpose of this instance.",
-                    "required": [
-                      "appId",
-                      "outcome"
-                    ],
-                    "title": "The first anyOf schema",
-                    "type": "object",
-                    "properties": {
-                      "appId": {
-                        "$id": "#/properties/profiles/properties/nutritionalInterventionPerformance/properties/fromInterventions/items/anyOf/0/properties/appId",
-                        "default": "",
-                        "description": "The appId specifies each interventions provided to the user",
-                        "examples": [
-                          "recipeResommender"
-                        ],
-                        "title": "The appId schema",
-                        "type": "string"
-                      },
-                      "outcome": {
-                        "$id": "#/properties/profiles/properties/nutritionalInterventionPerformance/properties/fromInterventions/items/anyOf/0/properties/outcome",
-                        "default": {},
-                        "description": "outcome for *appId* for today",
-                        "examples": [
-                          {}
-                        ],
-                        "title": "The outcome schema",
-                        "type": "object"
-                      }
-                    },
-                    "additionalProperties": true
-                  }
-                ]
-              }
-            }
-          },
-          "additionalProperties": true
-        },
-        "socialInterventionPerformance": {
-          "$id": "#/properties/profiles/properties/socialInterventionPerformance",
-          "default": {},
-          "description": "An explanation about the purpose of this instance.",
-          "required": [
-            "fromSensing",
-            "fromInterventions"
-          ],
-          "title": "The socialInterventionPerformance schema",
-          "type": ["object","null"],
-          "properties": {
-            "fromSensing": {
-              "$id": "#/properties/profiles/properties/socialInterventionPerformance/properties/fromSensing",
-              "default": null,
-              "description": "An explanation about the purpose of this instance.",
-              "examples": [
-                null
-              ],
-              "title": "The fromSensing schema",
-              "type": ["object","null"]
-            },
-            "fromInterventions": {
-              "$id": "#/properties/profiles/properties/socialInterventionPerformance/properties/fromInterventions",
-              "default": [],
-              "description": "An explanation about the purpose of this instance.",
-              "title": "The fromInterventions schema",
-              "type": "array",
-              "additionalItems": true,
-              "items": {
-                "$id": "#/properties/profiles/properties/socialInterventionPerformance/properties/fromInterventions/items",
-                "anyOf": [
-                  {
-                    "$id": "#/properties/profiles/properties/socialInterventionPerformance/properties/fromInterventions/items/anyOf/0",
-                    "default": {},
-                    "description": "An explanation about the purpose of this instance.",
-                    "required": [
-                      "appId",
-                      "outcome"
-                    ],
-                    "title": "The first anyOf schema",
-                    "type": ["object","null"],
-                    "properties": {
-                      "appId": {
-                        "$id": "#/properties/profiles/properties/socialInterventionPerformance/properties/fromInterventions/items/anyOf/0/properties/appId",
-                        "default": "",
-                        "description": "the appId specifies the interventions provided",
-                        "examples": [
-                          "quiz"
-                        ],
-                        "title": "The appId schema",
-                        "type": "string"
-                      },
-                      "outcome": {
-                        "$id": "#/properties/profiles/properties/socialInterventionPerformance/properties/fromInterventions/items/anyOf/0/properties/outcome",
-                        "default": {},
-                        "description": "outcome for *appId* for today",
-                        "examples": [],
-                        "title": "The outcome schema",
-                        "type": ["object","null"]
-                      }
-                    },
-                    "additionalProperties": true
-                  }
-                ]
-              }
-            }
-          },
-          "additionalProperties": true
-        },
-        "physicalInterventionPerformance": {
-          "$id": "#/properties/profiles/properties/physicalInterventionPerformance",
-          "default": {},
-          "description": "An explanation about the purpose of this instance.",
-          "required": [
-            "fromSensing",
-            "fromInterventions"
-          ],
-          "title": "The physicalInterventionPerformance schema",
-          "type": "object",
-          "properties": {
-            "fromSensing": {
-              "$id": "#/properties/profiles/properties/physicalInterventionPerformance/properties/fromSensing",
-              "type": "null",
-              "title": "The fromSensing schema",
-              "description": "An explanation about the purpose of this instance.",
-              "default": null,
-              "examples": [
-                null
-              ]
-            },
-            "fromInterventions": {
-              "$id": "#/properties/profiles/properties/physicalInterventionPerformance/properties/fromInterventions",
-              "default": [],
-              "description": "An explanation about the purpose of this instance.",
-              "title": "The fromInterventions schema",
-              "type": "array",
-              "additionalItems": true,
-              "items": {
-                "$id": "#/properties/profiles/properties/physicalInterventionPerformance/properties/fromInterventions/items",
-                "anyOf": [
-                  {
-                    "$id": "#/properties/profiles/properties/physicalInterventionPerformance/properties/fromInterventions/items/anyOf/0",
-                    "default": {},
-                    "description": "An explanation about the purpose of this instance.",
-                    "required": [
-                      "appId",
-                      "outcome"
-                    ],
-                    "title": "The first anyOf schema",
-                    "type": "object",
-                    "properties": {
-                      "appId": {
-                        "$id": "#/properties/profiles/properties/physicalInterventionPerformance/properties/fromInterventions/items/anyOf/0/properties/appId",
-                        "default": "",
-                        "description": "the appId specifies the intervention",
-                        "examples": [
-                          "physicalTrainer"
-                        ],
-                        "title": "The appId schema",
-                        "type": "string"
-                      },
-                      "outcome": {
-                        "$id": "#/properties/profiles/properties/physicalInterventionPerformance/properties/fromInterventions/items/anyOf/0/properties/outcome",
-                        "default": {},
-                        "description": "outcome for *appId* for today",
-                        "title": "The outcome schema",
-                        "type": "object"
-                      }
-                    },
-                    "additionalProperties": true
-                  }
-                ]
-              }
-            }
-          },
-          "additionalProperties": true
-        }
-      },
-      "additionalProperties": true
-    },
-    "diseaseMonitoring": {
-      "$id": "#/properties/diseaseMonitoring",
-      "default": {},
-      "description": "An explanation about the purpose of this instance.",
-      "required": [
-        "diseaseSigns",
-        "diseaseSymptoms"
-      ],
-      "title": "The diseaseMonitoring schema",
-      "type": "object",
-      "properties": {
-        "diseaseSigns": {
-          "$id": "#/properties/diseaseMonitoring/properties/diseaseSigns",
-          "default": [],
-          "description": "Measured features that can be disease progress signs.",
-          "examples": [
-            [
-              {
-                "type": " one of the following oxygen|lipColour|fingerColour|coughEstimated",
-                "value": "",
-                "unit": ""
-              },
-              {
-                "type": "lipColour",
-                "value": [
-                  2,
-                  3,
-                  4
-                ],
-                "unit": ""
-              }
-            ]
-          ],
-          "title": "The diseaseSigns schema",
-          "type": "array",
-          "additionalItems": true,
-          "items": {
-            "$id": "#/properties/diseaseMonitoring/properties/diseaseSigns/items",
-            "anyOf": [
-              {
-                "$id": "#/properties/diseaseMonitoring/properties/diseaseSigns/items/anyOf/0",
-                "default": {},
-                "description": "An explanation about the purpose of this instance.",
-                "required": [
-                  "type",
-                  "value",
-                  "unit"
-                ],
-                "title": "The first anyOf schema",
-                "type": "object",
-                "properties": {
-                  "type": {
-                    "$id": "#/properties/diseaseMonitoring/properties/diseaseSigns/items/anyOf/0/properties/type",
-                    "default": "",
-                    "description": "An explanation about the purpose of this instance.",
-                    "enum": [
-                      "bpm",
-                      "pi",
-                      "spo2",
-                      "lipColour",
-                      "fingerColour",
-                      "coughEstimated"
-                    ],
-                    "title": "The type schema",
-                    "type": "string"
-                  },
-                  "value": {
-                    "$id": "#/properties/diseaseMonitoring/properties/diseaseSigns/items/anyOf/0/properties/value",
-                    "default": "",
-                    "description": "An explanation about the purpose of this instance.",
-                    "examples": [
-                      ""
-                    ],
-                    "title": "The value schema",
-                    "type": [
-                      "string",
-                      "number",
-                      "integer",
-                      "array"
-                    ]
-                  },
-                  "unit": {
-                    "$id": "#/properties/diseaseMonitoring/properties/diseaseSigns/items/anyOf/0/properties/unit",
-                    "default": "",
-                    "description": "The unit of measurement for the specific valu",
-                    "examples": [
-                      ""
-                    ],
-                    "title": "The unit schema",
-                    "type": "string"
-                  }
-                },
-                "additionalProperties": true
-              }
-            ]
-          }
-        },
-        "diseaseSymptoms": {
-          "$id": "#/properties/diseaseMonitoring/properties/diseaseSymptoms",
-          "default": [],
-          "description": "Sell-reported disease symptoms.",
-          "title": "The diseaseSymptoms schema",
-          "type": "array",
-          "additionalItems": true,
-          "items": {
-            "$id": "#/properties/diseaseMonitoring/properties/diseaseSymptoms/items",
-            "type": "object",
-            "anyOf": [
-              {
-                "$id": "#/properties/diseaseMonitoring/properties/diseaseSymptoms/items/anyOf/0",
-                "type": "object",
-                "title": "The first anyOf schema",
-                "description": "An explanation about the purpose of this instance.",
-                "default": {},
-                "examples": [
-                  {
-                    "type": "one of the following fever | soreThroat | cough | diarrhea | appetiteLoss | abdominalPain| fatigue | chestPain | confusion | headache | unusualMusclePain | smellLoss | confusion | breathingProblem | ",
-                    "value": "",
-                    "unit": "boolean | multipleChoice"
-                  }
-                ],
-                "required": [
-                  "type",
-                  "value",
-                  "unit"
-                ],
-                "properties": {
-                  "type": {
-                    "$id": "#/properties/diseaseMonitoring/properties/diseaseSymptoms/items/anyOf/0/properties/type",
-                    "default": "",
-                    "description": "one of the following fever | soreThroat | cough | diarrhea | appetiteLoss | abdominalPain| fatigue | chestPain | confusion | headache | unusualMusclePain | smellLoss | confusion | breathingProblem | ",
-                    "title": "The type schema",
-                    "type": "string"
-                  },
-                  "value": {
-                    "$id": "#/properties/diseaseMonitoring/properties/diseaseSymptoms/items/anyOf/0/properties/value",
-                    "default": "",
-                    "description": "An explanation about the purpose of this instance.",
-                    "examples": [
-                      ""
-                    ],
-                    "title": "The value schema",
-                    "type": [
-                      "string",
-                      "number",
-                      "integer",
-                      "array"
-                    ]
-                  },
-                  "unit": {
-                    "$id": "#/properties/diseaseMonitoring/properties/diseaseSymptoms/items/anyOf/0/properties/unit",
-                    "type": "string",
-                    "title": "The unit schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                      "boolean | multipleChoice"
-                    ]
-                  }
-                },
-                "additionalProperties": true
-              }
-            ]
-          }
-        }
-      },
-      "additionalProperties": true
-    }
-  },
-  "additionalProperties": true
+	"$id": "http://example.com/example.json",
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"default": {},
+	"description": "The root schema comprises the entire JSON document.",
+	"required": [
+		"userId",
+		"gender",
+		"language",
+		"date",
+		"userDetectedPerHourHistogram",
+		"userAction",
+		"profiles",
+		"diseaseMonitoring"
+	],
+	"title": "The root schema",
+	"type": "object",
+	"properties": {
+		"userId": {
+			"$id": "#/properties/userId",
+			"default": "",
+			"description": "the userId represents the user for the system",
+			"examples": [
+				"89888a22-7c0c-40e8-9812-a6c2e2a65163"
+			],
+			"title": "The userId schema",
+			"type": "string"
+		},
+		"gender": {
+			"$id": "#/properties/gender",
+			"default": "",
+			"description": "user's gender",
+			"enum": [
+				"male",
+				"female",
+				"unknown"
+			],
+			"examples": [
+				"male"
+			],
+			"title": "The gender schema",
+			"type": [
+				"string",
+				"null"
+			]
+		},
+		"BMI": {
+			"$id": "#/properties/BMI",
+			"default": "",
+			"description": "the user's Body Mass Index",
+			"examples": [
+				24.3
+			],
+			"title": "The BMI schema",
+			"type": [
+				"number",
+				"null"
+			]
+		},
+		"language": {
+			"$id": "#/properties/language",
+			"default": "",
+			"description": "The language code that the user has selected",
+			"examples": [
+				"en"
+			],
+			"title": "The language schema",
+			"enum": [
+				"en",
+				"el",
+				"es",
+				"it"
+			],
+			"type": [
+				"string",
+				"null"
+			]
+		},
+		"date": {
+			"$id": "#/properties/date",
+			"default": "",
+			"description": "the date the data are collected",
+			"examples": [
+				"2020-12-19 00:41:09.771571"
+			],
+			"title": "The date schema",
+			"type": "string"
+		},
+		"userDetectedPerHourHistogram": {
+			"$id": "#/properties/userDetectedPerHourHistogram",
+			"default": [],
+			"description": "An explanation about the purpose of this instance.",
+			"title": "The userDetectedPerHourHistogram schema",
+			"type": "array",
+			"additionalItems": true,
+			"items": {
+				"$id": "#/properties/userDetectedPerHourHistogram/items",
+				"type": "object",
+				"anyOf": [
+					{
+						"$id": "#/properties/userDetectedPerHourHistogram/items/anyOf/0",
+						"type": "object",
+						"title": "The first anyOf schema",
+						"description": "An explanation about the purpose of this instance.",
+						"default": {},
+						"examples": [
+							{
+								"room": "kitchen",
+								"histogram": [
+									{
+										"dayHour": "18",
+										"durationSeconds": "20"
+									}
+								]
+							}
+						],
+						"required": [
+							"room",
+							"histogram"
+						],
+						"properties": {
+							"room": {
+								"$id": "#/properties/userDetectedPerHourHistogram/items/anyOf/0/properties/room",
+								"default": "",
+								"description": "An explanation about the purpose of this instance.",
+								"enum": [
+									"kitchen",
+									"bedroom",
+									"livingroom",
+									null
+								],
+								"examples": [
+									"kitchen"
+								],
+								"title": "The room schema",
+								"type": [
+									"string",
+									"null"
+								]
+							},
+							"histogram": {
+								"$id": "#/properties/userDetectedPerHourHistogram/items/anyOf/0/properties/histogram",
+								"default": [],
+								"description": "An explanation about the purpose of this instance.",
+								"examples": [
+									[
+										{
+											"dayHour": "18",
+											"durationSeconds": "20"
+										}
+									]
+								],
+								"title": "The histogram schema",
+								"type": [
+									"array",
+									"null"
+								],
+								"additionalItems": true,
+								"items": {
+									"$id": "#/properties/userDetectedPerHourHistogram/items/anyOf/0/properties/histogram/items",
+									"anyOf": [
+										{
+											"$id": "#/properties/userDetectedPerHourHistogram/items/anyOf/0/properties/histogram/items/anyOf/0",
+											"type": [
+												"object",
+												"null"
+											],
+											"title": "The first anyOf schema",
+											"description": "An explanation about the purpose of this instance.",
+											"default": {},
+											"examples": [
+												{
+													"dayHour": "18",
+													"durationSeconds": "20"
+												}
+											],
+											"required": [
+												"dayHour",
+												"durationSeconds"
+											],
+											"properties": {
+												"dayHour": {
+													"$id": "#/properties/userDetectedPerHourHistogram/items/anyOf/0/properties/histogram/items/anyOf/0/properties/dayHour",
+													"default": "",
+													"description": "the hour of the day in 0-24 format",
+													"examples": [
+														"18"
+													],
+													"maximum": 24,
+													"minimum": 0,
+													"title": "The dayHour schema",
+													"type": "integer"
+												},
+												"durationSeconds": {
+													"$id": "#/properties/userDetectedPerHourHistogram/items/anyOf/0/properties/histogram/items/anyOf/0/properties/durationSeconds",
+													"default": "",
+													"description": "duration in seconds the person spend in this room",
+													"examples": [
+														"20"
+													],
+													"title": "The durationSeconds schema",
+													"type": [
+														"integer",
+														"null"
+													]
+												}
+											},
+											"additionalProperties": true
+										}
+									]
+								}
+							}
+						},
+						"additionalProperties": true
+					}
+				]
+			}
+		},
+		"userAction": {
+			"$id": "#/properties/userAction",
+			"default": {},
+			"description": "An explanation about the purpose of this instance.",
+			"required": [
+				"morning",
+				"afternoon",
+				"evening",
+				"night"
+			],
+			"title": "The userAction schema",
+			"type": "object",
+			"properties": {
+				"morning": {
+					"$id": "#/properties/userAction/properties/morning",
+					"default": {},
+					"description": "An explanation about the purpose of this instance.",
+					"required": [
+						"preferedLocation",
+						"adlAnalytics",
+						"gait"
+					],
+					"title": "The morning schema",
+					"type": "object",
+					"properties": {
+						"preferedLocation": {
+							"$id": "#/properties/userAction/properties/morning/properties/preferedLocation",
+							"default": {},
+							"description": "An explanation about the purpose of this instance.",
+							"required": [
+								"room",
+								"area"
+							],
+							"title": "The preferedLocation schema",
+							"type": "object",
+							"properties": {
+								"room": {
+									"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room",
+									"type": "object",
+									"title": "The room schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"roomType": "<name of the room type>",
+											"percentage": "<number from 0 to 1 indicating the percentage of total time user is detected to time in this room>"
+										}
+									],
+									"required": [
+										"roomType",
+										"percentage"
+									],
+									"properties": {
+										"roomType": {
+											"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room/properties/roomType",
+											"default": "",
+											"description": "An explanation about the purpose of this instance.",
+											"enum": [
+												"livingroom",
+												"kitchen",
+												null
+											],
+											"examples": [
+												"kitchen"
+											],
+											"title": "The roomType schema",
+											"type": [
+												"string",
+												"null"
+											]
+										},
+										"percentage": {
+											"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room/properties/percentage",
+											"default": "",
+											"description": "number from 0 to 1 indicating the percentage of total time user is detected to time in this room",
+											"examples": [
+												0.7
+											],
+											"maximum": 1,
+											"minimum": 0,
+											"title": "The percentage schema",
+											"type": [
+												"number",
+												"null"
+											]
+										}
+									},
+									"additionalProperties": true
+								},
+								"area": {
+									"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area",
+									"default": {},
+									"description": "An explanation about the purpose of this instance.",
+									"required": [
+										"areaType",
+										"percentage"
+									],
+									"title": "The area schema",
+									"type": "object",
+									"properties": {
+										"areaType": {
+											"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area/properties/areaType",
+											"default": "",
+											"description": "name of the area type",
+											"enum": [
+												"sofa",
+												"door",
+												"telephone",
+												"table",
+												"chair",
+												"fridge",
+												null
+											],
+											"examples": [
+												"sofa"
+											],
+											"title": "The areaType schema",
+											"type": [
+												"string",
+												"null"
+											]
+										},
+										"percentage": {
+											"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area/properties/percentage",
+											"default": "",
+											"description": "number from 0 to 1 indicating the percentage of time detected to time in this area>",
+											"examples": [
+												0.6
+											],
+											"maximum": 1,
+											"minimum": 0,
+											"title": "The percentage schema",
+											"type": [
+												"number",
+												"null"
+											]
+										}
+									},
+									"additionalProperties": true
+								}
+							},
+							"additionalProperties": true
+						},
+						"adlAnalytics": {
+							"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics",
+							"type": "object",
+							"title": "The adlAnalytics schema",
+							"description": "An explanation about the purpose of this instance.",
+							"default": {},
+							"examples": [
+								{
+									"eating": {
+										"duration": "<duration in seconds>"
+									},
+									"preparingFood": {
+										"duration": "<duration in seconds>"
+									},
+									"washingDishes": {
+										"duration": "<duration in seconds>"
+									},
+									"sittingRelated": {
+										"duration": "<duration in seconds>"
+									}
+								}
+							],
+							"required": [
+								"eating",
+								"preparingFood",
+								"washingDishes",
+								"sittingRelated"
+							],
+							"properties": {
+								"eating": {
+									"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/eating",
+									"type": "object",
+									"title": "The eating schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"duration": "<duration in seconds>"
+										}
+									],
+									"required": [
+										"duration"
+									],
+									"properties": {
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/eating/properties/duration",
+											"default": "",
+											"description": "duration in seconds",
+											"examples": [
+												1462
+											],
+											"title": "The duration schema",
+											"type": [
+												"number",
+												"null"
+											]
+										}
+									},
+									"additionalProperties": true
+								},
+								"preparingFood": {
+									"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/preparingFood",
+									"type": "object",
+									"title": "The preparingFood schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"duration": "<duration in seconds>"
+										}
+									],
+									"required": [
+										"duration"
+									],
+									"properties": {
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/preparingFood/properties/duration",
+											"default": "",
+											"description": "duration in seconds",
+											"examples": [
+												5834
+											],
+											"title": "The duration schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								},
+								"washingDishes": {
+									"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/washingDishes",
+									"type": "object",
+									"title": "The washingDishes schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"duration": "<duration in seconds>"
+										}
+									],
+									"required": [
+										"duration"
+									],
+									"properties": {
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/washingDishes/properties/duration",
+											"default": "",
+											"description": "duration in seconds",
+											"examples": [
+												29493
+											],
+											"title": "The duration schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								},
+								"sittingRelated": {
+									"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/sittingRelated",
+									"type": "object",
+									"title": "The sittingRelated schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"duration": "<duration in seconds>"
+										}
+									],
+									"required": [
+										"duration"
+									],
+									"properties": {
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/sittingRelated/properties/duration",
+											"default": "",
+											"description": "duration in seconds",
+											"examples": [
+												93939
+											],
+											"title": "The duration schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								}
+							},
+							"additionalProperties": true
+						},
+						"gait": {
+							"$id": "#/properties/userAction/properties/morning/properties/gait",
+							"default": {},
+							"description": "An explanation about the purpose of this instance.",
+							"required": [
+								"features",
+								"dangerousSituation"
+							],
+							"title": "The gait schema",
+							"type": "object",
+							"properties": {
+								"features": {
+									"$id": "#/properties/userAction/properties/morning/properties/gait/properties/features",
+									"default": {},
+									"description": "An explanation about the purpose of this instance.",
+									"required": [
+										"avgSpeed",
+										"duration"
+									],
+									"title": "The features schema",
+									"type": "object",
+									"properties": {
+										"avgSpeed": {
+											"$id": "#/properties/userAction/properties/morning/properties/gait/properties/features/properties/avgSpeed",
+											"default": "",
+											"description": "average speed for specific day period in m/sec",
+											"examples": [
+												50.5
+											],
+											"title": "The avgSpeed schema",
+											"type": [
+												"number",
+												"null"
+											]
+										},
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/gait/properties/features/properties/duration",
+											"default": "",
+											"description": "duration of gait inside the house in sec for the specific day period in sec",
+											"examples": [
+												603882
+											],
+											"title": "The duration schema",
+											"type": [
+												"number",
+												"null"
+											]
+										}
+									},
+									"additionalProperties": true
+								},
+								"dangerousSituation": {
+									"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation",
+									"type": "array",
+									"title": "The dangerousSituation schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": [],
+									"examples": [
+										[
+											{
+												"type": "<type of dangerous situation>",
+												"room": "room where the type happended",
+												"exactTime": "time of the event"
+											},
+											{
+												"type": "<type of dangerous situation>",
+												"room": "room where the type happended",
+												"exactTime": "time of the event"
+											}
+										]
+									],
+									"additionalItems": true,
+									"items": {
+										"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items",
+										"type": "object",
+										"anyOf": [
+											{
+												"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0",
+												"default": {},
+												"description": "An explanation about the purpose of this instance.",
+												"required": [
+													"type",
+													"room",
+													"exactTime"
+												],
+												"title": "The first anyOf schema",
+												"type": "object",
+												"properties": {
+													"type": {
+														"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/type",
+														"default": "",
+														"description": "type of dangerous situation",
+														"enum": [
+															"fall",
+															"dangerousHeight",
+															null
+														],
+														"examples": [
+															"fall"
+														],
+														"title": "The type schema",
+														"type": [
+															"string",
+															"null"
+														]
+													},
+													"room": {
+														"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/room",
+														"default": "",
+														"description": "room where the type happended",
+														"enum": [
+															"kitchen",
+															"livingroom",
+															null
+														],
+														"examples": [
+															"kitchen"
+														],
+														"title": "The room schema",
+														"type": [
+															"string",
+															"null"
+														]
+													},
+													"exactTime": {
+														"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/exactTime",
+														"default": "",
+														"description": "time of the event",
+														"examples": [
+															"00:41:09.771571"
+														],
+														"title": "The exactTime schema",
+														"type": [
+															"string",
+															"null"
+														]
+													}
+												},
+												"additionalProperties": true
+											}
+										]
+									}
+								}
+							},
+							"additionalProperties": true
+						}
+					},
+					"additionalProperties": true
+				},
+				"afternoon": {
+					"$id": "#/properties/userAction/properties/morning",
+					"default": {},
+					"description": "An explanation about the purpose of this instance.",
+					"required": [
+						"preferedLocation",
+						"adlAnalytics",
+						"gait"
+					],
+					"title": "The morning schema",
+					"type": "object",
+					"properties": {
+						"preferedLocation": {
+							"$id": "#/properties/userAction/properties/morning/properties/preferedLocation",
+							"default": {},
+							"description": "An explanation about the purpose of this instance.",
+							"required": [
+								"room",
+								"area"
+							],
+							"title": "The preferedLocation schema",
+							"type": "object",
+							"properties": {
+								"room": {
+									"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room",
+									"type": "object",
+									"title": "The room schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"roomType": "<name of the room type>",
+											"percentage": "<number from 0 to 1 indicating the percentage of total time user is detected to time in this room>"
+										}
+									],
+									"required": [
+										"roomType",
+										"percentage"
+									],
+									"properties": {
+										"roomType": {
+											"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room/properties/roomType",
+											"default": "",
+											"description": "An explanation about the purpose of this instance.",
+											"enum": [
+												"livingroom",
+												"kitchen",
+												null
+											],
+											"examples": [
+												"kitchen"
+											],
+											"title": "The roomType schema",
+											"type": [
+												"string",
+												"null"
+											]
+										},
+										"percentage": {
+											"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room/properties/percentage",
+											"default": "",
+											"description": "number from 0 to 1 indicating the percentage of total time user is detected to time in this room",
+											"examples": [
+												0.7
+											],
+											"maximum": 1,
+											"minimum": 0,
+											"title": "The percentage schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								},
+								"area": {
+									"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area",
+									"default": {},
+									"description": "An explanation about the purpose of this instance.",
+									"required": [
+										"areaType",
+										"percentage"
+									],
+									"title": "The area schema",
+									"type": "object",
+									"properties": {
+										"areaType": {
+											"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area/properties/areaType",
+											"default": "",
+											"description": "name of the area type",
+											"enum": [
+												"sofa",
+												"door",
+												"telephone",
+												"table",
+												"chair",
+												"fridge",
+												null
+											],
+											"examples": [
+												"sofa"
+											],
+											"title": "The areaType schema",
+											"type": [
+												"string",
+												"null"
+											]
+										},
+										"percentage": {
+											"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area/properties/percentage",
+											"default": "",
+											"description": "number from 0 to 1 indicating the percentage of time detected to time in this area>",
+											"examples": [
+												0.6
+											],
+											"maximum": 1,
+											"minimum": 0,
+											"title": "The percentage schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								}
+							},
+							"additionalProperties": true
+						},
+						"adlAnalytics": {
+							"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics",
+							"type": "object",
+							"title": "The adlAnalytics schema",
+							"description": "An explanation about the purpose of this instance.",
+							"default": {},
+							"examples": [
+								{
+									"eating": {
+										"duration": "<duration in seconds>"
+									},
+									"preparingFood": {
+										"duration": "<duration in seconds>"
+									},
+									"washingDishes": {
+										"duration": "<duration in seconds>"
+									},
+									"sittingRelated": {
+										"duration": "<duration in seconds>"
+									}
+								}
+							],
+							"required": [
+								"eating",
+								"preparingFood",
+								"washingDishes",
+								"sittingRelated"
+							],
+							"properties": {
+								"eating": {
+									"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/eating",
+									"type": "object",
+									"title": "The eating schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"duration": "<duration in seconds>"
+										}
+									],
+									"required": [
+										"duration"
+									],
+									"properties": {
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/eating/properties/duration",
+											"default": "",
+											"description": "duration in seconds",
+											"examples": [
+												1462
+											],
+											"title": "The duration schema",
+											"type": [
+												"number",
+												"null"
+											]
+										}
+									},
+									"additionalProperties": true
+								},
+								"preparingFood": {
+									"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/preparingFood",
+									"type": "object",
+									"title": "The preparingFood schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"duration": "<duration in seconds>"
+										}
+									],
+									"required": [
+										"duration"
+									],
+									"properties": {
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/preparingFood/properties/duration",
+											"default": "",
+											"description": "duration in seconds",
+											"examples": [
+												5834
+											],
+											"title": "The duration schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								},
+								"washingDishes": {
+									"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/washingDishes",
+									"type": "object",
+									"title": "The washingDishes schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"duration": "<duration in seconds>"
+										}
+									],
+									"required": [
+										"duration"
+									],
+									"properties": {
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/washingDishes/properties/duration",
+											"default": "",
+											"description": "duration in seconds",
+											"examples": [
+												29493
+											],
+											"title": "The duration schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								},
+								"sittingRelated": {
+									"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/sittingRelated",
+									"type": "object",
+									"title": "The sittingRelated schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"duration": "<duration in seconds>"
+										}
+									],
+									"required": [
+										"duration"
+									],
+									"properties": {
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/sittingRelated/properties/duration",
+											"default": "",
+											"description": "duration in seconds",
+											"examples": [
+												93939
+											],
+											"title": "The duration schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								}
+							},
+							"additionalProperties": true
+						},
+						"gait": {
+							"$id": "#/properties/userAction/properties/morning/properties/gait",
+							"default": {},
+							"description": "An explanation about the purpose of this instance.",
+							"required": [
+								"features",
+								"dangerousSituation"
+							],
+							"title": "The gait schema",
+							"type": "object",
+							"properties": {
+								"features": {
+									"$id": "#/properties/userAction/properties/morning/properties/gait/properties/features",
+									"default": {},
+									"description": "An explanation about the purpose of this instance.",
+									"required": [
+										"avgSpeed",
+										"duration"
+									],
+									"title": "The features schema",
+									"type": "object",
+									"properties": {
+										"avgSpeed": {
+											"$id": "#/properties/userAction/properties/morning/properties/gait/properties/features/properties/avgSpeed",
+											"default": "",
+											"description": "average speed for specific day period in m/sec",
+											"examples": [
+												50.5
+											],
+											"title": "The avgSpeed schema",
+											"type": [
+												"number",
+												"null"
+											]
+										},
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/gait/properties/features/properties/duration",
+											"default": "",
+											"description": "duration of gait inside the house in sec for the specific day period in sec",
+											"examples": [
+												603882
+											],
+											"title": "The duration schema",
+											"type": [
+												"number",
+												"null"
+											]
+										}
+									},
+									"additionalProperties": true
+								},
+								"dangerousSituation": {
+									"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation",
+									"type": "array",
+									"title": "The dangerousSituation schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": [],
+									"examples": [
+										[
+											{
+												"type": "<type of dangerous situation>",
+												"room": "room where the type happended",
+												"exactTime": "time of the event"
+											},
+											{
+												"type": "<type of dangerous situation>",
+												"room": "room where the type happended",
+												"exactTime": "time of the event"
+											}
+										]
+									],
+									"additionalItems": true,
+									"items": {
+										"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items",
+										"type": "object",
+										"anyOf": [
+											{
+												"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0",
+												"default": {},
+												"description": "An explanation about the purpose of this instance.",
+												"required": [
+													"type",
+													"room",
+													"exactTime"
+												],
+												"title": "The first anyOf schema",
+												"type": "object",
+												"properties": {
+													"type": {
+														"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/type",
+														"default": "",
+														"description": "type of dangerous situation",
+														"enum": [
+															"fall",
+															"dangerousHeight",
+															null
+														],
+														"examples": [
+															"fall"
+														],
+														"title": "The type schema",
+														"type": [
+															"string",
+															"null"
+														]
+													},
+													"room": {
+														"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/room",
+														"default": "",
+														"description": "room where the type happended",
+														"enum": [
+															"kitchen",
+															"livingroom",
+															null
+														],
+														"examples": [
+															"kitchen"
+														],
+														"title": "The room schema",
+														"type": [
+															"string",
+															"null"
+														]
+													},
+													"exactTime": {
+														"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/exactTime",
+														"default": "",
+														"description": "time of the event",
+														"examples": [
+															"00:41:09.771571"
+														],
+														"title": "The exactTime schema",
+														"type": [
+															"string",
+															"null"
+														]
+													}
+												},
+												"additionalProperties": true
+											}
+										]
+									}
+								}
+							},
+							"additionalProperties": true
+						}
+					},
+					"additionalProperties": true
+				},
+				"evening": {
+					"$id": "#/properties/userAction/properties/morning",
+					"default": {},
+					"description": "An explanation about the purpose of this instance.",
+					"required": [
+						"preferedLocation",
+						"adlAnalytics",
+						"gait"
+					],
+					"title": "The morning schema",
+					"type": "object",
+					"properties": {
+						"preferedLocation": {
+							"$id": "#/properties/userAction/properties/morning/properties/preferedLocation",
+							"default": {},
+							"description": "An explanation about the purpose of this instance.",
+							"required": [
+								"room",
+								"area"
+							],
+							"title": "The preferedLocation schema",
+							"type": "object",
+							"properties": {
+								"room": {
+									"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room",
+									"type": "object",
+									"title": "The room schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"roomType": "<name of the room type>",
+											"percentage": "<number from 0 to 1 indicating the percentage of total time user is detected to time in this room>"
+										}
+									],
+									"required": [
+										"roomType",
+										"percentage"
+									],
+									"properties": {
+										"roomType": {
+											"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room/properties/roomType",
+											"default": "",
+											"description": "An explanation about the purpose of this instance.",
+											"enum": [
+												"livingroom",
+												"kitchen",
+												null
+											],
+											"examples": [
+												"kitchen"
+											],
+											"title": "The roomType schema",
+											"type": [
+												"string",
+												"null"
+											]
+										},
+										"percentage": {
+											"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room/properties/percentage",
+											"default": "",
+											"description": "number from 0 to 1 indicating the percentage of total time user is detected to time in this room",
+											"examples": [
+												0.7
+											],
+											"maximum": 1,
+											"minimum": 0,
+											"title": "The percentage schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								},
+								"area": {
+									"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area",
+									"default": {},
+									"description": "An explanation about the purpose of this instance.",
+									"required": [
+										"areaType",
+										"percentage"
+									],
+									"title": "The area schema",
+									"type": "object",
+									"properties": {
+										"areaType": {
+											"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area/properties/areaType",
+											"default": "",
+											"description": "name of the area type",
+											"enum": [
+												"sofa",
+												"door",
+												"telephone",
+												"table",
+												"chair",
+												"fridge",
+												null
+											],
+											"examples": [
+												"sofa"
+											],
+											"title": "The areaType schema",
+											"type": [
+												"string",
+												"null"
+											]
+										},
+										"percentage": {
+											"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area/properties/percentage",
+											"default": "",
+											"description": "number from 0 to 1 indicating the percentage of time detected to time in this area>",
+											"examples": [
+												0.6
+											],
+											"maximum": 1,
+											"minimum": 0,
+											"title": "The percentage schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								}
+							},
+							"additionalProperties": true
+						},
+						"adlAnalytics": {
+							"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics",
+							"type": "object",
+							"title": "The adlAnalytics schema",
+							"description": "An explanation about the purpose of this instance.",
+							"default": {},
+							"examples": [
+								{
+									"eating": {
+										"duration": "<duration in seconds>"
+									},
+									"preparingFood": {
+										"duration": "<duration in seconds>"
+									},
+									"washingDishes": {
+										"duration": "<duration in seconds>"
+									},
+									"sittingRelated": {
+										"duration": "<duration in seconds>"
+									}
+								}
+							],
+							"required": [
+								"eating",
+								"preparingFood",
+								"washingDishes",
+								"sittingRelated"
+							],
+							"properties": {
+								"eating": {
+									"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/eating",
+									"type": "object",
+									"title": "The eating schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"duration": "<duration in seconds>"
+										}
+									],
+									"required": [
+										"duration"
+									],
+									"properties": {
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/eating/properties/duration",
+											"default": "",
+											"description": "duration in seconds",
+											"examples": [
+												1462
+											],
+											"title": "The duration schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								},
+								"preparingFood": {
+									"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/preparingFood",
+									"type": "object",
+									"title": "The preparingFood schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"duration": "<duration in seconds>"
+										}
+									],
+									"required": [
+										"duration"
+									],
+									"properties": {
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/preparingFood/properties/duration",
+											"default": "",
+											"description": "duration in seconds",
+											"examples": [
+												5834
+											],
+											"title": "The duration schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								},
+								"washingDishes": {
+									"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/washingDishes",
+									"type": "object",
+									"title": "The washingDishes schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"duration": "<duration in seconds>"
+										}
+									],
+									"required": [
+										"duration"
+									],
+									"properties": {
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/washingDishes/properties/duration",
+											"default": "",
+											"description": "duration in seconds",
+											"examples": [
+												29493
+											],
+											"title": "The duration schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								},
+								"sittingRelated": {
+									"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/sittingRelated",
+									"type": "object",
+									"title": "The sittingRelated schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"duration": "<duration in seconds>"
+										}
+									],
+									"required": [
+										"duration"
+									],
+									"properties": {
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/sittingRelated/properties/duration",
+											"default": "",
+											"description": "duration in seconds",
+											"examples": [
+												93939
+											],
+											"title": "The duration schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								}
+							},
+							"additionalProperties": true
+						},
+						"gait": {
+							"$id": "#/properties/userAction/properties/morning/properties/gait",
+							"default": {},
+							"description": "An explanation about the purpose of this instance.",
+							"required": [
+								"features",
+								"dangerousSituation"
+							],
+							"title": "The gait schema",
+							"type": "object",
+							"properties": {
+								"features": {
+									"$id": "#/properties/userAction/properties/morning/properties/gait/properties/features",
+									"default": {},
+									"description": "An explanation about the purpose of this instance.",
+									"required": [
+										"avgSpeed",
+										"duration"
+									],
+									"title": "The features schema",
+									"type": "object",
+									"properties": {
+										"avgSpeed": {
+											"$id": "#/properties/userAction/properties/morning/properties/gait/properties/features/properties/avgSpeed",
+											"default": "",
+											"description": "average speed for specific day period in m/sec",
+											"examples": [
+												50.5
+											],
+											"title": "The avgSpeed schema",
+											"type": [
+												"number",
+												"null"
+											]
+										},
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/gait/properties/features/properties/duration",
+											"default": "",
+											"description": "duration of gait inside the house in sec for the specific day period in sec",
+											"examples": [
+												603882
+											],
+											"title": "The duration schema",
+											"type": [
+												"number",
+												"null"
+											]
+										}
+									},
+									"additionalProperties": true
+								},
+								"dangerousSituation": {
+									"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation",
+									"type": "array",
+									"title": "The dangerousSituation schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": [],
+									"examples": [
+										[
+											{
+												"type": "<type of dangerous situation>",
+												"room": "room where the type happended",
+												"exactTime": "time of the event"
+											},
+											{
+												"type": "<type of dangerous situation>",
+												"room": "room where the type happended",
+												"exactTime": "time of the event"
+											}
+										]
+									],
+									"additionalItems": true,
+									"items": {
+										"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items",
+										"type": "object",
+										"anyOf": [
+											{
+												"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0",
+												"default": {},
+												"description": "An explanation about the purpose of this instance.",
+												"required": [
+													"type",
+													"room",
+													"exactTime"
+												],
+												"title": "The first anyOf schema",
+												"type": "object",
+												"properties": {
+													"type": {
+														"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/type",
+														"default": "",
+														"description": "type of dangerous situation",
+														"enum": [
+															"fall",
+															"dangerousHeight",
+															null
+														],
+														"examples": [
+															"fall"
+														],
+														"title": "The type schema",
+														"type": [
+															"string",
+															"null"
+														]
+													},
+													"room": {
+														"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/room",
+														"default": "",
+														"description": "room where the type happended",
+														"enum": [
+															"kitchen",
+															"livingroom",
+															null
+														],
+														"examples": [
+															"kitchen"
+														],
+														"title": "The room schema",
+														"type": [
+															"string",
+															"null"
+														]
+													},
+													"exactTime": {
+														"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/exactTime",
+														"default": "",
+														"description": "time of the event",
+														"examples": [
+															"00:41:09.771571"
+														],
+														"title": "The exactTime schema",
+														"type": [
+															"string",
+															"null"
+														]
+													}
+												},
+												"additionalProperties": true
+											}
+										]
+									}
+								}
+							},
+							"additionalProperties": true
+						}
+					},
+					"additionalProperties": true
+				},
+				"night": {
+					"$id": "#/properties/userAction/properties/morning",
+					"default": {},
+					"description": "An explanation about the purpose of this instance.",
+					"required": [
+						"preferedLocation",
+						"adlAnalytics",
+						"gait"
+					],
+					"title": "The morning schema",
+					"type": "object",
+					"properties": {
+						"preferedLocation": {
+							"$id": "#/properties/userAction/properties/morning/properties/preferedLocation",
+							"default": {},
+							"description": "An explanation about the purpose of this instance.",
+							"required": [
+								"room",
+								"area"
+							],
+							"title": "The preferedLocation schema",
+							"type": "object",
+							"properties": {
+								"room": {
+									"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room",
+									"type": "object",
+									"title": "The room schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"roomType": "<name of the room type>",
+											"percentage": "<number from 0 to 1 indicating the percentage of total time user is detected to time in this room>"
+										}
+									],
+									"required": [
+										"roomType",
+										"percentage"
+									],
+									"properties": {
+										"roomType": {
+											"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room/properties/roomType",
+											"default": "",
+											"description": "An explanation about the purpose of this instance.",
+											"enum": [
+												"livingroom",
+												"kitchen",
+												null
+											],
+											"examples": [
+												"kitchen"
+											],
+											"title": "The roomType schema",
+											"type": [
+												"string",
+												"null"
+											]
+										},
+										"percentage": {
+											"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/room/properties/percentage",
+											"default": "",
+											"description": "number from 0 to 1 indicating the percentage of total time user is detected to time in this room",
+											"examples": [
+												0.7
+											],
+											"maximum": 1,
+											"minimum": 0,
+											"title": "The percentage schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								},
+								"area": {
+									"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area",
+									"default": {},
+									"description": "An explanation about the purpose of this instance.",
+									"required": [
+										"areaType",
+										"percentage"
+									],
+									"title": "The area schema",
+									"type": "object",
+									"properties": {
+										"areaType": {
+											"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area/properties/areaType",
+											"default": "",
+											"description": "name of the area type",
+											"enum": [
+												"sofa",
+												"door",
+												"telephone",
+												"table",
+												"chair",
+												"fridge",
+												null
+											],
+											"examples": [
+												"sofa"
+											],
+											"title": "The areaType schema",
+											"type": [
+												"string",
+												"null"
+											]
+										},
+										"percentage": {
+											"$id": "#/properties/userAction/properties/morning/properties/preferedLocation/properties/area/properties/percentage",
+											"default": "",
+											"description": "number from 0 to 1 indicating the percentage of time detected to time in this area>",
+											"examples": [
+												0.6
+											],
+											"maximum": 1,
+											"minimum": 0,
+											"title": "The percentage schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								}
+							},
+							"additionalProperties": true
+						},
+						"adlAnalytics": {
+							"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics",
+							"type": "object",
+							"title": "The adlAnalytics schema",
+							"description": "An explanation about the purpose of this instance.",
+							"default": {},
+							"examples": [
+								{
+									"eating": {
+										"duration": "<duration in seconds>"
+									},
+									"preparingFood": {
+										"duration": "<duration in seconds>"
+									},
+									"washingDishes": {
+										"duration": "<duration in seconds>"
+									},
+									"sittingRelated": {
+										"duration": "<duration in seconds>"
+									}
+								}
+							],
+							"required": [
+								"eating",
+								"preparingFood",
+								"washingDishes",
+								"sittingRelated"
+							],
+							"properties": {
+								"eating": {
+									"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/eating",
+									"type": "object",
+									"title": "The eating schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"duration": "<duration in seconds>"
+										}
+									],
+									"required": [
+										"duration"
+									],
+									"properties": {
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/eating/properties/duration",
+											"default": "",
+											"description": "duration in seconds",
+											"examples": [
+												1462
+											],
+											"title": "The duration schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								},
+								"preparingFood": {
+									"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/preparingFood",
+									"type": "object",
+									"title": "The preparingFood schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"duration": "<duration in seconds>"
+										}
+									],
+									"required": [
+										"duration"
+									],
+									"properties": {
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/preparingFood/properties/duration",
+											"default": "",
+											"description": "duration in seconds",
+											"examples": [
+												5834
+											],
+											"title": "The duration schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								},
+								"washingDishes": {
+									"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/washingDishes",
+									"type": "object",
+									"title": "The washingDishes schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"duration": "<duration in seconds>"
+										}
+									],
+									"required": [
+										"duration"
+									],
+									"properties": {
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/washingDishes/properties/duration",
+											"default": "",
+											"description": "duration in seconds",
+											"examples": [
+												29493
+											],
+											"title": "The duration schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								},
+								"sittingRelated": {
+									"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/sittingRelated",
+									"type": "object",
+									"title": "The sittingRelated schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": {},
+									"examples": [
+										{
+											"duration": "<duration in seconds>"
+										}
+									],
+									"required": [
+										"duration"
+									],
+									"properties": {
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/adlAnalytics/properties/sittingRelated/properties/duration",
+											"default": "",
+											"description": "duration in seconds",
+											"examples": [
+												93939
+											],
+											"title": "The duration schema",
+											"type": "number"
+										}
+									},
+									"additionalProperties": true
+								}
+							},
+							"additionalProperties": true
+						},
+						"gait": {
+							"$id": "#/properties/userAction/properties/morning/properties/gait",
+							"default": {},
+							"description": "An explanation about the purpose of this instance.",
+							"required": [
+								"features",
+								"dangerousSituation"
+							],
+							"title": "The gait schema",
+							"type": "object",
+							"properties": {
+								"features": {
+									"$id": "#/properties/userAction/properties/morning/properties/gait/properties/features",
+									"default": {},
+									"description": "An explanation about the purpose of this instance.",
+									"required": [
+										"avgSpeed",
+										"duration"
+									],
+									"title": "The features schema",
+									"type": "object",
+									"properties": {
+										"avgSpeed": {
+											"$id": "#/properties/userAction/properties/morning/properties/gait/properties/features/properties/avgSpeed",
+											"default": "",
+											"description": "average speed for specific day period in m/sec",
+											"examples": [
+												50.5
+											],
+											"title": "The avgSpeed schema",
+											"type": [
+												"number",
+												"null"
+											]
+										},
+										"duration": {
+											"$id": "#/properties/userAction/properties/morning/properties/gait/properties/features/properties/duration",
+											"default": "",
+											"description": "duration of gait inside the house in sec for the specific day period in sec",
+											"examples": [
+												603882
+											],
+											"title": "The duration schema",
+											"type": [
+												"number",
+												"null"
+											]
+										}
+									},
+									"additionalProperties": true
+								},
+								"dangerousSituation": {
+									"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation",
+									"type": "array",
+									"title": "The dangerousSituation schema",
+									"description": "An explanation about the purpose of this instance.",
+									"default": [],
+									"examples": [
+										[
+											{
+												"type": "<type of dangerous situation>",
+												"room": "room where the type happended",
+												"exactTime": "time of the event"
+											},
+											{
+												"type": "<type of dangerous situation>",
+												"room": "room where the type happended",
+												"exactTime": "time of the event"
+											}
+										]
+									],
+									"additionalItems": true,
+									"items": {
+										"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items",
+										"type": "object",
+										"anyOf": [
+											{
+												"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0",
+												"default": {},
+												"description": "An explanation about the purpose of this instance.",
+												"required": [
+													"type",
+													"room",
+													"exactTime"
+												],
+												"title": "The first anyOf schema",
+												"type": "object",
+												"properties": {
+													"type": {
+														"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/type",
+														"default": "",
+														"description": "type of dangerous situation",
+														"enum": [
+															"fall",
+															"dangerousHeight",
+															null
+														],
+														"examples": [
+															"fall"
+														],
+														"title": "The type schema",
+														"type": [
+															"string",
+															"null"
+														]
+													},
+													"room": {
+														"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/room",
+														"default": "",
+														"description": "room where the type happended",
+														"enum": [
+															"kitchen",
+															"livingroom",
+															null
+														],
+														"examples": [
+															"kitchen"
+														],
+														"title": "The room schema",
+														"type": [
+															"string",
+															"null"
+														]
+													},
+													"exactTime": {
+														"$id": "#/properties/userAction/properties/morning/properties/gait/properties/dangerousSituation/items/anyOf/0/properties/exactTime",
+														"default": "",
+														"description": "time of the event",
+														"examples": [
+															"00:41:09.771571"
+														],
+														"title": "The exactTime schema",
+														"type": [
+															"string",
+															"null"
+														]
+													}
+												},
+												"additionalProperties": true
+											}
+										]
+									}
+								}
+							},
+							"additionalProperties": true
+						}
+					},
+					"additionalProperties": true
+				}
+			},
+			"additionalProperties": true
+		},
+		"profiles": {
+			"$id": "#/properties/profiles",
+			"default": {},
+			"description": "An explanation about the purpose of this instance.",
+			"required": [
+				"emotion",
+				"engagement",
+				"cognitiveInterventionPerformance",
+				"nutritionalInterventionPerformance",
+				"socialInterventionPerformance",
+				"physicalInterventionPerformance"
+			],
+			"title": "The profiles schema",
+			"type": "object",
+			"properties": {
+				"emotion": {
+					"$id": "#/properties/profiles/properties/emotion",
+					"default": {},
+					"description": "An explanation about the purpose of this instance.",
+					"required": [
+						"face",
+						"voice"
+					],
+					"title": "The emotion schema",
+					"type": "object",
+					"properties": {
+						"face": {
+							"$id": "#/properties/profiles/properties/emotion/properties/face",
+							"default": {},
+							"description": "An explanation about the purpose of this instance.",
+							"required": [
+								"amountOfTime",
+								"anger",
+								"disgust",
+								"fear",
+								"happiness",
+								"neutral",
+								"sadness",
+								"surprise"
+							],
+							"title": "The face schema",
+							"type": "object",
+							"properties": {
+								"amountOfTime": {
+									"$id": "#/properties/profiles/properties/emotion/properties/face/properties/amountOfTime",
+									"default": "",
+									"description": "duration of the day that emotion is detected in sec",
+									"examples": [
+										283283
+									],
+									"title": "The amountOfTime schema",
+									"type": [
+										"number",
+										"null"
+									]
+								},
+								"anger": {
+									"$id": "#/properties/profiles/properties/emotion/properties/face/properties/anger",
+									"default": "",
+									"description": "number from 0 to 1, percentage",
+									"examples": [
+										0.5
+									],
+									"title": "The anger schema",
+									"type": [
+										"number",
+										"null"
+									]
+								},
+								"disgust": {
+									"$id": "#/properties/profiles/properties/emotion/properties/face/properties/disgust",
+									"default": "",
+									"description": "number from 0 to 1, percentage",
+									"examples": [
+										0.2
+									],
+									"title": "The disgust schema",
+									"type": [
+										"number",
+										"null"
+									]
+								},
+								"fear": {
+									"$id": "#/properties/profiles/properties/emotion/properties/face/properties/fear",
+									"default": "",
+									"description": "number from 0 to 1, percentage",
+									"examples": [
+										0.3
+									],
+									"title": "The fear schema",
+									"type": [
+										"number",
+										"null"
+									]
+								},
+								"hapiness": {
+									"$id": "#/properties/profiles/properties/emotion/properties/face/properties/hapiness",
+									"default": "",
+									"description": "number from 0 to 1, percentage",
+									"examples": [
+										0.5
+									],
+									"title": "The hapiness schema",
+									"type": [
+										"number",
+										"null"
+									]
+								},
+								"neutral": {
+									"$id": "#/properties/profiles/properties/emotion/properties/face/properties/neutral",
+									"default": "",
+									"description": "number from 0 to 1, percentage",
+									"examples": [
+										0.7
+									],
+									"title": "The neutral schema",
+									"type": [
+										"number",
+										"null"
+									]
+								},
+								"sadness": {
+									"$id": "#/properties/profiles/properties/emotion/properties/face/properties/sadness",
+									"default": "",
+									"description": "number from 0 to 1, percentage",
+									"examples": [
+										0.7
+									],
+									"title": "The sadness schema",
+									"type": [
+										"number",
+										"null"
+									]
+								},
+								"surprise": {
+									"$id": "#/properties/profiles/properties/emotion/properties/face/properties/surprise",
+									"default": "",
+									"description": "number from 0 to 1, percentage",
+									"examples": [
+										0.3
+									],
+									"title": "The surprise schema",
+									"type": [
+										"number",
+										"null"
+									]
+								}
+							},
+							"additionalProperties": true
+						},
+						"voice": {
+							"$id": "#/properties/profiles/properties/emotion/properties/voice",
+							"default": {},
+							"description": "An explanation about the purpose of this instance.",
+							"required": [
+								"amountOfTime",
+								"anger",
+								"fear",
+								"happiness",
+								"neutral",
+								"sadness"
+							],
+							"title": "The voice schema",
+							"type": "object",
+							"properties": {
+								"amountOfTime": {
+									"$id": "#/properties/profiles/properties/emotion/properties/voice/properties/amountOfTime",
+									"default": "",
+									"description": "duration of the day that emotion is detected",
+									"examples": [
+										28432
+									],
+									"title": "The amountOfTime schema",
+									"type": [
+										"number",
+										"null"
+									]
+								},
+								"anger": {
+									"$id": "#/properties/profiles/properties/emotion/properties/voice/properties/anger",
+									"default": "",
+									"description": "number from 0 to 1, percentage",
+									"examples": [
+										0.9
+									],
+									"title": "The anger schema",
+									"maximum": 1,
+									"minimum": 0,
+									"type": [
+										"number",
+										"null"
+									]
+								},
+								"fear": {
+									"$id": "#/properties/profiles/properties/emotion/properties/voice/properties/fear",
+									"default": "",
+									"description": "number from 0 to 1, percentage",
+									"examples": [
+										0.2
+									],
+									"title": "The fear schema",
+									"type": [
+										"number",
+										"null"
+									]
+								},
+								"hapiness": {
+									"$id": "#/properties/profiles/properties/emotion/properties/voice/properties/hapiness",
+									"default": "",
+									"description": "number from 0 to 1, percentage",
+									"examples": [
+										0.6
+									],
+									"title": "The hapiness schema",
+									"type": [
+										"number",
+										"null"
+									]
+								},
+								"neutral": {
+									"$id": "#/properties/profiles/properties/emotion/properties/voice/properties/neutral",
+									"default": "",
+									"description": "number from 0 to 1, percentage",
+									"examples": [
+										0.2
+									],
+									"title": "The neutral schema",
+									"type": [
+										"number",
+										"null"
+									]
+								},
+								"sadness": {
+									"$id": "#/properties/profiles/properties/emotion/properties/voice/properties/sadness",
+									"default": "",
+									"description": "number from 0 to 1, percentage",
+									"examples": [
+										0.1
+									],
+									"title": "The sadness schema",
+									"type": [
+										"number",
+										"null"
+									]
+								}
+							},
+							"additionalProperties": true
+						}
+					},
+					"additionalProperties": true
+				},
+				"engagement": {
+					"$id": "#/properties/profiles/properties/engagement",
+					"default": {},
+					"description": "An explanation about the purpose of this instance.",
+					"required": [
+						"accepted"
+					],
+					"title": "The engagement schema",
+					"type": "object",
+					"properties": {
+						"accepted": {
+							"$id": "#/properties/profiles/properties/engagement/properties/accepted",
+							"default": "",
+							"description": "percentage of activities accepted during the day",
+							"examples": [
+								0.3
+							],
+							"title": "The accepted schema",
+							"maximum": 1,
+							"minimum": 0,
+							"type": [
+								"number",
+								"null"
+							]
+						}
+					},
+					"additionalProperties": true
+				},
+				"cognitiveInterventionPerformance": {
+					"$id": "#/properties/profiles/properties/cognitiveInterventionPerformance",
+					"default": {},
+					"description": "An explanation about the purpose of this instance.",
+					"required": [
+						"fromSensing",
+						"fromInterventions"
+					],
+					"title": "The cognitiveInterventionPerformance schema",
+					"type": "object",
+					"properties": {
+						"fromSensing": {
+							"$id": "#/properties/profiles/properties/cognitiveInterventionPerformance/properties/fromSensing",
+							"type": [
+								"object",
+								"null"
+							],
+							"title": "The fromSensing schema",
+							"description": "An explanation about the purpose of this instance.",
+							"default": null,
+							"examples": [
+								null
+							]
+						},
+						"fromInterventions": {
+							"$id": "#/properties/profiles/properties/cognitiveInterventionPerformance/properties/fromInterventions",
+							"default": [],
+							"description": "An explanation about the purpose of this instance.",
+							"title": "The fromInterventions schema",
+							"type": "array",
+							"additionalItems": true,
+							"items": {
+								"$id": "#/properties/profiles/properties/cognitiveInterventionPerformance/properties/fromInterventions/items",
+								"type": [
+									"object",
+									"null"
+								],
+								"anyOf": [
+									{
+										"$id": "#/properties/profiles/properties/cognitiveInterventionPerformance/properties/fromInterventions/items/anyOf/0",
+										"default": {},
+										"description": "An explanation about the purpose of this instance.",
+										"required": [
+											"appId",
+											"outcome"
+										],
+										"title": "The first anyOf schema",
+										"type": "object",
+										"properties": {
+											"appId": {
+												"$id": "#/properties/profiles/properties/cognitiveInterventionPerformance/properties/fromInterventions/items/anyOf/0/properties/appId",
+												"default": "",
+												"description": "The appId specifies each interventions provided to the user",
+												"examples": [
+													"musicApp"
+												],
+												"title": "The appId schema",
+												"type": [
+													"string",
+													"null"
+												]
+											},
+											"outcome": {
+												"$id": "#/properties/profiles/properties/cognitiveInterventionPerformance/properties/fromInterventions/items/anyOf/0/properties/outcome",
+												"default": {},
+												"description": "outcome for *appId* for today",
+												"examples": [],
+												"title": "The outcome schema",
+												"type": [
+													"object",
+													"null"
+												]
+											}
+										},
+										"additionalProperties": true
+									}
+								]
+							}
+						}
+					},
+					"additionalProperties": true
+				},
+				"nutritionalInterventionPerformance": {
+					"$id": "#/properties/profiles/properties/nutritionalInterventionPerformance",
+					"default": {},
+					"description": "An explanation about the purpose of this instance.",
+					"required": [
+						"fromSensing",
+						"fromInterventions"
+					],
+					"title": "The nutritionalInterventionPerformance schema",
+					"type": [
+						"object",
+						"null"
+					],
+					"properties": {
+						"fromSensing": {
+							"$id": "#/properties/profiles/properties/nutritionalInterventionPerformance/properties/fromSensing",
+							"default": null,
+							"description": "An explanation about the purpose of this instance.",
+							"examples": [
+								null
+							],
+							"title": "The fromSensing schema",
+							"type": [
+								"object",
+								"null"
+							]
+						},
+						"fromInterventions": {
+							"$id": "#/properties/profiles/properties/nutritionalInterventionPerformance/properties/fromInterventions",
+							"default": [],
+							"description": "An explanation about the purpose of this instance.",
+							"title": "The fromInterventions schema",
+							"type": "array",
+							"additionalItems": true,
+							"items": {
+								"$id": "#/properties/profiles/properties/nutritionalInterventionPerformance/properties/fromInterventions/items",
+								"anyOf": [
+									{
+										"$id": "#/properties/profiles/properties/nutritionalInterventionPerformance/properties/fromInterventions/items/anyOf/0",
+										"default": {},
+										"description": "An explanation about the purpose of this instance.",
+										"required": [
+											"appId",
+											"outcome"
+										],
+										"title": "The first anyOf schema",
+										"type": "object",
+										"properties": {
+											"appId": {
+												"$id": "#/properties/profiles/properties/nutritionalInterventionPerformance/properties/fromInterventions/items/anyOf/0/properties/appId",
+												"default": "",
+												"description": "The appId specifies each interventions provided to the user",
+												"examples": [
+													"recipeResommender"
+												],
+												"title": "The appId schema",
+												"type": [
+													"string",
+													"null"
+												]
+											},
+											"outcome": {
+												"$id": "#/properties/profiles/properties/nutritionalInterventionPerformance/properties/fromInterventions/items/anyOf/0/properties/outcome",
+												"default": {},
+												"description": "outcome for *appId* for today",
+												"examples": [
+													{}
+												],
+												"title": "The outcome schema",
+												"type": [
+													"object",
+													"null"
+												]
+											}
+										},
+										"additionalProperties": true
+									}
+								]
+							}
+						}
+					},
+					"additionalProperties": true
+				},
+				"socialInterventionPerformance": {
+					"$id": "#/properties/profiles/properties/socialInterventionPerformance",
+					"default": {},
+					"description": "An explanation about the purpose of this instance.",
+					"required": [
+						"fromSensing",
+						"fromInterventions"
+					],
+					"title": "The socialInterventionPerformance schema",
+					"type": [
+						"object",
+						"null"
+					],
+					"properties": {
+						"fromSensing": {
+							"$id": "#/properties/profiles/properties/socialInterventionPerformance/properties/fromSensing",
+							"default": null,
+							"description": "An explanation about the purpose of this instance.",
+							"examples": [
+								null
+							],
+							"title": "The fromSensing schema",
+							"type": [
+								"object",
+								"null"
+							]
+						},
+						"fromInterventions": {
+							"$id": "#/properties/profiles/properties/socialInterventionPerformance/properties/fromInterventions",
+							"default": [],
+							"description": "An explanation about the purpose of this instance.",
+							"title": "The fromInterventions schema",
+							"type": "array",
+							"additionalItems": true,
+							"items": {
+								"$id": "#/properties/profiles/properties/socialInterventionPerformance/properties/fromInterventions/items",
+								"anyOf": [
+									{
+										"$id": "#/properties/profiles/properties/socialInterventionPerformance/properties/fromInterventions/items/anyOf/0",
+										"default": {},
+										"description": "An explanation about the purpose of this instance.",
+										"required": [
+											"appId",
+											"outcome"
+										],
+										"title": "The first anyOf schema",
+										"type": [
+											"object",
+											"null"
+										],
+										"properties": {
+											"appId": {
+												"$id": "#/properties/profiles/properties/socialInterventionPerformance/properties/fromInterventions/items/anyOf/0/properties/appId",
+												"default": "",
+												"description": "the appId specifies the interventions provided",
+												"examples": [
+													"quiz"
+												],
+												"title": "The appId schema",
+												"type": [
+													"string",
+													"null"
+												]
+											},
+											"outcome": {
+												"$id": "#/properties/profiles/properties/socialInterventionPerformance/properties/fromInterventions/items/anyOf/0/properties/outcome",
+												"default": {},
+												"description": "outcome for *appId* for today",
+												"examples": [],
+												"title": "The outcome schema",
+												"type": [
+													"object",
+													"null"
+												]
+											}
+										},
+										"additionalProperties": true
+									}
+								]
+							}
+						}
+					},
+					"additionalProperties": true
+				},
+				"physicalInterventionPerformance": {
+					"$id": "#/properties/profiles/properties/physicalInterventionPerformance",
+					"default": {},
+					"description": "An explanation about the purpose of this instance.",
+					"required": [
+						"fromSensing",
+						"fromInterventions"
+					],
+					"title": "The physicalInterventionPerformance schema",
+					"type": "object",
+					"properties": {
+						"fromSensing": {
+							"$id": "#/properties/profiles/properties/physicalInterventionPerformance/properties/fromSensing",
+							"type": "null",
+							"title": "The fromSensing schema",
+							"description": "An explanation about the purpose of this instance.",
+							"default": null,
+							"examples": [
+								null
+							]
+						},
+						"fromInterventions": {
+							"$id": "#/properties/profiles/properties/physicalInterventionPerformance/properties/fromInterventions",
+							"default": [],
+							"description": "An explanation about the purpose of this instance.",
+							"title": "The fromInterventions schema",
+							"type": "array",
+							"additionalItems": true,
+							"items": {
+								"$id": "#/properties/profiles/properties/physicalInterventionPerformance/properties/fromInterventions/items",
+								"anyOf": [
+									{
+										"$id": "#/properties/profiles/properties/physicalInterventionPerformance/properties/fromInterventions/items/anyOf/0",
+										"default": {},
+										"description": "An explanation about the purpose of this instance.",
+										"required": [
+											"appId",
+											"outcome"
+										],
+										"title": "The first anyOf schema",
+										"type": "object",
+										"properties": {
+											"appId": {
+												"$id": "#/properties/profiles/properties/physicalInterventionPerformance/properties/fromInterventions/items/anyOf/0/properties/appId",
+												"default": "",
+												"description": "the appId specifies the intervention",
+												"examples": [
+													"physicalTrainer"
+												],
+												"title": "The appId schema",
+												"type": [
+													"string",
+													"null"
+												]
+											},
+											"outcome": {
+												"$id": "#/properties/profiles/properties/physicalInterventionPerformance/properties/fromInterventions/items/anyOf/0/properties/outcome",
+												"default": {},
+												"description": "outcome for *appId* for today",
+												"title": "The outcome schema",
+												"type": [
+													"object",
+													"null"
+												]
+											}
+										},
+										"additionalProperties": true
+									}
+								]
+							}
+						}
+					},
+					"additionalProperties": true
+				}
+			},
+			"additionalProperties": true
+		},
+		"diseaseMonitoring": {
+			"$id": "#/properties/diseaseMonitoring",
+			"default": {},
+			"description": "An explanation about the purpose of this instance.",
+			"required": [
+				"diseaseSigns",
+				"diseaseSymptoms"
+			],
+			"title": "The diseaseMonitoring schema",
+			"type": "object",
+			"properties": {
+				"diseaseSigns": {
+					"$id": "#/properties/diseaseMonitoring/properties/diseaseSigns",
+					"default": [],
+					"description": "Measured features that can be disease progress signs.",
+					"examples": [
+						[
+							{
+								"type": " one of the following oxygen|lipColour|fingerColour|coughEstimated",
+								"value": "",
+								"unit": ""
+							},
+							{
+								"type": "lipColour",
+								"value": [
+									2,
+									3,
+									4
+								],
+								"unit": ""
+							}
+						]
+					],
+					"title": "The diseaseSigns schema",
+					"type": "array",
+					"additionalItems": true,
+					"items": {
+						"$id": "#/properties/diseaseMonitoring/properties/diseaseSigns/items",
+						"anyOf": [
+							{
+								"$id": "#/properties/diseaseMonitoring/properties/diseaseSigns/items/anyOf/0",
+								"default": {},
+								"description": "An explanation about the purpose of this instance.",
+								"required": [
+									"type",
+									"value",
+									"unit"
+								],
+								"title": "The first anyOf schema",
+								"type": "object",
+								"properties": {
+									"type": {
+										"$id": "#/properties/diseaseMonitoring/properties/diseaseSigns/items/anyOf/0/properties/type",
+										"default": "",
+										"description": "An explanation about the purpose of this instance.",
+										"enum": [
+											"bpm",
+											"pi",
+											"spo2",
+											"lipColour",
+											"fingerColour",
+											"coughEstimated"
+										],
+										"title": "The type schema",
+										"type": "string"
+									},
+									"value": {
+										"$id": "#/properties/diseaseMonitoring/properties/diseaseSigns/items/anyOf/0/properties/value",
+										"default": "",
+										"description": "An explanation about the purpose of this instance.",
+										"examples": [
+											""
+										],
+										"title": "The value schema",
+										"type": [
+											"string",
+											"number",
+											"integer",
+											"array"
+										]
+									},
+									"unit": {
+										"$id": "#/properties/diseaseMonitoring/properties/diseaseSigns/items/anyOf/0/properties/unit",
+										"default": "",
+										"description": "The unit of measurement for the specific valu",
+										"examples": [
+											""
+										],
+										"title": "The unit schema",
+										"type": "string"
+									}
+								},
+								"additionalProperties": true
+							}
+						]
+					}
+				},
+				"diseaseSymptoms": {
+					"$id": "#/properties/diseaseMonitoring/properties/diseaseSymptoms",
+					"default": [],
+					"description": "Sell-reported disease symptoms.",
+					"title": "The diseaseSymptoms schema",
+					"type": "array",
+					"additionalItems": true,
+					"items": {
+						"$id": "#/properties/diseaseMonitoring/properties/diseaseSymptoms/items",
+						"type": "object",
+						"anyOf": [
+							{
+								"$id": "#/properties/diseaseMonitoring/properties/diseaseSymptoms/items/anyOf/0",
+								"type": "object",
+								"title": "The first anyOf schema",
+								"description": "An explanation about the purpose of this instance.",
+								"default": {},
+								"examples": [
+									{
+										"type": "one of the following fever | soreThroat | cough | diarrhea | appetiteLoss | abdominalPain| fatigue | chestPain | confusion | headache | unusualMusclePain | smellLoss | confusion | breathingProblem | ",
+										"value": "",
+										"unit": "boolean | multipleChoice"
+									}
+								],
+								"required": [
+									"type",
+									"value",
+									"unit"
+								],
+								"properties": {
+									"type": {
+										"$id": "#/properties/diseaseMonitoring/properties/diseaseSymptoms/items/anyOf/0/properties/type",
+										"default": "",
+										"description": "one of the following fever | soreThroat | cough | diarrhea | appetiteLoss | abdominalPain| fatigue | chestPain | confusion | headache | unusualMusclePain | smellLoss | confusion | breathingProblem | ",
+										"title": "The type schema",
+										"type": "string"
+									},
+									"value": {
+										"$id": "#/properties/diseaseMonitoring/properties/diseaseSymptoms/items/anyOf/0/properties/value",
+										"default": "",
+										"description": "An explanation about the purpose of this instance.",
+										"examples": [
+											""
+										],
+										"title": "The value schema",
+										"type": [
+											"string",
+											"number",
+											"integer",
+											"array",
+											"null",
+											"object"
+										]
+									},
+									"unit": {
+										"$id": "#/properties/diseaseMonitoring/properties/diseaseSymptoms/items/anyOf/0/properties/unit",
+										"type": "string",
+										"title": "The unit schema",
+										"description": "An explanation about the purpose of this instance.",
+										"default": "",
+										"examples": [
+											"boolean | multipleChoice"
+										]
+									}
+								},
+								"additionalProperties": true
+							}
+						]
+					}
+				}
+			},
+			"additionalProperties": true
+		}
+	},
+	"additionalProperties": true
 }
