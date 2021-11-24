@@ -424,7 +424,10 @@
 							"feature": "appetiteLoss",
 							"nextQuestion": [
 								{
-									"value": 18
+									"yes": 18
+								},
+								{
+									"no": 18
 								}
 							]
 						},
@@ -866,7 +869,10 @@
 							"feature": "appetiteLoss",
 							"nextQuestion": [
 								{
-									"value": 18
+									"yes": 18
+								},
+								{
+									"no": 18
 								}
 							]
 						},
@@ -1308,7 +1314,10 @@
 							"feature": "appetiteLoss",
 							"nextQuestion": [
 								{
-									"value": 18
+									"yes": 18
+								},
+								{
+									"no": 18
 								}
 							]
 						},
@@ -1901,7 +1910,10 @@
 							"feature": "appetiteLoss",
 							"nextQuestion": [
 								{
-									"value": 18
+									"yes": 18
+								},
+								{
+									"no": 18
 								}
 							]
 						},
@@ -2343,7 +2355,10 @@
 							"feature": "appetiteLoss",
 							"nextQuestion": [
 								{
-									"value": 18
+									"yes": 18
+								},
+								{
+									"no": 18
 								}
 							]
 						},
@@ -2785,7 +2800,10 @@
 							"feature": "appetiteLoss",
 							"nextQuestion": [
 								{
-									"value": 18
+									"yes": 18
+								},
+								{
+									"no": 18
 								}
 							]
 						},
