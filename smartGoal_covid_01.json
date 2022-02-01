@@ -1,12 +1,5 @@
 {
-	"goalId": "covid_01",
-	"creationDate": "2021-07-08",
-	"version": "3.3.0",
 	"el": {
-	  "goalId": "covid_01",
-	  "creationDate": "2020-03-26",
-	  "name": "Υποστήριξη και παρακολούθηση συμπτωμάτων COVID-19",
-	  "description": "Αυτός ο στόχος θα σε βοηθήσει να παρακολουθείς την εξέλιξη των συμπτωμάτων σου κατά τη διάρκεια της καραντίνας",
 	  "requirements": [
 		"Συμβουλευτείτε τον γιατρό σας αν έχετε οποιαδήποτε αμφιβολία"
 	  ],
@@ -41,12 +34,10 @@
 				  8,
 				  22
 				]
-			  }
-			},
-			{
+			  },
 			  "questionnaire": {
 				"dailyRange": [
-				  0,
+				  1,
 				  1
 				],
 				"weeklyRange": [
@@ -73,16 +64,14 @@
 				  8,
 				  22
 				]
-			  }
-			},
-			{
+			  },
 			  "questionnaire": {
 				"dailyRange": [
-				  0,
+				  1,
 				  1
 				],
 				"weeklyRange": [
-				  3,
+				  5,
 				  7
 				],
 				"timeRange": [
@@ -112,12 +101,10 @@
 				  8,
 				  22
 				]
-			  }
-			},
-			{
+			  },
 			  "questionnaire": {
 				"dailyRange": [
-				  0,
+				  1,
 				  1
 				],
 				"weeklyRange": [
@@ -144,16 +131,14 @@
 				  8,
 				  22
 				]
-			  }
-			},
-			{
+			  },
 			  "questionnaire": {
 				"dailyRange": [
-				  0,
+				  1,
 				  1
 				],
 				"weeklyRange": [
-				  5,
+				  3,
 				  7
 				],
 				"timeRange": [
@@ -183,13 +168,11 @@
 				  8,
 				  22
 				]
-			  }
-			},
-			{
+			  },
 			  "questionnaire": {
 				"dailyRange": [
 				  1,
-				  2
+				  1
 				],
 				"weeklyRange": [
 				  7,
@@ -215,13 +198,11 @@
 				  8,
 				  22
 				]
-			  }
-			},
-			{
+			  },
 			  "questionnaire": {
 				"dailyRange": [
 				  1,
-				  2
+				  1
 				],
 				"weeklyRange": [
 				  7,
@@ -239,6 +220,10 @@
 	  "categoryLabels": [
 		"disease"
 	  ],
+	  "goalId": "covid_01",
+	  "creationDate": "2020-03-26",
+	  "name": "Υποστήριξη και παρακολούθηση συμπτωμάτων COVID-19",
+	  "description": "Αυτός ο στόχος θα σε βοηθήσει να παρακολουθείς την εξέλιξη των συμπτωμάτων σου κατά τη διάρκεια της καραντίνας",
 	  "toolInfo": {
 		"questionnaire": {
 		  "name": "Ερωτηματολόγιο"
@@ -1617,10 +1602,6 @@
 	  }
 	},
 	"en": {
-	  "goalId": "covid_01",
-	  "creationDate": "2020-03-26",
-	  "name": "Monitoring support of COVID-19 symptoms",
-	  "description": "This goal will support you on monitoring your COVID-19 symptoms during your self-quarantine.",
 	  "requirements": [
 		"Do not hesitate to contact your doctor if you have any doubt"
 	  ],
@@ -1757,6 +1738,10 @@
 	  "categoryLabels": [
 		"disease"
 	  ],
+	  "goalId": "covid_01",
+	  "creationDate": "2020-03-26",
+	  "name": "Monitoring support of COVID-19 symptoms",
+	  "description": "This goal will support you on monitoring your COVID-19 symptoms during your self-quarantine.",
 	  "toolInfo": {
 		"questionnaire": {
 		  "name": "Questionnaire"
@@ -3101,5 +3086,20 @@
 		  }
 		]
 	  }
-	}
+	},
+	"es": {
+	  "requirements": [],
+	  "personalization": [],
+	  "interventionPlan": [],
+	  "categoryLabels": []
+	},
+	"it": {
+	  "requirements": [],
+	  "personalization": [],
+	  "interventionPlan": [],
+	  "categoryLabels": []
+	},
+	"goalId": "covid_01",
+	"creationDate": "2021-07-08T00:00:00.000Z",
+	"version": "3.4.0"
   }
